@@ -1,0 +1,122 @@
+$color_headfoot:rgb(87,156,135);
+$color_fondnote:rgb(252,223,219);
+$color_fondchic:rgb(255,245,254);
+$color_fondpapilles:rgb(249,249,249);
+$color_fondgout:rgb(253,253,253);
+$color_text_h1:rgb(253,203,70);
+
+
+
+body{
+    height: 1606px;
+    width: 1024px;
+}
+#bloc-page 
+
+{
+    background-color:white;
+    width:1024px;
+    height:1606px;
+}
+header{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    height:161px;
+    background:$color_headfoot;
+}
+h1{
+    
+    
+    color: $color_text_h1;
+    align-items: center;
+    
+    }
+main{
+    height: 1204px;
+    margin-left: 113px;
+    margin-right: 113px;
+    .haut-menu {
+        display: flex;
+        flex-direction: row;
+        padding-top:64px;
+        height:514px;
+        
+
+        
+        .haut-menu__un {
+            display: flex;
+            background:$color_fondnote;
+            justify-content: center;
+            border: 2px grey solid;
+            text-align: center;
+            align-items: center;
+            margin: 0;
+            width:369px;
+            .note{
+                text-align: center;
+                
+            }
+        }
+        .haut-menu__deux {
+            display: flex;
+            background:$color_fondchic;
+            border: 2px grey solid;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            margin:0 0 0 60px;
+            width:369px;
+            }
+        }
+
+    .bas-menu {
+    display: flex;
+    flex-direction: row;
+    height: 514px;
+    padding-top: 64px;
+    margin-bottom: 48px;
+    
+        .bas-menu__trois{
+            display: flex;
+            justify-content: center;
+            background:$color_fondpapilles;
+            border: 2px grey solid;
+            text-align: center;
+            align-items: center;
+            margin:0;
+            width:369px;
+            }
+        .bas-menu__quatre{
+            display: flex;
+            justify-content: center;
+            background:$color_fondgout;
+            border:2px grey solid; 
+            text-align: center;
+            align-items: center;
+            margin:0 0 0 60px;
+            width: 369px;
+            }
+        }
+    }
+
+.après{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width:50%;
+    height: 81px;
+    background:$color_headfoot;
+    color: $color_text_h1;
+    margin:auto;
+} 
+footer{
+    margin-top:48px;
+    height:112px;
+    border: 1px black solid;
+}  
+        
+    
+
