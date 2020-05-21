@@ -5,7 +5,10 @@ $color_fondpapilles:rgb(249,249,249);
 $color_fondgout:rgb(253,253,253);
 $color_text_h1:rgb(253,203,70);
 
-
+@font-face {
+    font-family:"Mitr-Medium" ;
+        src: url('"Mitr-SemiBold.ttf')format('truetype');
+}
 
 body{
     height: 1606px;
@@ -22,17 +25,20 @@ header{
     display: flex;
     justify-content:center ;
     align-items: center;
-    height:161px;
-    background:$color_headfoot;
+    height:161px;    
+    border-bottom: 2px rgb(161, 193, 129 ) solid;
+    background-color:$color_headfoot;
 }
 h1{
-    
-    
+    font-size:60px;
+    font-family: 'Mitr-SeliBold',Arial,sans-serif;
     color: $color_text_h1;
     align-items: center;
     
     }
 main{
+    display: flex;
+    flex-direction: column;
     height: 1204px;
     margin-left: 113px;
     margin-right: 113px;
@@ -53,11 +59,9 @@ main{
             align-items: center;
             margin: 0;
             width:369px;
-            .note{
-                text-align: center;
-                
             }
-        }
+            
+        
         .haut-menu__deux {
             display: flex;
             background:$color_fondchic;
@@ -69,7 +73,7 @@ main{
             width:369px;
             }
         }
-
+   
     .bas-menu {
     display: flex;
     flex-direction: row;
@@ -78,15 +82,24 @@ main{
     margin-bottom: 48px;
     
         .bas-menu__trois{
-            display: flex;
+            display:flex;
             justify-content: center;
             background:$color_fondpapilles;
-            border: 2px grey solid;
+            box-shadow:
+             
+             0 0 0 2px hsl(0, 0%, 90%),
+             0 0 0 3px hsl(0, 0%, 95%);
+                 
+            
+            
+
             text-align: center;
             align-items: center;
             margin:0;
             width:369px;
             }
+            
+            
         .bas-menu__quatre{
             display: flex;
             justify-content: center;
@@ -98,7 +111,7 @@ main{
             width: 369px;
             }
         }
-    }
+}
 
 .après{
     display:flex;
@@ -111,6 +124,8 @@ main{
     background:$color_headfoot;
     color: $color_text_h1;
     margin:auto;
+    border-radius:10px;
+    font-size:60px;
 } 
 footer{
     margin-top:48px;

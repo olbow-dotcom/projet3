@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "Mitr-Medium";
+  src: url('"Mitr-SemiBold.ttf') format("truetype");
+}
 body {
   height: 1606px;
   width: 1024px;
@@ -15,16 +19,21 @@ header {
   justify-content: center;
   align-items: center;
   height: 161px;
-  background: #579c87;
+  border-bottom: 2px #a1c181 solid;
+  background-color: #579c87;
 }
 
 h1 {
+  font-size: 60px;
+  font-family: "Mitr-SeliBold", Arial, sans-serif;
   color: #fdcb46;
   align-items: center;
 }
 
 main {
-  height: 75%;
+  display: flex;
+  flex-direction: column;
+  height: 1204px;
   margin-left: 113px;
   margin-right: 113px;
 }
@@ -65,7 +74,7 @@ main .bas-menu .bas-menu__trois {
   display: flex;
   justify-content: center;
   background: #f9f9f9;
-  border: 2px grey solid;
+  box-shadow: 0 0 0 2px #e6e6e6, 0 0 0 3px #f2f2f2;
   text-align: center;
   align-items: center;
   margin: 0;
@@ -93,6 +102,8 @@ main .bas-menu .bas-menu__quatre {
   background: #579c87;
   color: #fdcb46;
   margin: auto;
+  border-radius: 10px;
+  font-size: 60px;
 }
 
 footer {
