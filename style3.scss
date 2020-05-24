@@ -7,7 +7,19 @@ $color_text_h1:rgb(253,203,70);
 
 @font-face {
     font-family:"Mitr-Medium" ;
-        src: url('"Mitr-SemiBold.ttf')format('truetype');
+        src: url('Mitr-SemiBold.ttf')format('truetype');
+}
+@font-face {
+    font-family: "Devonshire-Regular";
+    src: url("Devonshire-Regular/Devonshire/Devonshire-Regular.ttf")format('truetype');
+}
+@font-face {
+    font-family: "Komikatext_bold_macroman";
+ src: url("Komika-Text-fontfacekit/web fonts/komikatext_bold_macroman/KOMTXTB_-webfont.woff")format('truetype');
+}
+@font-face {
+    font-family:'croissantone';
+    src: url('Croissant-One/croissantone/CroissantOne-Regular.ttf') format('truetype');
 }
 
 body{
@@ -31,43 +43,52 @@ header{
 }
 h1{
     font-size:60px;
-    font-family: 'Mitr-SeliBold',Arial,sans-serif;
+    font-family: 'Mitr-SemiBold',Arial,sans-serif;
     color: $color_text_h1;
     align-items: center;
+}
+a{
+    text-decoration: none;
+}   
     
-    }
 main{
     display: flex;
     flex-direction: column;
     height: 1204px;
     align-items: center;
-   
+
     .haut-menu {
         display: flex;
         flex-direction: row;
         padding-top:64px;
         height:514px;
-        width: 100%;
-        a{
-            flex:1
-        }
+        width: auto;
         
+        
+         
         .haut-menu__un {
             display: flex;
             flex-direction: column;
+            flex-wrap: nowrap;
             background:$color_fondnote;
             justify-content: center;
             text-align: center;
             align-items: center;
             margin: 0;
-            
-            width:100%;
+            width:369px;
             height: 100%;
             box-shadow:             
-             0 0 5px 2px hsl(0, 0%, 90%), 
-             
+             0 0 5px 2px hsl(0, 0%, 90%); 
+            font-family: 'Devonshire-Regular';
+            font-size: 30px;            
+            .menu-un{
+                margin-top: 20px; 
+                font-family: "Komikatext_bold_macroman";
+                font-size: 1.5em;
+    
             }
-            
+            }   
+        
         
         .haut-menu__deux {
             display: flex;
@@ -76,13 +97,14 @@ main{
             justify-content: center;
             text-align: center;
             align-items: center;
-            margin:0 0 0 60px;
-            width:100%;
+            margin-left:60px ;
+            width:369px;
             height: 100%;
             box-shadow:             
-             0 0 0 2px hsl(0, 0%, 90%), 
-             
-            }
+             0 0 5px 2px hsl(0, 0%, 90%);
+            line-height: 2;           
+            font-family: 'croissantone';}
+            font-size: 30px;
         }
    
     .bas-menu {
@@ -94,15 +116,17 @@ main{
     
         .bas-menu__trois{
             display:flex;
-            justify-content: center;
+            flex-direction: column;
             background:$color_fondpapilles;
-            box-shadow:             
-             0 0 0 2px hsl(0, 0%, 90%), 
-             0 0 0 3px hsl(0, 0%, 95%);
+            justify-content: center;
             text-align: center;
             align-items: center;
             margin:0;
             width:369px;
+            height: 100%;
+            box-shadow:             
+             0 0 5px 2px hsl(0, 0%, 90%);
+
             }
             
             
@@ -112,13 +136,14 @@ main{
             background:$color_fondgout;
             text-align: center;
             align-items: center;
-            margin:0 0 0 60px;
+            margin-left: 60px;
             width: 369px;
+            height: 100%;
             box-shadow:             
-             0 0 0 2px hsl(0, 0%, 90%), 
-             0 0 0 3px hsl(0, 0%, 95%);
+             0 0 5px 2px hsl(0, 0%, 90%); 
             }
         }
+    
 }
 
 .après{

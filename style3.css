@@ -1,7 +1,19 @@
 @charset "UTF-8";
 @font-face {
   font-family: "Mitr-Medium";
-  src: url('"Mitr-SemiBold.ttf') format("truetype");
+  src: url("Mitr-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Devonshire-Regular";
+  src: url("Devonshire-Regular/Devonshire/Devonshire-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Komikatext_bold_macroman";
+  src: url("Komika-Text-fontfacekit/web fonts/komikatext_bold_macroman/KOMTXTB_-webfont.woff") format("truetype");
+}
+@font-face {
+  font-family: "croissantone";
+  src: url("Croissant-One/croissantone/CroissantOne-Regular.ttf") format("truetype");
 }
 body {
   height: 1606px;
@@ -23,9 +35,13 @@ header {
 
 h1 {
   font-size: 60px;
-  font-family: "Mitr-SeliBold", Arial, sans-serif;
+  font-family: "Mitr-SemiBold", Arial, sans-serif;
   color: #fdcb46;
   align-items: center;
+}
+
+a {
+  text-decoration: none;
 }
 
 main {
@@ -39,22 +55,28 @@ main .haut-menu {
   flex-direction: row;
   padding-top: 64px;
   height: 514px;
-  width: 100%;
-}
-main .haut-menu a {
-  flex: 1;
+  width: auto;
+  font-size: 30px;
 }
 main .haut-menu .haut-menu__un {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   background: #fcdfdb;
   justify-content: center;
   text-align: center;
   align-items: center;
   margin: 0;
-  width: 100%;
+  width: 369px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
+  font-family: "Devonshire-Regular";
+  font-size: 30px;
+}
+main .haut-menu .haut-menu__un .menu-un {
+  margin-top: 20px;
+  font-family: "Komikatext_bold_macroman";
+  font-size: 1.5em;
 }
 main .haut-menu .haut-menu__deux {
   display: flex;
@@ -63,10 +85,12 @@ main .haut-menu .haut-menu__deux {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 0 0 0 60px;
-  width: 100%;
+  margin-left: 60px;
+  width: 369px;
   height: 100%;
-  box-shadow: 0 0 0 2px #e6e6e6;
+  box-shadow: 0 0 5px 2px #e6e6e6;
+  line-height: 2;
+  font-family: "croissantone";
 }
 main .bas-menu {
   display: flex;
@@ -77,13 +101,15 @@ main .bas-menu {
 }
 main .bas-menu .bas-menu__trois {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   background: #f9f9f9;
-  box-shadow: 0 0 0 2px #e6e6e6, 0 0 0 3px #f2f2f2;
+  justify-content: center;
   text-align: center;
   align-items: center;
   margin: 0;
   width: 369px;
+  height: 100%;
+  box-shadow: 0 0 5px 2px #e6e6e6;
 }
 main .bas-menu .bas-menu__quatre {
   display: flex;
@@ -91,9 +117,10 @@ main .bas-menu .bas-menu__quatre {
   background: #fdfdfd;
   text-align: center;
   align-items: center;
-  margin: 0 0 0 60px;
+  margin-left: 60px;
   width: 369px;
-  box-shadow: 0 0 0 2px #e6e6e6, 0 0 0 3px #f2f2f2;
+  height: 100%;
+  box-shadow: 0 0 5px 2px #e6e6e6;
 }
 
 .après {
