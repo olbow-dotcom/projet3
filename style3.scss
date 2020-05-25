@@ -21,6 +21,14 @@ $color_text_h1:rgb(253,203,70);
     font-family:'croissantone';
     src: url('Croissant-One/croissantone/CroissantOne-Regular.ttf') format('truetype');
 }
+@font-face{
+    font-family:'Dancing-Script' ;
+    src: url('Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf');
+}
+@font-face{
+    font-family: 'sarah-print';
+    src: url('DJB Sarah prints.ttf');
+}
 
 body{
     height: 1606px;
@@ -87,6 +95,7 @@ main{
                 font-size: 1.5em;
     
             }
+            
             }   
         
         
@@ -131,7 +140,14 @@ main{
             height: 100%;
             box-shadow:             
              0 0 5px 2px hsl(0, 0%, 90%);
-
+            font-family: 'Dancing-Script',"Palace Script MT","Kunstler Script";
+            font-size: 40px;
+            font-weight: bold;
+            .menu-trois{
+                font-family: "sarah-print";
+                margin-top:20px;
+                font-weight: lighter;
+            }
             }
             
             
