@@ -23,11 +23,15 @@ $color_text_h1:rgb(253,203,70);
 }
 @font-face{
     font-family:'Dancing-Script' ;
-    src: url('Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf');
+    src: url('Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf') format('truetype');
 }
 @font-face{
     font-family: 'sarah-print';
     src: url('DJB Sarah prints.ttf');
+}
+@font-face{
+    font-family: 'Kaushan-Script';
+    src: url('Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf')
 }
 
 body{
@@ -63,11 +67,11 @@ main{
     display: flex;
     flex-direction: column;
     height: 1204px;
-    align-items: center;
-
+    align-items:stretch ;
     .haut-menu {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
         padding-top:64px;
         height:514px;
         width: auto;
@@ -82,13 +86,13 @@ main{
             justify-content: center;
             text-align: center;
             align-items: center;
-            margin: 0;
             width:369px;
             height: 100%;
             box-shadow:             
              0 0 5px 2px hsl(0, 0%, 90%); 
             font-family: 'Devonshire-Regular';
-            font-size: 30px;            
+            font-size: 30px; 
+            color: rgb(60 18 24);           
             .menu-un{
                 margin-top: 20px; 
                 font-family: "Komikatext_bold_macroman";
@@ -97,45 +101,56 @@ main{
             }
             
             }   
-        
+        .chic{
+            background-color:$color_fondchic;
+            
+        }
         
         .haut-menu__deux {
             display: flex;
             flex-direction: column;
-            background:$color_fondchic;
             justify-content: center;
             text-align: center;
             align-items: center;
-            margin-left:60px ;
             width:369px;
             height: 100%;
             box-shadow:             
              0 0 5px 2px hsl(0, 0%, 90%);
-            line-height: 2;           
-            font-family: 'croissantone';}
+            font-family: 'croissantone';
             font-size: 25px;
+            background-image: linear-gradient(to right,#d8852e,#905bfd); 
+            color:transparent;
+            background-clip:text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
             .menu-deux{
                 font-family: 'Lucida Fax', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 'Verdana', 'sans-serif';
                 font-weight: bold;
                 font-size: 40px;
+                color: rgb(199 116 18);
+                margin-top:20px;
+            
             }
+
         }
-   
+    }
     .bas-menu {
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     height: 514px;
     padding-top: 64px;
     margin-bottom: 48px;
+
+        .papilles{
+            background-color: $color_fondpapilles;
+        }
     
         .bas-menu__trois{
             display:flex;
             flex-direction: column;
-            background:$color_fondpapilles;
-            justify-content: center;
+            justify-content:center; 
             text-align: center;
-            align-items: center;
-            margin:0;
             width:369px;
             height: 100%;
             box-shadow:             
@@ -143,28 +158,46 @@ main{
             font-family: 'Dancing-Script',"Palace Script MT","Kunstler Script";
             font-size: 40px;
             font-weight: bold;
+            background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251));
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
             .menu-trois{
                 font-family: "sarah-print";
                 margin-top:20px;
                 font-weight: lighter;
+                color:rgb(8 135 251)
             }
             }
-            
+        .gout{
+            background-color: $color_fondgout;
+        }    
             
         .bas-menu__quatre{
             display: flex;
+            flex-direction: column;
             justify-content: center;
             background:$color_fondgout;
             text-align: center;
-            align-items: center;
-            margin-left: 60px;
             width: 369px;
             height: 100%;
             box-shadow:             
-             0 0 5px 2px hsl(0, 0%, 90%); 
+             0 0 5px 2px hsl(0, 0%, 90%);
+            font-family: 'Kaushan-Script';  
+            font-size: 40px;
+            background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
+            color:transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            .menu-quatre{
+                font-family: 'sarah-print';
+                font-size: 40px;
+                color: rgb(114 191 86);
             }
         }
-    
+    }
 }
 
 .après{
@@ -179,7 +212,9 @@ main{
     color: $color_text_h1;
     margin:auto;
     border-radius:10px;
-    font-size:60px;
+    font-size:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
 } 
 footer{
     display:flex;
@@ -193,6 +228,7 @@ footer{
         text-decoration: none;
         color:$color_text_h1;
         font-size:40px ;
+        font-family: Arial, Helvetica, sans-serif;
 
     }
 

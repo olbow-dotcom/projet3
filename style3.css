@@ -17,11 +17,15 @@
 }
 @font-face {
   font-family: "Dancing-Script";
-  src: url("Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf");
+  src: url("Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf") format("truetype");
 }
 @font-face {
   font-family: "sarah-print";
   src: url("DJB Sarah prints.ttf");
+}
+@font-face {
+  font-family: "Kaushan-Script";
+  src: url("Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf");
 }
 body {
   height: 1606px;
@@ -56,15 +60,15 @@ main {
   display: flex;
   flex-direction: column;
   height: 1204px;
-  align-items: center;
+  align-items: stretch;
 }
 main .haut-menu {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   padding-top: 64px;
   height: 514px;
   width: auto;
-  font-size: 25px;
 }
 main .haut-menu .haut-menu__un {
   display: flex;
@@ -74,74 +78,103 @@ main .haut-menu .haut-menu__un {
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin: 0;
   width: 369px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
   font-family: "Devonshire-Regular";
   font-size: 30px;
+  color: #3c1218;
 }
 main .haut-menu .haut-menu__un .menu-un {
   margin-top: 20px;
   font-family: "Komikatext_bold_macroman";
   font-size: 1.5em;
 }
+main .haut-menu .chic {
+  background-color: #fff5fe;
+}
 main .haut-menu .haut-menu__deux {
   display: flex;
   flex-direction: column;
-  background: #fff5fe;
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-left: 60px;
   width: 369px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
-  line-height: 2;
   font-family: "croissantone";
+  font-size: 25px;
+  background-image: linear-gradient(to right, #d8852e, #905bfd);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
 }
-main .haut-menu .menu-deux {
+main .haut-menu .haut-menu__deux .menu-deux {
   font-family: "Lucida Fax", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, "Verdana", "sans-serif";
   font-weight: bold;
   font-size: 40px;
+  color: #c77412;
+  margin-top: 20px;
 }
 main .bas-menu {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   height: 514px;
   padding-top: 64px;
   margin-bottom: 48px;
 }
+main .bas-menu .papilles {
+  background-color: #f9f9f9;
+}
 main .bas-menu .bas-menu__trois {
   display: flex;
   flex-direction: column;
-  background: #f9f9f9;
   justify-content: center;
   text-align: center;
-  align-items: center;
-  margin: 0;
   width: 369px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
   font-family: "Dancing-Script", "Palace Script MT", "Kunstler Script";
   font-size: 40px;
   font-weight: bold;
+  background-image: linear-gradient(to right, #0645e5, #0887fb);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
 }
 main .bas-menu .bas-menu__trois .menu-trois {
   font-family: "sarah-print";
   margin-top: 20px;
   font-weight: lighter;
+  color: #0887fb;
+}
+main .bas-menu .gout {
+  background-color: #fdfdfd;
 }
 main .bas-menu .bas-menu__quatre {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background: #fdfdfd;
   text-align: center;
-  align-items: center;
-  margin-left: 60px;
   width: 369px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
+  font-family: "Kaushan-Script";
+  font-size: 40px;
+  background-image: linear-gradient(to right, #56a847, #bfff7e);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+main .bas-menu .bas-menu__quatre .menu-quatre {
+  font-family: "sarah-print";
+  font-size: 40px;
+  color: #72bf56;
 }
 
 .après {
@@ -156,7 +189,9 @@ main .bas-menu .bas-menu__quatre {
   color: #fdcb46;
   margin: auto;
   border-radius: 10px;
-  font-size: 60px;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
 }
 
 footer {
@@ -172,6 +207,7 @@ footer a {
   text-decoration: none;
   color: #fdcb46;
   font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*# sourceMappingURL=style3.css.map */
