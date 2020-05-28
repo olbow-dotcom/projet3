@@ -271,6 +271,9 @@ section {
 .repas1 .menu1__entrées caption, .repas1 .menu1__plat caption {
   font-weight: bold;
 }
+.repas1 .menu1__entrées caption:hover, .repas1 .menu1__plat caption:hover {
+  text-decoration: underline;
+}
 .repas1 .menu1__dessert {
   margin-top: 100px;
 }
@@ -278,6 +281,9 @@ section {
   text-align: center;
   font-size: 30px;
   margin-bottom: 0;
+}
+.repas1 .menu1__dessert h3:hover {
+  text-decoration: underline;
 }
 .repas1 .menu1__dessert p {
   margin-top: 0;
