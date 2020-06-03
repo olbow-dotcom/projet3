@@ -235,7 +235,7 @@ footer{
 
 
 
-$animate: all 0.2s ease-in-out;
+$animate: all 0.2s ;
 
 
     
@@ -333,7 +333,6 @@ section{
                         position: relative;
                         text-align:center;
                         font-size: 30px;
-                        transition:$animate;
                         left:0;
                         &::before,
                         &::after                            
@@ -343,7 +342,7 @@ section{
                                 bottom: 0;
                                 width: 0px;  
                                 height:5px;
-                                transition:$animate;                              
+                                                              
                                 transition-duration: 0.75s;
                                 opacity: 0;
                                 background-color: darken(orange,5%);
@@ -357,6 +356,7 @@ section{
                                         {
                                         width:100%;
                                         opacity:1;
+                                        transition:$animate;
                                         }
                                     }
                                 }    
