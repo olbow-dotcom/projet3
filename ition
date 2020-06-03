@@ -1,0 +1,113 @@
+[33mcommit bed4eae94b625962a8103e56fb7d211d05fc430e[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Thu May 28 19:40:14 2020 +0200
+
+    mise en page avec soulignement des titres
+
+[33mcommit 038fde47e598a461e40018b4b0279fc5dc74275b[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Thu May 28 19:12:58 2020 +0200
+
+    mise en pa ge css menu 1
+
+[33mcommit 81720320d5d7f204008609c3c1ad9d8c5334fbda[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Wed May 27 07:01:07 2020 +0200
+
+    mise en page index terminée
+
+[33mcommit 110bfd7b729bee7bca2bb63195dd8fadaf1810eb[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Mon May 25 19:20:47 2020 +0200
+
+    3 menus policés
+
+[33mcommit fd3fecf6911a6899d13944beb49f060d6a8a6673[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Sun May 24 22:40:04 2020 +0200
+
+    police haut menu sans couleur
+
+[33mcommit 263a9c7145c12e843f8430f66f2f38d6c86c4117[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Sun May 24 19:50:22 2020 +0200
+
+    haut menu policé
+
+[33mcommit 51fedd2c4828f747f2ef8a21bb77131f460d4aa1[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Fri May 22 10:35:41 2020 +0200
+
+    flex1
+
+[33mcommit da27c5fbf7221a14c5baa531acf29e300d8e9743[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Fri May 22 01:18:19 2020 +0200
+
+    commit contour menus
+
+[33mcommit 604667fb4c2f8b76276c69698350250b8ca39140[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Thu May 21 09:31:30 2020 +0200
+
+    cimmit mis en page brut
+
+[33mcommit 6e7b0181d47d4f2574ba957ecc53141320d4703a[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Wed May 13 20:01:45 2020 +0200
+
+    sass et compilation css
+
+[33mcommit 4e15aa3f1bb0a3c1246f6cc894d4c8ad591f976c[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Wed May 13 18:55:47 2020 +0200
+
+    package.json1
+
+[33mcommit 351763d043760a95cdc3d795ac42f665d1ac75c4[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Wed May 13 18:39:26 2020 +0200
+
+    node js npm +sass scss
+
+[33mcommit fceda7be0dbece465e99cd03cb3819bba356002c[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 10:04:17 2020 +0200
+
+    html corrigé
+
+[33mcommit 20fa2910929349e1f308685537eb4a0f90be98b8[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 09:50:41 2020 +0200
+
+    écriture HTML
+
+[33mcommit 7649b880375a83f17585d8927d3c94cdde1017ac[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 08:58:41 2020 +0200
+
+    structure des menus html
+
+[33mcommit 46d2cce720bffe42ed6c79654b7feea0762745f2[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 07:23:33 2020 +0200
+
+    menu pages
+
+[33mcommit e55291499d49b7376f0a8451a5ab14121ed1f6af[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 06:29:22 2020 +0200
+
+    commit changement nom fichiers
+
+[33mcommit 1807a735ecf8681fcb2a529568cbf2e0c2926f24[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Tue May 12 06:24:53 2020 +0200
+
+    commit html
+
+[33mcommit 047ac10414da3228e008d63264b1d02c4b514788[m
+Author: OLBO <boireauolivier@hotmail.com>
+Date:   Fri May 8 10:33:22 2020 +0200
+
+    commit initial

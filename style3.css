@@ -62,10 +62,13 @@ a {
   height: 1204px;
   align-items: stretch;
 }
+.sommaire a {
+  margin: 20px;
+}
 .sommaire .haut-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 64px;
   height: 514px;
   width: auto;
@@ -120,10 +123,8 @@ a {
 .sommaire .bas-menu {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   height: 514px;
-  padding-top: 64px;
-  margin-bottom: 48px;
 }
 .sommaire .bas-menu .papilles {
   background-color: #f9f9f9;
@@ -271,22 +272,39 @@ section {
 .repas1 .menu1__entrées caption, .repas1 .menu1__plat caption {
   font-weight: bold;
 }
-.repas1 .menu1__entrées caption:hover, .repas1 .menu1__plat caption:hover {
-  text-decoration: underline;
-}
 .repas1 .menu1__dessert {
   margin-top: 100px;
 }
+.repas1 .menu1__dessert > p {
+  margin-top: 50px;
+}
 .repas1 .menu1__dessert h3 {
-  text-align: center;
-  font-size: 30px;
+  display: flex;
   margin-bottom: 0;
 }
-.repas1 .menu1__dessert h3:hover {
-  text-decoration: underline;
+.repas1 .menu1__dessert h3 .hover {
+  margin: 0 auto;
+  padding-bottom: 2px;
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  transition: all 0.2s ease-in-out;
+  left: 0;
 }
-.repas1 .menu1__dessert p {
-  margin-top: 0;
+.repas1 .menu1__dessert h3 .hover::before, .repas1 .menu1__dessert h3 .hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0px;
+  height: 5px;
+  transition: all 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #e69500;
+}
+.repas1 .menu1__dessert h3 .hover:hover .hover::before, .repas1 .menu1__dessert h3 .hover:hover .hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style3.css.map */
