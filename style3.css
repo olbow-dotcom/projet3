@@ -213,14 +213,12 @@ footer a {
 
 h2 {
   font-size: 3rem;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  text-align: center;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.titre-menu__un {
+  padding-bottom: 70px;
 }
 
 .repas1 {
@@ -228,19 +226,16 @@ section {
   flex-direction: column;
   background: #fcdfdb;
   justify-content: space-around;
-  text-align: justify;
-  width: 85%;
+  width: auto;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
   font-family: "Segoe print", Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   color: #3c1218;
-  padding: 0 40px 0 40px;
+  padding: 80px 120px 120px 120px;
+  margin: 0px 90px 120px 90px;
 }
-.repas1 .prix {
-  text-align: right;
-}
-.repas1 .menu__un {
+.repas1 .titre-menu__un {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -250,12 +245,63 @@ section {
   font-weight: bolder;
   font-family: "Devonshire-Regular";
 }
-.repas1 .menu__un .musique {
+.repas1 .titre-menu__un .musique {
   padding-top: 50px;
   width: 50px;
   height: 50px;
 }
-.repas1 .fin {
+.repas1 .entrees {
+  margin-bottom: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+}
+.repas1 .ravioles, .repas1 .caviar, .repas1 .homard, .repas1 .foie-gras {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.repas1 h3 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.repas1 h3 .hover {
+  text-align: center;
+  margin: 0, auto;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  position: relative;
+}
+.repas1 h3 .hover:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #e69500;
+}
+.repas1 h3:hover .hover:after {
+  width: 100%;
+  opacity: 1;
+}
+.repas1 .plat {
+  margin-bottom: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+}
+.repas1 .noix, .repas1 .langoustine, .repas1 .mijote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.fin {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -266,45 +312,110 @@ section {
   margin-top: 100px;
   margin-bottom: 70px;
 }
-.repas1 .menu1__entrées, .repas1 .menu1__plat {
+
+.menu1__dessert {
   margin-top: 100px;
 }
-.repas1 .menu1__entrées caption, .repas1 .menu1__plat caption {
-  font-weight: bold;
-}
-.repas1 .menu1__dessert {
-  margin-top: 100px;
-}
-.repas1 .menu1__dessert > p {
+.menu1__dessert > p {
   margin-top: 50px;
+  text-align: 0.2;
 }
-.repas1 .menu1__dessert h3 {
-  display: flex;
-  margin-bottom: 0;
-}
-.repas1 .menu1__dessert h3 .hover {
-  margin: 0 auto;
-  padding-bottom: 2px;
-  position: relative;
+.menu1__dessert h3 {
   text-align: center;
-  font-size: 30px;
-  transition: all 0.2s ease-in-out;
-  left: 0;
 }
-.repas1 .menu1__dessert h3 .hover::before, .repas1 .menu1__dessert h3 .hover::after {
+.menu1__dessert h3 .hover {
+  text-align: center;
+  margin: 0, auto;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  position: relative;
+}
+.menu1__dessert h3 .hover:after {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 0px;
   height: 5px;
-  transition: all 0.2s ease-in-out;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
   background-color: #e69500;
 }
-.repas1 .menu1__dessert h3 .hover:hover .hover::before, .repas1 .menu1__dessert h3 .hover:hover .hover::after {
+.menu1__dessert h3:hover .hover:after {
   width: 100%;
   opacity: 1;
+}
+
+.repas2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  background-color: #fff5fe;
+  height: 100%;
+  font-family: "Baskerville Old face", "bell MT";
+  font-size: 20px;
+  box-shadow: 0 0 5px 2px #e6e6e6;
+  padding: 80px 120px 120px 120px;
+  margin: 0px 90px 120px 90px;
+}
+.repas2 .titre-menu_deux {
+  text-align: center;
+  margin-bottom: 150px;
+  width: 100%;
+  font-family: "croissantone";
+  background-image: linear-gradient(to right, #d8852e, #905bfd);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+.repas2 .chic2 {
+  margin: 90px, 0, 90px, 0;
+}
+.repas2 .entre2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  color: #d8852e;
+  margin-bottom: 70px;
+}
+.repas2 .entre2 .tartare, .repas2 .entre2 .veloute, .repas2 .entre2 .soupe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.repas2 h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.repas2 .plat2 {
+  color: #b37097;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  margin-bottom: 70px;
+}
+.repas2 .plat2 .st-jacques, .repas2 .plat2 .magret, .repas2 .plat2 .pigeonneau {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.repas2 .dessert2 {
+  color: #905bfd;
+}
+.repas2 .dessert2 .type-dessert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h3::before {
+  content: "";
+  width: 50px;
+  height: 2px;
 }
 
 /*# sourceMappingURL=style3.css.map */
