@@ -226,14 +226,14 @@ h2 {
   flex-direction: column;
   background: #fcdfdb;
   justify-content: space-around;
-  width: auto;
+  width: 900px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
   font-family: "Segoe print", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: #3c1218;
   padding: 80px 120px 120px 120px;
-  margin: 0px 90px 120px 90px;
+  margin: auto;
 }
 .repas1 .titre-menu__un {
   display: flex;
@@ -355,9 +355,10 @@ h2 {
   height: 100%;
   font-family: "Baskerville Old face", "bell MT";
   font-size: 20px;
+  width: 900px;
   box-shadow: 0 0 5px 2px #e6e6e6;
   padding: 80px 120px 120px 120px;
-  margin: 0px 90px 120px 90px;
+  margin: auto;
 }
 .repas2 .titre-menu_deux {
   text-align: center;
@@ -412,10 +413,147 @@ h2 {
   justify-content: space-between;
 }
 
-h3::before {
-  content: "";
-  width: 50px;
-  height: 2px;
+.repas3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #f9f9f9;
+  width: 900px;
+  box-shadow: 0 0 5px 2px #e6e6e6;
+  padding: 80px 120px 120px 120px;
+  margin: auto;
+  font-family: "Dancing-Script", "Palace Script MT", "Kunstler Script";
+}
+.repas3 .titre-menu {
+  background-image: linear-gradient(to right, #0645e5, rgba(8, 135, 251, 0.8));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  font-size: 100px;
+}
+.repas3 .entre3 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.repas3 .entre3 .tartare, .repas3 .entre3 .bouchee, .repas3 .entre3 .cepes {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.repas3 h3 {
+  text-align: center;
+}
+.repas3 .plat3 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-bottom: 100px;
+}
+.repas3 .plat3 .poulet, .repas3 .plat3 .langouste, .repas3 .plat3 .cote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.repas3 .dessert3 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-bottom: 100px;
+}
+.repas3 .dessert3 .farandole, .repas3 .dessert3 .creme, .repas3 .dessert3 .tiramisu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.repas3 span {
+  font-size: 20px;
+}
+
+h2, h3 {
+  font-weight: normal;
+}
+
+h3 {
+  padding-bottom: 20px;
+}
+
+.repas4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: #fdfdfd;
+  width: 900px;
+  height: 100%;
+  box-shadow: 0 0 5px 2px #e6e6e6;
+  padding: 80px 120px 120px 120px;
+  margin: auto;
+  font-family: "Kaushan-Script";
+}
+.repas4 h2 {
+  background-image: linear-gradient(to right, #56a847, #bfff7e);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+}
+.repas4 h3 {
+  text-align: center;
+}
+.repas4 .entre4 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+.repas4 .entre4 .fricassee, .repas4 .entre4 .oeuf, .repas4 .entre4 .foie {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.repas4 .plat4 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-bottom: 100px;
+}
+.repas4 .plat4 .filet, .repas4 .plat4 .parmentier, .repas4 .plat4 .turbot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+.repas4 .dessert4 {
+  font-family: "sarah-print";
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 0.2;
+  padding-bottom: 100px;
+}
+.repas4 .dessert4 .paris-brest, .repas4 .dessert4 .macaron, .repas4 .dessert4 .mousse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style3.css.map */
