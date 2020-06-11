@@ -21,7 +21,7 @@
 }
 @font-face {
   font-family: "Segoe Print";
-  src: local("segoepr.ttf") format("truetype");
+  src: local("SEGOEPR.TTF") format("truetype");
 }
 @font-face {
   font-family: "Kaushan-Script";
@@ -281,7 +281,7 @@ h2 {
 .repas1 h3 .hover:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0px;
   height: 5px;
@@ -395,6 +395,28 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+.repas2 h3 .hover {
+  text-align: center;
+  margin: 0, auto;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  position: relative;
+}
+.repas2 h3 .hover:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #e69500;
+}
+.repas2 h3:hover .hover:after {
+  width: 100%;
+  opacity: 1;
+}
 .repas2 .plat2 {
   color: #b37097;
   width: 100%;
@@ -437,7 +459,6 @@ h2 {
   font-size: 100px;
 }
 .repas3 .entre3 {
-  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -450,9 +471,33 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
+  font-family: "Segoe Print";
 }
 .repas3 h3 {
   text-align: center;
+  font-family: "Segoe Print";
+}
+.repas3 h3 .hover {
+  text-align: center;
+  margin: 0, auto;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  position: relative;
+}
+.repas3 h3 .hover:after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0px;
+  height: 5px;
+  transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition-duration: 0.75s;
+  opacity: 0;
+  background-color: #e69500;
+}
+.repas3 h3:hover .hover:after {
+  width: 100%;
+  opacity: 1;
 }
 .repas3 .plat3 {
   font-family: "Segoe Print";
@@ -467,6 +512,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
+  font-family: "Segoe Print";
 }
 .repas3 .dessert3 {
   font-family: "Segoe Print";
@@ -481,6 +527,7 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
+  font-family: "Segoe Print";
 }
 .repas3 span {
   font-size: 20px;
