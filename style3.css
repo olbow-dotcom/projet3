@@ -8,8 +8,8 @@
   src: url("Devonshire-Regular/Devonshire/Devonshire-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "Komikatext_bold_macroman";
-  src: url("Komika-Text-fontfacekit/web fonts/komikatext_bold_macroman/KOMTXTB_-webfont.woff") format("truetype");
+  font-family: "Komika Text";
+  src: local("KOMTXT_.TTF") format("truetype");
 }
 @font-face {
   font-family: "croissantone";
@@ -20,8 +20,8 @@
   src: url("Dancing-Script-Bold/dancingscript/DancingScript-Bold.ttf") format("truetype");
 }
 @font-face {
-  font-family: "sarah-print";
-  src: url("DJB Sarah prints.ttf");
+  font-family: "Segoe Print";
+  src: local("segoepr.ttf") format("truetype");
 }
 @font-face {
   font-family: "Kaushan-Script";
@@ -59,7 +59,7 @@ a {
 .sommaire {
   display: flex;
   flex-direction: column;
-  height: 1204px;
+  height: 100%;
   align-items: stretch;
 }
 .sommaire a {
@@ -90,7 +90,8 @@ a {
 }
 .sommaire .haut-menu .haut-menu__un .menu-un {
   margin-top: 20px;
-  font-family: "Komikatext_bold_macroman";
+  font-family: "Komika Text";
+  font-weight: bold;
   font-size: 1.5em;
 }
 .sommaire .haut-menu .chic {
@@ -147,7 +148,7 @@ a {
   -moz-background-clip: text;
 }
 .sommaire .bas-menu .bas-menu__trois .menu-trois {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   margin-top: 20px;
   font-weight: lighter;
   color: #0887fb;
@@ -173,7 +174,7 @@ a {
   -moz-background-clip: text;
 }
 .sommaire .bas-menu .bas-menu__quatre .menu-quatre {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   font-size: 40px;
   color: #72bf56;
 }
@@ -203,6 +204,10 @@ footer {
   background-color: #579c87;
   justify-content: space-between;
   padding: 0 15px 0 15px;
+  width: 100%;
+  position: fixed;
+  left: 0%;
+  bottom: 0%;
 }
 footer a {
   text-decoration: none;
@@ -229,7 +234,6 @@ h2 {
   width: 900px;
   height: 100%;
   box-shadow: 0 0 5px 2px #e6e6e6;
-  font-family: "Segoe print", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
   color: #3c1218;
   padding: 80px 120px 120px 120px;
@@ -261,10 +265,12 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: "Komika Text";
 }
 .repas1 h3 {
   margin-bottom: 30px;
   text-align: center;
+  font-family: "Komika Text";
 }
 .repas1 h3 .hover {
   text-align: center;
@@ -299,6 +305,7 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  font-family: "Komika Text";
 }
 
 .fin {
@@ -313,23 +320,20 @@ h2 {
   margin-bottom: 70px;
 }
 
-.menu1__dessert {
-  margin-top: 100px;
+.dessert > p {
+  line-height: 2.2;
+  font-family: "Komika Text";
 }
-.menu1__dessert > p {
-  margin-top: 50px;
-  text-align: 0.2;
-}
-.menu1__dessert h3 {
+.dessert h3 {
   text-align: center;
 }
-.menu1__dessert h3 .hover {
+.dessert h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-.menu1__dessert h3 .hover:after {
+.dessert h3 .hover:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -341,7 +345,7 @@ h2 {
   opacity: 0;
   background-color: #e69500;
 }
-.menu1__dessert h3:hover .hover:after {
+.dessert h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
@@ -433,7 +437,7 @@ h2 {
   font-size: 100px;
 }
 .repas3 .entre3 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -451,7 +455,7 @@ h2 {
   text-align: center;
 }
 .repas3 .plat3 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -465,7 +469,7 @@ h2 {
   padding-bottom: 10px;
 }
 .repas3 .dessert3 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -513,7 +517,7 @@ h3 {
   text-align: center;
 }
 .repas4 .entre4 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -528,7 +532,7 @@ h3 {
   padding-bottom: 10px;
 }
 .repas4 .plat4 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -542,7 +546,7 @@ h3 {
   padding-bottom: 10px;
 }
 .repas4 .dessert4 {
-  font-family: "sarah-print";
+  font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -554,6 +558,75 @@ h3 {
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .hebergeur {
+  margin-left: 58px;
+}
+body p {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+}
+body p span {
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.com {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  height: 100%;
+}
+.com .mail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 60px;
+  border: groove;
+  background-color: #b37097;
+  font-size: 50px;
+}
+.com .mail:hover + .contact {
+  transform: scale(1);
+}
+.com .mail:hover + .contact span {
+  transform: translateY(0);
+}
+.com .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: groove;
+  width: 600px;
+  height: 500px;
+  background-image: linear-gradient(to bottom, #2c6d2e, #2ce52e);
+  box-shadow: 0 0 5px 10px #e6e6e6;
+  text-align: center;
+  font-size: 100px;
+  font-family: "Kaushan-Script";
+  color: #f2a8bd;
+  transform: scale(0);
+  transition: transform 330ms ease-in-out;
+  overflow: hidden;
+}
+.com .contact span {
+  display: inline-block;
+  transform: translateY(250%);
+  transition: transform 280ms ease-out 50ms;
 }
 
 /*# sourceMappingURL=style3.css.map */
