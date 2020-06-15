@@ -329,13 +329,12 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
 }
 .repas1 .ravioles, .repas1 .caviar, .repas1 .homard, .repas1 .foie-gras {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "Komika Text";
+  font-family: "Segoe Print";
 }
 .repas1 h3 {
   display: flex;
@@ -343,7 +342,9 @@ h2 {
   justify-content: space-between;
   margin-bottom: 30px;
   text-align: center;
-  font-family: "Komika Text";
+  font-family: "Segoe Print";
+  font-weight: bold;
+  font-size: 30px;
 }
 .repas1 h3 .hover {
   text-align: center;
@@ -375,13 +376,12 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
 }
 .repas1 .noix, .repas1 .langoustine, .repas1 .mijote {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "Komika Text";
+  font-family: "Segoe Print";
 }
 
 .fin {
@@ -390,15 +390,15 @@ h2 {
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-family: "devonshire-regular";
+  font-family: "Devonshire-Regular";
   font-size: 45px;
   margin-top: 100px;
   margin-bottom: 70px;
 }
 
 .dessert > p {
-  line-height: 2.2;
-  font-family: "Komika Text";
+  line-height: 3.2;
+  font-family: "Segoe Print";
 }
 .dessert h3 {
   text-align: center;
@@ -458,7 +458,6 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   color: #d8852e;
   margin-bottom: 70px;
 }
@@ -466,12 +465,16 @@ h2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "croissantone";
+  font-family: "Lucida fax";
 }
 .repas2 h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center;
+  font-weight: bold;
   margin-bottom: 30px;
-  font-family: "croissantone";
+  font-family: "Lucida fax";
 }
 .repas2 h3 .hover {
   text-align: center;
@@ -495,28 +498,32 @@ h2 {
   width: 100%;
   opacity: 1;
 }
+.repas2 h3 .chic1g, .repas2 h3 .chic1d {
+  width: 280px;
+}
 .repas2 .plat2 {
   color: #b37097;
+  margin-bottom: 70px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
-  margin-bottom: 70px;
 }
 .repas2 .plat2 .st-jacques, .repas2 .plat2 .magret, .repas2 .plat2 .pigeonneau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "croissantone";
+  font-family: "Lucida Fax";
 }
 .repas2 .dessert2 {
   color: #905bfd;
+  margin-bottom: 70px;
+  line-height: 2;
 }
 .repas2 .dessert2 .type-dessert {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "croissantone";
+  font-family: "Lucida fax";
 }
 
 .repas3 {
@@ -542,7 +549,6 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-top: 120px;
   padding-bottom: 100px;
 }
@@ -584,7 +590,6 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-bottom: 100px;
 }
 .repas3 .plat3 .poulet, .repas3 .plat3 .langouste, .repas3 .plat3 .cote {
@@ -599,7 +604,6 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-bottom: 100px;
 }
 .repas3 .dessert3 .farandole, .repas3 .dessert3 .creme, .repas3 .dessert3 .tiramisu {
@@ -632,6 +636,7 @@ h3 {
   padding: 80px 120px 120px 120px;
   margin: auto;
   font-family: "Kaushan-Script";
+  font-weight: bold;
 }
 .repas4 h2 {
   background-image: linear-gradient(to right, #56a847, #bfff7e);
@@ -641,7 +646,11 @@ h3 {
   -moz-background-clip: text;
 }
 .repas4 h3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: center;
+  font-weight: bold;
   font-family: "Segoe Print";
 }
 .repas4 h3 .hover {
@@ -666,11 +675,13 @@ h3 {
   width: 100%;
   opacity: 1;
 }
+.repas4 h3 .trait-gout-g, .repas4 h3 .trait-gout-d {
+  width: 350px;
+}
 .repas4 .entre4 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-top: 120px;
   padding-bottom: 100px;
 }
@@ -685,7 +696,6 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-bottom: 100px;
 }
 .repas4 .plat4 .filet, .repas4 .plat4 .parmentier, .repas4 .plat4 .turbot {
@@ -699,7 +709,6 @@ h3 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  line-height: 0.2;
   padding-bottom: 100px;
 }
 .repas4 .dessert4 .paris-brest, .repas4 .dessert4 .macaron, .repas4 .dessert4 .mousse {
