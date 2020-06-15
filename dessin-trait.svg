@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="dessin trait.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 197.00001 107"
+   height="107px"
+   width="70px">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     inkscape:snap-center="true"
+     inkscape:lockguides="false"
+     showborder="false"
+     scale-x="1"
+     inkscape:window-maximized="0"
+     inkscape:window-y="0"
+     inkscape:window-x="-7"
+     inkscape:window-height="1368"
+     inkscape:window-width="1718"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="297.11933"
+     inkscape:cx="426.09347"
+     inkscape:zoom="1.8599359"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Calque 1">
+    <path
+       id="path863"
+       d="m 152.81233,59.329104 c -7.64786,-0.291193 -72.213966,-1.373297 -78.057296,-1.308213 -1.080038,0.01204 -4.835625,0.259562 -8.345749,0.55007 -3.510123,0.290504 -12.383565,0.539251 -19.718758,0.552775 l -13.336714,0.02459 -1.18e-4,-1.730026 c -1.07e-4,-1.556125 0.134431,-1.844377 1.33839,-2.867542 l 1.338508,-1.137521 12.489251,0.0062 c 6.869088,0.0033 14.992976,0.185046 18.053084,0.403673 7.451846,0.532407 66.689662,0.663868 74.948092,0.166331 9.32979,-0.562079 48.35202,0.700795 49.66538,1.607326 0.66083,0.456121 0.7512,1.663163 0.18001,2.404576 -0.22358,0.290216 -1.31606,0.514257 -2.53645,0.520167 -1.17905,0.0057 -2.73282,0.179184 -3.45285,0.385496 -1.9326,0.553747 -22.20592,0.816551 -32.56478,0.422139 z"
+       style="fill:#000000;stroke-width:0.372878" />
+  </g>
+</svg>

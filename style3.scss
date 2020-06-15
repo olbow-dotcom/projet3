@@ -61,7 +61,7 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
 
 @mixin titre-souligné{
     .hover
-        {
+        {   
             text-align: center;
             margin:0,auto;
             transition:$animate;
@@ -113,16 +113,28 @@ $color_fondgout:rgb(253,253,253);
 $color_text_h1:rgb(253,203,70);
 
 @keyframes wiggle{
-    0%{transform: translate(2px,2px);}
-    10%{transform: translate(-2px,-2px);}
-    20%{transform: translate(2px,2px);}
-    40%{transform: translate(-2px,-2px);}
-    50%{transform: translate(2px,2px);}
-    60%{transform: translate(-2px,-2px);}
-    70%{transform: translate(2px,2px);}
-    80%{transform: translate(-2px,-2px);}
-    90%{transform: translate(2px,2px);}
-    100%{transform: translate(-2px,-2px);   }
+    0%{transform:  translateX(5px);}
+    5%{transform:  translateY(5px);}
+    10%{transform: transalteX(-5px);}
+    15%{transform: transalteY(-5px);}
+    20%{transform: transalteX(5px);}
+    25%{transform: transalteY(5px);}
+    30%{transform: transalteX(-5px);}
+    35%{transform: transalteY(-5px);}
+    40%{transform: transalteX(5px,);}
+    45%{transform: transalteY(5px);}
+    50%{transform:  translateX(-5px);}
+    55%{transform:  translateY(-5px);}
+    60%{transform: translateX(5px);}
+    65%{transform: transalteY(5px);}
+    70%{transform: transalteX(-5px);}
+    75%{transform: transalteY(-5px);}
+    80%{transform: transalteX(5px);}
+    85%{transform: transalteY(5px);}
+    90%{transform: transalteX(-5px);}
+    95%{transform: transalteY(-5px);}
+    100%{transform: transalteX(5px,);}
+        
 }
 
 
@@ -139,7 +151,8 @@ $color_text_h1:rgb(253,203,70);
 //mise en style CSS page index
 
 body{
-    height: 1606px;
+    margin:0;
+    //height: 1606px;
     //width: 1024px;
 }
 #bloc-page 
@@ -147,7 +160,7 @@ body{
 {
     background-color:white;
     //width:1024px;
-    height:1606px;
+    //height:1606px;
 }
 header{
     display: flex;
@@ -168,6 +181,7 @@ a{
 }   
 
 .sommaire{
+    
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -319,6 +333,7 @@ a{
     font-size:50px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
+    margin-bottom: 130px;
 } 
 footer{
     display:flex;
@@ -361,59 +376,9 @@ footer{
 
 
 
-$animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
-@mixin titre-souligné{
-    .hover
-        {
-            text-align: center;
-            margin:0,auto;
-            transition:$animate;
-            position: relative;
-            
-            &:after
-             {
-                content: "";
-                position:absolute;
-                bottom: -5px;
-                left:0;
-                width:0px;
-                height: 5px;
-                transition:$animate;
-                transition-duration: 0.75s;
-                opacity:0;
-                background-color: darken(orange,5%);
-            }
-        }
-        &:hover
-        {
-            .hover
-            {
-                
-                &:after
-                {
-                    
-                    width:100%;
-                    opacity:1;
-                }
-            }
-        }    
-}
-@mixin margin-block-main
- {
-    h3{
-    font-weight: bold;
-    text-align: center;
-    }
- }
+// mise en style CSS menu 1 la note enchantée:
 
 
-
-
-
-
-
-
-//css menu 1 la note enchantée:
 
 
 
@@ -467,10 +432,17 @@ h2
         font-family: "Komika Text";
     }
 
-    h3{ margin-bottom: 30px;
+    h3{ display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 30px;
         text-align: center;
         @include titre-souligné;
-        font-family: "Komika Text";}
+        font-family: "Komika Text";
+        >.trait, .trait-d{
+            width: 300px;
+        }
+    }
 
     .plat{margin-bottom: 70px;
         @include presentation-du-menu-prix;}
@@ -833,7 +805,6 @@ body{display: flex;
 
 header{
     width:100%;
-    position: fixed;
     left:0;
     top:0
 }
