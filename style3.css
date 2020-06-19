@@ -335,6 +335,11 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
+}
+.repas1 .ravioles:hover, .repas1 .caviar:hover, .repas1 .homard:hover, .repas1 .foie-gras:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas1 h3 {
   display: flex;
@@ -362,7 +367,7 @@ h2 {
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
-  background-color: #e69500;
+  background: #3c1218;
 }
 .repas1 h3:hover .hover:after {
   width: 100%;
@@ -382,9 +387,13 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
 }
-
-.fin {
+.repas1 .noix:hover, .repas1 .langoustine:hover, .repas1 .mijote:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
+}
+.repas1 .fin {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -395,33 +404,37 @@ h2 {
   margin-top: 100px;
   margin-bottom: 70px;
 }
-
-.dessert > p {
+.repas1 .dessert > p {
   line-height: 3.2;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
 }
-.dessert h3 {
+.repas1 .dessert > p:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
+}
+.repas1 h3 {
   text-align: center;
 }
-.dessert h3 .hover {
+.repas1 h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-.dessert h3 .hover:after {
+.repas1 h3 .hover:after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 0px;
   height: 5px;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
-  background-color: #e69500;
+  background: #3c1218;
 }
-.dessert h3:hover .hover:after {
+.repas1 h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
@@ -458,14 +471,19 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: #d8852e;
-  margin-bottom: 70px;
 }
-.repas2 .entre2 .tartare, .repas2 .entre2 .veloute, .repas2 .entre2 .soupe {
+.repas2 .tartare, .repas2 .veloute, .repas2 .soupe {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  color: #d8852e;
+  margin-bottom: 70px;
   font-family: "Lucida fax";
+  transition: 450ms ease-in-out;
+}
+.repas2 .tartare:hover, .repas2 .veloute:hover, .repas2 .soupe:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas2 h3 {
   display: flex;
@@ -492,7 +510,7 @@ h2 {
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
-  background-color: #e69500;
+  background: linear-gradient(to right, #d8852e, #905bfd);
 }
 .repas2 h3:hover .hover:after {
   width: 100%;
@@ -508,22 +526,32 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-.repas2 .plat2 .st-jacques, .repas2 .plat2 .magret, .repas2 .plat2 .pigeonneau {
+.repas2 .st-jacques, .repas2 .magret, .repas2 .pigeonneau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida Fax";
+  transition: 450ms ease-in-out;
+}
+.repas2 .st-jacques:hover, .repas2 .magret:hover, .repas2 .pigeonneau:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas2 .dessert2 {
   color: #905bfd;
   margin-bottom: 70px;
   line-height: 2;
 }
-.repas2 .dessert2 .type-dessert {
+.repas2 .type-dessert {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida fax";
+  transition: 450ms ease-in-out;
+}
+.repas2 .type-dessert:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 
 .repas3 {
@@ -552,16 +580,27 @@ h2 {
   padding-top: 120px;
   padding-bottom: 100px;
 }
-.repas3 .entre3 .tartare, .repas3 .entre3 .bouchee, .repas3 .entre3 .cepes {
+.repas3 .tartare, .repas3 .bouchee, .repas3 .cepes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
+}
+.repas3 .tartare:hover, .repas3 .bouchee:hover, .repas3 .cepes:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas3 h3 {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: "Segoe Print";
+}
+.repas3 h3 .trait_g {
+  width: 280px;
+  height: 50px;
 }
 .repas3 h3 .hover {
   text-align: center;
@@ -579,7 +618,7 @@ h2 {
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
-  background-color: #e69500;
+  background: linear-gradient(to right, #0645e5, rgba(8, 135, 251, 0.8));
 }
 .repas3 h3:hover .hover:after {
   width: 100%;
@@ -598,30 +637,38 @@ h2 {
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
 }
-.repas3 .dessert3 {
+.repas3 .plat3 .poulet:hover, .repas3 .plat3 .langouste:hover, .repas3 .plat3 .cote:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
+}
+.repas3 .plat3 .dessert3 {
   font-family: "Segoe Print";
   width: 100%;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
 }
-.repas3 .dessert3 .farandole, .repas3 .dessert3 .creme, .repas3 .dessert3 .tiramisu {
+.repas3 .plat3 .farandole, .repas3 .plat3 .creme, .repas3 .plat3 .tiramisu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
 }
-.repas3 span {
+.repas3 .plat3 .farandole:hover, .repas3 .plat3 .creme:hover, .repas3 .plat3 .tiramisu:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
+}
+.repas3 .plat3 span {
   font-size: 20px;
 }
-
-h2, h3 {
+.repas3 .plat3 h2, .repas3 .plat3 h3 {
   font-weight: normal;
 }
-
-h3 {
+.repas3 .plat3 h3 {
   padding-bottom: 20px;
 }
 
@@ -669,7 +716,7 @@ h3 {
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   transition-duration: 0.75s;
   opacity: 0;
-  background-color: #e69500;
+  background: linear-gradient(to right, #56a847, #bfff7e);
 }
 .repas4 h3:hover .hover:after {
   width: 100%;
@@ -685,12 +732,17 @@ h3 {
   padding-top: 120px;
   padding-bottom: 100px;
 }
-.repas4 .entre4 .fricassee, .repas4 .entre4 .oeuf, .repas4 .entre4 .foie {
+.repas4 .fricassee, .repas4 .oeuf, .repas4 .foie {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
+}
+.repas4 .fricassee:hover, .repas4 .oeuf:hover, .repas4 .foie:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas4 .plat4 {
   width: 100%;
@@ -698,12 +750,17 @@ h3 {
   flex-direction: column;
   padding-bottom: 100px;
 }
-.repas4 .plat4 .filet, .repas4 .plat4 .parmentier, .repas4 .plat4 .turbot {
+.repas4 .filet, .repas4 .parmentier, .repas4 .turbot {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
+}
+.repas4 .filet:hover, .repas4 .parmentier:hover, .repas4 .turbot:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 .repas4 .dessert4 {
   width: 100%;
@@ -711,12 +768,17 @@ h3 {
   flex-direction: column;
   padding-bottom: 100px;
 }
-.repas4 .dessert4 .paris-brest, .repas4 .dessert4 .macaron, .repas4 .dessert4 .mousse {
+.repas4 .paris-brest, .repas4 .macaron, .repas4 .mousse {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+  transition: 450ms ease-in-out;
+}
+.repas4 .paris-brest:hover, .repas4 .macaron:hover, .repas4 .mousse:hover {
+  transform: scale(1.25);
+  opacity: 0.5;
 }
 
 body {
