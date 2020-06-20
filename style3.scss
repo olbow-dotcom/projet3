@@ -1,3 +1,14 @@
+//sommaire
+//10 : declarations des polices
+//47 : mixins, keyfrmaes, animations et variables
+//274 : mise en CSS page index
+//518 :  mise en style CSS menu 1 la note enchantée:
+//660 : mise en page CSS menu 2 le chic a la francaise
+//781 : style menu 3 le délice des papilles
+//898 : mise en forme css menu 4 la palette du gout
+//1005 : mise ne pages css mentions légales
+
+
 //déclaration des polices
 
 @font-face {
@@ -282,6 +293,7 @@ header
     height:161px;    
     border-bottom: 2px rgb(161, 193, 129 ) solid;
     background-color:$color_headfoot;
+    width: 100%;
 }
 h1
 {
@@ -461,6 +473,19 @@ a
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     margin-bottom: 130px;
+    &:hover
+    {
+        &::after
+        {
+            opacity:1;
+        }
+    }
+    &::after
+    {
+        content:".""."".";
+        opacity:0;
+        transition:250ms;
+    }
 } 
 footer{
     display:flex;
@@ -1030,68 +1055,8 @@ body
 
 
 
-//mise en css contactez-nous
 
 
-header
-{
-    width:100%;
-    left:0;
-    top:0
-}
-
-.com
-{
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    height: 100%;
-    
-    .mail
-    {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width:600px;
-        height:60px;
-        border:groove;
-        background-color: #b37097;
-        font-size: 50px;
-        &:hover + .contact
-        {
-            transform: scale(1);
-            span
-            {
-                transform: translateY(0);
-            }
-        }
-    }
-    .contact
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        border:groove;
-        width:600px;
-        height:500px;
-        background-image: linear-gradient(to bottom, #2c6d2e, #2ce52e );
-        box-shadow: 0 0 5px 10px hsl(10%, 0%, 90%);
-        text-align:center;
-        font-size:100px;
-        font-family: "Kaushan-Script";
-        color:#f2a8bd;
-        transform:scale(0);
-        transition: transform 330ms ease-in-out;
-        overflow:hidden;    
-        span
-        {
-            display:inline-block;
-            transform: translateY(250%);
-            transition: transform 280ms ease-out 50ms;
-        }    
-    }      
-}          
 
 
 

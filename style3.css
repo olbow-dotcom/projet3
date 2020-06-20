@@ -107,6 +107,7 @@ header {
   height: 161px;
   border-bottom: 2px #a1c181 solid;
   background-color: #579c87;
+  width: 100%;
 }
 
 h1 {
@@ -259,6 +260,14 @@ a {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
   margin-bottom: 130px;
+}
+.après:hover::after {
+  opacity: 1;
+}
+.après::after {
+  content: "." "." ".";
+  opacity: 0;
+  transition: 250ms;
 }
 
 footer {
@@ -795,58 +804,6 @@ body p {
 }
 body p span {
   font-weight: bold;
-}
-
-header {
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-.com {
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  height: 100%;
-}
-.com .mail {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  height: 60px;
-  border: groove;
-  background-color: #b37097;
-  font-size: 50px;
-}
-.com .mail:hover + .contact {
-  transform: scale(1);
-}
-.com .mail:hover + .contact span {
-  transform: translateY(0);
-}
-.com .contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: groove;
-  width: 600px;
-  height: 500px;
-  background-image: linear-gradient(to bottom, #2c6d2e, #2ce52e);
-  box-shadow: 0 0 5px 10px #e6e6e6;
-  text-align: center;
-  font-size: 100px;
-  font-family: "Kaushan-Script";
-  color: #f2a8bd;
-  transform: scale(0);
-  transition: transform 330ms ease-in-out;
-  overflow: hidden;
-}
-.com .contact span {
-  display: inline-block;
-  transform: translateY(250%);
-  transition: transform 280ms ease-out 50ms;
 }
 
 /*# sourceMappingURL=style3.css.map */
