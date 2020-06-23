@@ -260,18 +260,21 @@ $color_text_h1:rgb(253,203,70);
 }
 @keyframes progress-3pts{
     0%{transform:scaleX(0);}
-    10%{transform: scale(0.1)}
-    20%{transform: scale(0.2)}
-    30%{transform: scale(0.3)}
-    40%{transform: scale(0.4)}
+    10%{transform: scaleX(0.1)}
+    20%{transform: scaleX(0.2)}
+    30%{transform: scaleX(0.3)}
+    40%{transform: scaleX(0.4)}
     50%{transform :scaleX(0.5)}
-    60%{transform: scale(0.6)}
-    70%{transform: scale(0.7)}
-    80%{transform: scale(0.8)}
-    90%{transform: scale(0.9)}
+    60%{transform: scaleX(0.6)}
+    70%{transform: scaleX(0.7)}
+    80%{transform: scaleX(0.8)}
+    90%{transform: scaleX(0.9)}
     100%{transform: scaleX(1);}
 }
 
+$num-pts:3;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-pts;
 
 
 
@@ -485,15 +488,20 @@ a
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     margin-bottom: 130px;
-    &:hover{
-        & > .trois-points{
-            transform: scaleX(1)  ;
-            transform-origin: bottom;
-            animation-name: progress-3pts;
-            animation-duration: 1000ms;
-            animation-iteration-count: infinite; 
-
+    .trois-points
+    {
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        &__bar
+        {
+            animation: progress-3pts 1000ms backwards infinite;
+            @for $i from 1 through 3 {
+                &--#{$i}
+                {animation-delay: $anim-delay*$i;}
+            }
         }
+
     }
     
 } 
