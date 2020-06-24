@@ -94,10 +94,10 @@
 }
 @keyframes progress-3pts {
   0% {
-    transform: scaleX(0);
+    transform: scaleX(1);
   }
   10% {
-    transform: scaleX(0.1);
+    transform: scalex(0.1);
   }
   20% {
     transform: scaleX(0.2);
@@ -174,10 +174,10 @@ a {
   width: auto;
 }
 .sommaire .haut-menu .haut-menu__un {
+  background-color: #fcdfdb;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  background: #fcdfdb;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -187,6 +187,11 @@ a {
   font-family: "Devonshire-Regular";
   font-size: 30px;
   color: #3c1218;
+  transition: all 450ms;
+}
+.sommaire .haut-menu .haut-menu__un:hover {
+  transform: scale(1.15);
+  background-color: rgba(252, 223, 219, 0.7);
 }
 .sommaire .haut-menu .haut-menu__un .menu-un {
   margin-top: 20px;
@@ -194,10 +199,8 @@ a {
   font-weight: bold;
   font-size: 1.5em;
 }
-.sommaire .haut-menu .chic {
-  background-color: #fff5fe;
-}
 .sommaire .haut-menu .haut-menu__deux {
+  background-color: #fff5fe;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -213,6 +216,12 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  transition: all 450ms;
+}
+.sommaire .haut-menu .haut-menu__deux:hover {
+  transform: scale(1.15);
+  background-color: rgba(255, 245, 254, 0.8);
+  margin: 0;
 }
 .sommaire .haut-menu .haut-menu__deux .menu-deux {
   font-family: "Lucida Fax", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, "Verdana", "sans-serif";
@@ -227,10 +236,8 @@ a {
   justify-content: center;
   height: 514px;
 }
-.sommaire .bas-menu .papilles {
-  background-color: #f9f9f9;
-}
 .sommaire .bas-menu .bas-menu__trois {
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,15 +253,18 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  transition: all 450ms;
+}
+.sommaire .bas-menu .bas-menu__trois:hover {
+  transform: scale(1.15);
+  background-color: rgba(249, 249, 249, 0.8);
+  margin: 0;
 }
 .sommaire .bas-menu .bas-menu__trois .menu-trois {
   font-family: "Segoe Print";
   margin-top: 20px;
   font-weight: lighter;
   color: #0887fb;
-}
-.sommaire .bas-menu .gout {
-  background-color: #fdfdfd;
 }
 .sommaire .bas-menu .bas-menu__quatre {
   display: flex;
@@ -272,6 +282,11 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+  transition: all 450ms;
+}
+.sommaire .bas-menu .bas-menu__quatre:hover {
+  transform: scale(1.15);
+  background-color: rgba(253, 253, 253, 0.7);
 }
 .sommaire .bas-menu .bas-menu__quatre .menu-quatre {
   font-family: "Segoe Print";
@@ -296,21 +311,26 @@ a {
   font-weight: lighter;
   margin-bottom: 130px;
 }
-.après .trois-points {
+
+.trois-points {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
-.après .trois-points__bar {
-  animation: progress-3pts 1000ms backwards infinite;
+.trois-points__bar {
+  animation: progress-3pts 1000ms forwards ease-in-out infinite;
+  animation-direction: alternate;
+  transform-origin: center, center;
+  transform-origin: center, center;
+  transform-origin: center, center;
 }
-.après .trois-points__bar--1 {
+.trois-points__bar--1 {
   animation-delay: 333.3333333333ms;
 }
-.après .trois-points__bar--2 {
+.trois-points__bar--2 {
   animation-delay: 666.6666666667ms;
 }
-.après .trois-points__bar--3 {
+.trois-points__bar--3 {
   animation-delay: 1000ms;
 }
 

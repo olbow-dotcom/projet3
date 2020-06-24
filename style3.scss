@@ -228,10 +228,14 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     }
 }
 $color_headfoot:rgb(87,156,135);
-$color_fondnote:rgb(252,223,219);
-$color_fondchic:rgb(255,245,254);
-$color_fondpapilles:rgb(249,249,249);
-$color_fondgout:rgb(253,253,253);
+$color_fondnote-start:rgba(252,223,219,1);
+$color_fondnote-end:rgba(252,223,219,0.7);
+$color_fondchic-start:rgba(255,245,254,1);
+$color_fondchic-end:rgba(255,245,254,0.8);
+$color_fondpapilles-start:rgb(249,249,249,1);
+$color_fondpapilles-end:rgb(249,249,249,0.8);
+$color_fondgout-start:rgb(253,253,253,1);
+$color_fondgout-end:rgb(253,253,253,0.7);
 $color_text_h1:rgb(253,203,70);
 
 @keyframes wiggle{
@@ -259,24 +263,24 @@ $color_text_h1:rgb(253,203,70);
     
 }
 @keyframes progress-3pts{
-    0%{transform:scaleX(0);}
-    10%{transform: scaleX(0.1)}
-    20%{transform: scaleX(0.2)}
-    30%{transform: scaleX(0.3)}
-    40%{transform: scaleX(0.4)}
-    50%{transform :scaleX(0.5)}
-    60%{transform: scaleX(0.6)}
-    70%{transform: scaleX(0.7)}
-    80%{transform: scaleX(0.8)}
-    90%{transform: scaleX(0.9)}
-    100%{transform: scaleX(1);}
+    0%{transform:scaleX(1);}
+    10%{transform: scalex(0.1);}
+    20%{transform: scaleX(0.2);}
+    30%{transform: scaleX(0.3);}
+    40%{transform: scaleX(0.4);}
+    50%{transform :scaleX(0.5);}
+    60%{transform: scaleX(0.6);}
+    70%{transform: scaleX(0.7);}
+    80%{transform: scaleX(0.8);}
+    90%{transform: scaleX(0.9);}
+    100%{transform: scaleX(1,);}
 }
 
+$bg-start:rgba(252,223,219,1);
+$bg-end: rgba(252,223,219,0.7);
+$anim-dur:1000ms;
 $num-pts:3;
-$anim-dur: 1000ms;
-$anim-delay: $anim-dur / $num-pts;
-
-
+$anim-delay:$anim-dur/$num-pts;
 
 
 
@@ -342,13 +346,14 @@ a
         height:514px;
         width: auto;
         
-        
+       
+
         .haut-menu__un 
         {
-            display: flex;
+            background-color:$color_fondnote-start;
+             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
-            background:$color_fondnote;
             justify-content: center;
             text-align: center;
             align-items: center;
@@ -358,7 +363,14 @@ a
             0 0 5px 2px hsl(0, 0%, 90%); 
             font-family: 'Devonshire-Regular';
             font-size: 30px; 
-            color: rgb(60 18 24);           
+            color: rgb(60 18 24); 
+            transition:all 450ms;
+            &:hover
+            {
+                transform: scale(1.15);
+                background-color: $color_fondnote-end;
+            }            
+            
             .menu-un
             {
                 margin-top: 20px; 
@@ -366,15 +378,14 @@ a
                 font-weight: bold;
                 font-size: 1.5em;
             }
-            
+         
         }   
-        .chic
-        {
-            background-color: $color_fondchic;
-        }
         
+        
+
         .haut-menu__deux
         {
+            background-color: $color_fondchic-start;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -391,6 +402,13 @@ a
             background-clip:text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
+            transition:all 450ms;
+            &:hover
+            {
+                transform: scale(1.15);
+                background-color: $color_fondchic-end;
+                margin:0;
+            }            
             .menu-deux
             {
                 font-family: 'Lucida Fax', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 'Verdana', 'sans-serif';
@@ -408,13 +426,10 @@ a
         justify-content: center;
         height: 514px;
         
-        .papilles
-        {
-            background-color: $color_fondpapilles;
-        }
+        
         .bas-menu__trois
         {
-            
+            background-color: $color_fondpapilles-start;
             display:flex;
             flex-direction: column;
             justify-content:center; 
@@ -431,6 +446,13 @@ a
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
+            transition:all 450ms;
+            &:hover
+            {
+                transform: scale(1.15);
+                background-color: $color_fondpapilles-end;
+                margin:0;
+            }            
             .menu-trois
             {
                 font-family: "Segoe Print";
@@ -439,17 +461,14 @@ a
                 color:rgb(8 135 251)
             }
         }
-        .gout
-        {
-            background-color: $color_fondgout;
-        }    
+        
         
         .bas-menu__quatre
         {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            background:$color_fondgout;
+            background:$color_fondgout-start;
             text-align: center;
             width: 369px;
             height: 100%;
@@ -462,6 +481,12 @@ a
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
+            transition:all 450ms;
+            &:hover
+            {
+                transform: scale(1.15);
+                background-color: $color_fondgout-end;
+            }            
             .menu-quatre
             {
                 font-family: 'Segoe Print';
@@ -487,7 +512,8 @@ a
     font-size:50px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    margin-bottom: 130px;
+    margin-bottom: 130px;}
+
     .trois-points
     {
         display:flex;
@@ -495,16 +521,18 @@ a
         justify-content: center;
         &__bar
         {
-            animation: progress-3pts 1000ms backwards infinite;
-            @for $i from 1 through 3 {
+            animation: progress-3pts $anim-dur forwards ease-in-out infinite;
+            animation-direction: alternate;
+            @for $i from 1 through $num-pts {
                 &--#{$i}
                 {animation-delay: $anim-delay*$i;}
+            transform-origin: center, center;
             }
         }
 
     }
     
-} 
+ 
 footer{
     display:flex;
     align-items: center;
@@ -566,7 +594,7 @@ h2
 {
     display: flex;
     flex-direction: column;
-    background:$color_fondnote;
+    background:$color_fondnote-start;
     justify-content: space-around;
     width:900px;
     height: 100%;
@@ -685,7 +713,7 @@ h2
     flex-direction: column;
     justify-content: space-around;
     align-items: left;
-    background-color: $color_fondchic;
+    background-color: $color_fondchic-start;
     height: 100%;
     font-family:"Baskerville Old face","bell MT";
     font-size: 20px;
@@ -791,7 +819,7 @@ h2
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: $color_fondpapilles;
+    background-color: $color_fondpapilles-start;
     width: 900px;
     box-shadow:              
     0 0 5px 2px hsl(0, 0%, 90%);
@@ -895,7 +923,7 @@ h2
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background-color: $color_fondgout;
+    background-color: $color_fondgout-start;
     width:900px;
     height: 100%;
     box-shadow:              
