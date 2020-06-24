@@ -154,6 +154,7 @@ h1 {
 
 a {
   text-decoration: none;
+  margin: 20px;
 }
 
 .sommaire {
@@ -161,9 +162,6 @@ a {
   flex-direction: column;
   height: 100%;
   align-items: stretch;
-}
-.sommaire a {
-  margin: 20px;
 }
 .sommaire .haut-menu {
   display: flex;
@@ -190,14 +188,23 @@ a {
   transition: all 450ms;
 }
 .sommaire .haut-menu .haut-menu__un:hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   background-color: rgba(252, 223, 219, 0.7);
 }
 .sommaire .haut-menu .haut-menu__un .menu-un {
   margin-top: 20px;
   font-family: "Komika Text";
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 40px;
+  color: #3c1218;
+}
+.sommaire .haut-menu .chic {
+  background-color: #fff5fe;
+  transition: all 450ms;
+}
+.sommaire .haut-menu .chic:hover {
+  transform: scale(1.1);
+  background-color: rgba(255, 245, 254, 0.7);
 }
 .sommaire .haut-menu .haut-menu__deux {
   background-color: #fff5fe;
@@ -216,12 +223,6 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  transition: all 450ms;
-}
-.sommaire .haut-menu .haut-menu__deux:hover {
-  transform: scale(1.15);
-  background-color: rgba(255, 245, 254, 0.8);
-  margin: 0;
 }
 .sommaire .haut-menu .haut-menu__deux .menu-deux {
   font-family: "Lucida Fax", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, "Verdana", "sans-serif";
@@ -236,8 +237,16 @@ a {
   justify-content: center;
   height: 514px;
 }
-.sommaire .bas-menu .bas-menu__trois {
+.sommaire .bas-menu .papilles {
   background-color: #f9f9f9;
+  transition: transform 450ms, background-color 450ms, margin 450ms;
+}
+.sommaire .bas-menu .papilles:hover {
+  transform: scale(1.1);
+  background-color: rgba(249, 249, 249, 0.7);
+  margin: 0;
+}
+.sommaire .bas-menu .bas-menu__trois {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -253,18 +262,20 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  transition: all 450ms;
-}
-.sommaire .bas-menu .bas-menu__trois:hover {
-  transform: scale(1.15);
-  background-color: rgba(249, 249, 249, 0.8);
-  margin: 0;
 }
 .sommaire .bas-menu .bas-menu__trois .menu-trois {
   font-family: "Segoe Print";
   margin-top: 20px;
   font-weight: lighter;
   color: #0887fb;
+}
+.sommaire .bas-menu .gout {
+  background-color: #fdfdfd;
+  transition: transform 450ms, background-color 450ms;
+}
+.sommaire .bas-menu .gout:hover {
+  transform: scale(1.1);
+  background-color: rgba(253, 253, 253, 0.7);
 }
 .sommaire .bas-menu .bas-menu__quatre {
   display: flex;
@@ -282,11 +293,6 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  transition: all 450ms;
-}
-.sommaire .bas-menu .bas-menu__quatre:hover {
-  transform: scale(1.15);
-  background-color: rgba(253, 253, 253, 0.7);
 }
 .sommaire .bas-menu .bas-menu__quatre .menu-quatre {
   font-family: "Segoe Print";
