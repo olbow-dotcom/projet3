@@ -171,8 +171,21 @@ a {
   height: 514px;
   width: auto;
 }
-.sommaire .haut-menu .haut-menu__un {
+@media (min-width: 320px) and (max-width: 1024px) {
+  .sommaire .haut-menu {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.sommaire .haut-menu .note {
   background-color: #fcdfdb;
+  transition: all 450ms;
+}
+.sommaire .haut-menu .note:hover {
+  transform: scale(1.1);
+  background-color: rgba(252, 223, 219, 0.7);
+}
+.sommaire .haut-menu .haut-menu__un {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -185,11 +198,6 @@ a {
   font-family: "Devonshire-Regular";
   font-size: 30px;
   color: #3c1218;
-  transition: all 450ms;
-}
-.sommaire .haut-menu .haut-menu__un:hover {
-  transform: scale(1.1);
-  background-color: rgba(252, 223, 219, 0.7);
 }
 .sommaire .haut-menu .haut-menu__un .menu-un {
   margin-top: 20px;
