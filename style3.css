@@ -386,6 +386,11 @@ footer a:hover {
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
 }
+@media (max-width: 1024px) {
+  footer a {
+    font-size: 20px;
+  }
+}
 
 h2 {
   font-size: 3rem;
@@ -479,7 +484,7 @@ h2 {
 .repas1 h3 > .trait, .repas1 h3 .trait-d {
   width: 280px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .repas1 h3 > .trait, .repas1 h3 .trait-d {
     display: none;
   }
@@ -629,7 +634,7 @@ h2 {
   position: absolute;
   left: 20%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .repas2 h3 .chic1g {
     display: none;
   }
@@ -640,7 +645,7 @@ h2 {
   position: absolute;
   right: 20%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .repas2 h3 .chic1d {
     display: none;
   }
@@ -737,6 +742,28 @@ h2 {
 .repas3 h3 .hover {
   display: inline-block;
   text-align: center;
+}
+.repas3 h3 .trait_g {
+  display: inline-block;
+  width: 400px;
+  position: absolute;
+  left: 20%;
+}
+@media (max-width: 1124px) {
+  .repas3 h3 .trait_g {
+    display: none;
+  }
+}
+.repas3 h3 .trait_d {
+  display: inline-block;
+  width: 400px;
+  position: absolute;
+  right: 20%;
+}
+@media (max-width: 1124px) {
+  .repas3 h3 .trait_d {
+    display: none;
+  }
 }
 .repas3 h3 .hover {
   text-align: center;
@@ -879,7 +906,7 @@ h2 {
   position: absolute;
   left: 20%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .repas4 h3 .trait-gout-d {
     display: none;
   }
@@ -890,7 +917,7 @@ h2 {
   position: absolute;
   right: 20%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1124px) {
   .repas4 h3 .trait-gout-g {
     display: none;
   }

@@ -616,6 +616,10 @@ footer{
             animation-duration : 0.8s;
             animation-iteration-count:infinite ;
         }
+    @media(max-width: 1024px)
+    {
+        font-size:20px
+    }
     }
     
 }  
@@ -712,7 +716,7 @@ h2
         >.trait, .trait-d
         {
             width: 280px;
-            @media (max-width:1024px)
+            @media (max-width:1124px)
             {
                 display:none;
 
@@ -865,7 +869,7 @@ h2
                 position: absolute;;
                 left:20%;
                 
-                @media (max-width:1024px)
+                @media (max-width:1124px)
                 {
                 display: none;
                 }
@@ -878,7 +882,7 @@ h2
                 position: absolute;
                 right:20%;
                 
-                @media (max-width:1024px)
+                @media (max-width:1124px)
                 {
             display: none;
                 }
@@ -996,12 +1000,38 @@ h2
         {
             display:inline-block;
         }
+        
         .hover
         {
             display: inline-block;
             text-align:center;
         }
-
+        .trait_g
+            
+            {
+                display:inline-block;
+                width: 400px;
+                
+                position: absolute;;
+                left:20%;
+                
+                @media (max-width:1124px)
+                {
+                display: none;
+                }
+            }
+        .trait_d            
+            {
+                display:inline-block;
+                width: 400px;
+                position: absolute;
+                right:20%;
+                
+                @media (max-width:1124px)
+                {
+            display: none;
+                }
+            }
         
         
         @include titre-souligné-papilles;
@@ -1122,7 +1152,7 @@ h2
                 position: absolute;;
                 left:20%;
                 
-                @media (max-width:1024px)
+                @media (max-width:1124px)
                 {
                 display: none;
                 }
@@ -1134,7 +1164,7 @@ h2
                 position: absolute;
                 right:20%;
                 
-                @media (max-width:1024px)
+                @media (max-width:1124px)
                 {
             display: none;
                 }
