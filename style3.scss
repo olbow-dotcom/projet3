@@ -670,7 +670,7 @@ h2
         text-align: center;
         align-items: center;
         font-size: 3em;
-        font-weight: bolder;
+        font-weight: bold;
         font-family:'Devonshire-Regular';
         padding-bottom: 70px;
         .musique
@@ -711,7 +711,7 @@ h2
         }
         >.trait, .trait-d
         {
-            width: 200px;
+            width: 280px;
             @media (max-width:1024px)
             {
                 display:none;
@@ -786,8 +786,6 @@ h2
 
 
 
-
-
 .repas2
 {
     display:flex;
@@ -843,25 +841,55 @@ h2
     {   
         display:flex;
         flex-direction: row;
-        justify-content:space-between ;
+        justify-content:center ;
         text-align: center;
         font-weight: bold;
-        margin-bottom: 30px;
+        padding:0;
+        width:inherit;
         @include titre-souligné-chic;
         font-family:"Lucida fax";
         @media(max-width:1024px)
         {
             display:inline-block;
         }
-        .chic1g,.chic1d
+        .hover
         {
-            width: 180px;
-            @media (max-width:1024px)
-            {
-                display: none;
-            }
+            display:inline-block;
         }
+           .chic1g,
+            
+            {
+                display:inline-block;
+                width: 300px;
+                
+                position: absolute;;
+                left:20%;
+                
+                @media (max-width:1024px)
+                {
+                display: none;
+                }
+            }
+            .chic1d
+            
+            {
+                display:inline-block;
+                width: 300px;
+                position: absolute;
+                right:20%;
+                
+                @media (max-width:1024px)
+                {
+            display: none;
+                }
+            }
+           
+
     }
+
+
+    
+    
     .plat2
     {   
         color:#b37097;
@@ -897,7 +925,9 @@ h2
           @include style-menu-res;
         }
     }      
-}    
+}  
+
+    
 
 
 

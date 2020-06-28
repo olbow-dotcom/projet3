@@ -418,7 +418,7 @@ h2 {
   text-align: center;
   align-items: center;
   font-size: 3em;
-  font-weight: bolder;
+  font-weight: bold;
   font-family: "Devonshire-Regular";
   padding-bottom: 70px;
 }
@@ -477,7 +477,7 @@ h2 {
   }
 }
 .repas1 h3 > .trait, .repas1 h3 .trait-d {
-  width: 200px;
+  width: 280px;
 }
 @media (max-width: 1024px) {
   .repas1 h3 > .trait, .repas1 h3 .trait-d {
@@ -586,10 +586,11 @@ h2 {
 .repas2 h3 {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 30px;
+  padding: 0;
+  width: inherit;
   font-family: "Lucida fax";
 }
 .repas2 h3 .hover {
@@ -619,11 +620,28 @@ h2 {
     display: inline-block;
   }
 }
-.repas2 h3 .chic1g, .repas2 h3 .chic1d {
-  width: 180px;
+.repas2 h3 .hover {
+  display: inline-block;
+}
+.repas2 h3 .chic1g {
+  display: inline-block;
+  width: 300px;
+  position: absolute;
+  left: 20%;
 }
 @media (max-width: 1024px) {
-  .repas2 h3 .chic1g, .repas2 h3 .chic1d {
+  .repas2 h3 .chic1g {
+    display: none;
+  }
+}
+.repas2 h3 .chic1d {
+  display: inline-block;
+  width: 300px;
+  position: absolute;
+  right: 20%;
+}
+@media (max-width: 1024px) {
+  .repas2 h3 .chic1d {
     display: none;
   }
 }
