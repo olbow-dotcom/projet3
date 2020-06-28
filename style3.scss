@@ -558,7 +558,7 @@ a
     justify-content: center;
     align-items: center;
     text-align: center;
-    width:50%;
+    width:30%;
     height: 81px;
     background:$color_headfoot;
     color: $color_text_h1;
@@ -590,7 +590,7 @@ a
     }
     @media (max-width:1024px)
     {
-        font-size:165%;
+        font-size:100%;
     }
 }  
  
@@ -642,28 +642,25 @@ h2
     margin-bottom: 70px;
     text-align: center;
 }
-.titre-menu__un
-{
-    padding-bottom: 70px;
-}
+
 .repas1
 {
     display: flex;
     flex-direction: column;
     background:$color_fondnote-start;
     justify-content: space-around;
-    width:50%;
+    align-items: center;
     height: 100%;
     box-shadow:             
     0 0 5px 2px hsl(0, 0%, 90%); 
     font-size: 20px; 
     color: rgb(60 18 24);
     padding:80px 120px 120px 120px ; 
-    margin:auto;
+    margin:0 20% 0 20%;
     @media(max-width:1024px)
     {
-        padding:0px;
-        width:100%;
+        padding:0 10px 50px 10px;
+        
     }
     .titre-menu__un
     {
@@ -672,9 +669,10 @@ h2
         justify-content: center;
         text-align: center;
         align-items: center;
-        font-size: 2em;
+        font-size: 3em;
         font-weight: bolder;
-        font-family:'Devonshire-Regular' ;
+        font-family:'Devonshire-Regular';
+        padding-bottom: 70px;
         .musique
         {
             padding-top: 50px;
@@ -706,9 +704,20 @@ h2
         font-family: "Segoe Print";
         font-weight: bold;
         font-size: 30px;
+        @media(max-width:1024px)
+        {
+            display:inline-block;
+
+        }
         >.trait, .trait-d
         {
-            width: 300px;
+            width: 200px;
+            @media (max-width:1024px)
+            {
+                display:none;
+
+            }
+                
             
         }
     }
@@ -742,21 +751,26 @@ h2
     }
     .dessert
     {
-        
+       @include presentation-du-menu-prix;
         
         >p
         {
             
-            line-height: 3.2;
-            font-family: "Segoe Print";
             
+            font-family: "Segoe Print";
+            @media(max-width: 1024px)
+            {
+                line-height: 2;
+                
+            }
         }
     }    
   .plat-prix
     { 
+        @include style-menu;
         @media(max-width:1024px)
         {@include style-menu-res;
-        overflow-wrap: break-word;}
+        }
     }  
 }    
 
@@ -779,16 +793,20 @@ h2
     display:flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: left;
+    align-items: center;
     background-color: $color_fondchic-start;
     height: 100%;
     font-family:"Baskerville Old face","bell MT";
     font-size: 20px;
-    width: 900px;
+    margin: 0 20% 0 20%;
     box-shadow:              
     0 0 5px 2px hsl(0, 0%, 90%);
     padding: 80px  120px 120px 120px ; 
-    margin:auto;
+    @media(max-width:1024px)
+    {
+        padding:0 10px 50px 10px;
+        
+    }
 
     .chic2
     {
@@ -799,7 +817,7 @@ h2
     {
         text-align: center;
         margin-bottom: 150px;
-        width:100%;
+        font-size:2em;
         font-family: 'croissantone';
         background-image: linear-gradient(to right,#d8852e,#905bfd); 
         color:transparent;
@@ -831,10 +849,17 @@ h2
         margin-bottom: 30px;
         @include titre-souligné-chic;
         font-family:"Lucida fax";
+        @media(max-width:1024px)
+        {
+            display:inline-block;
+        }
         .chic1g,.chic1d
         {
-            width: 280px;
-            
+            width: 180px;
+            @media (max-width:1024px)
+            {
+                display: none;
+            }
         }
     }
     .plat2
@@ -852,6 +877,7 @@ h2
     }
     .dessert2
     {
+        @include presentation-du-menu-prix;
         color:#905bfd;
         margin-bottom: 70px;
         line-height: 2;
@@ -862,7 +888,15 @@ h2
         font-family:"Lucida fax";
         
         
-    }    
+    }
+    .plat-prix
+    { 
+        
+        @media(max-width:1024px)
+        {
+          @include style-menu-res;
+        }
+    }      
 }    
 
 
@@ -887,12 +921,17 @@ h2
     flex-direction: column;
     justify-content: space-around;
     background-color: $color_fondpapilles-start;
-    width: 900px;
+    margin:0 20% 0 20%;
     box-shadow:              
     0 0 5px 2px hsl(0, 0%, 90%);
     padding: 80px  120px 120px 120px ; 
-    margin:auto;
     font-family:'Dancing-Script',"Palace Script MT","Kunstler Script" ;
+    @media(max-width:1024px)
+    {
+        padding:0 10px 50px 10px;
+        
+    }
+
     .titre-menu
     {
         background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
@@ -900,7 +939,7 @@ h2
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        font-size: 100px; 
+        font-size: 4em; 
     }
     
     .entre3
@@ -922,10 +961,19 @@ h2
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        text-align: center;
+        @media(max-width:1024px)
+        {
+            display:inline-block;
+        }
         .trait_g
         {
             width:280px;
             height: 50px;
+            @media (max-width:1024px)
+            {
+                display: none;
+            }
         }
         @include titre-souligné-papilles;
         font-family: "Segoe Print";
@@ -935,7 +983,7 @@ h2
         font-family:"Segoe Print" ;
         @include presentation-du-menu-prix;
         padding-bottom: 100px;
-        
+    }    
         .poulet, .langouste, .cote
         {
             @include style-menu;
@@ -943,7 +991,7 @@ h2
             font-family: "Segoe Print";
            
         } 
-    }   
+       
         .dessert3
         {
             font-family:"Segoe Print" ;
@@ -971,7 +1019,14 @@ h2
         {
             padding-bottom: 20px;
         }    
-                    
+        .plat-prix
+        { 
+            
+            @media(max-width:1024px)
+            {
+              @include style-menu-res;
+            }
+        }                     
 }    
 
 
@@ -991,14 +1046,18 @@ h2
     flex-direction: column;
     justify-content: space-around;
     background-color: $color_fondgout-start;
-    width:900px;
+    margin: 0 20% 0 20%;
     height: 100%;
     box-shadow:              
     0 0 5px 2px hsl(0, 0%, 90%);
     padding: 80px  120px 120px 120px ; 
-    margin:auto;
     font-family:'Kaushan-Script' ;
     font-weight: bold;
+    @media(max-width:1024px)
+    {
+        padding:0 10px 50px 10px;
+        
+    }
     h2
     {
         background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
@@ -1016,9 +1075,17 @@ h2
         font-weight: bold;
         @include titre-souligné-gout;
         font-family: "Segoe Print";
+        @media(max-width:1024px)
+        {
+            display:inline-block;
+        }
         .trait-gout-g, .trait-gout-d
         {
-            width: 350px;
+            width: 250px;
+            @media (max-width:1024px)
+            {
+                display: none;
+            }
         }
     }
     .entre4
@@ -1061,7 +1128,14 @@ h2
         
        
     }
-    
+    .plat-prix
+        { 
+            
+            @media(max-width:1024px)
+            {
+              @include style-menu-res;
+            }
+        }                     
 }
 
 
