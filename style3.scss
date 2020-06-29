@@ -267,7 +267,7 @@ $color_text_h1:rgb(253,203,70);
     60%{transform: translateX(5px);}
     65%{transform: translateY(5px);}
     70%{transform: translateX(-5px);}
-    75%{transform: translzteY(-5px);}
+    75%{transform: translateY(-5px);}
     80%{transform: translateX(5px);}
     85%{transform: translateY(5px);}
     90%{transform: translateX(-5px);}
@@ -849,7 +849,7 @@ h2
     {   
         display:flex;
         flex-direction: row;
-        justify-content:center ;
+        justify-content:space-between ;
         text-align: center;
         font-weight: bold;
         padding:0;
@@ -860,38 +860,22 @@ h2
         {
             display:inline-block;
         }
-        .hover
-        {
-            display:inline-block;
-        }
-        .chic1g,
+        
+        .chic1g,.chic1d
         
         {
-            display:inline-block;
-            width: 300px;
             
-            position: absolute;;
-            left:20%;
+            width: 200px;
             
-            @media (max-width:1420px)
-            {
-                display: none;
-            }
-        }
-        .chic1d
-        
-        {
-            display:inline-block;
-            width: 300px;
-            position: absolute;
-            right:20%;
-            
+                      
             @media (max-width:1420px)
             {
                 display: none;
             }
         }
         
+        
+             
         
     }
     
@@ -998,44 +982,25 @@ h2
     {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
-        @media(max-width:1024px)
-        {
-            display:inline-block;
-        }
-        
-        .hover
+        @media(max-width:11440024px)
         {
             display: inline-block;
             text-align:center;
         }
-        .trait_g
+        .trait_g,.trait_d   
         
         {
-            display:inline-block;
-            width: 400px;
             
-            position: absolute;;
-            left:20%;
-            
+            width: 280px;
             @media (max-width:1440px)
             {
                 display: none;
             }
         }
-        .trait_d            
-        {
-            display:inline-block;
-            width: 400px;
-            position: absolute;
-            right:20%;
-            
-            @media (max-width:1440px)
-            {
-                display: none;
-            }
-        }
+                 
+        
         
         
         @include titre-souligné-papilles;
@@ -1133,48 +1098,32 @@ h2
     { 
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         text-align: center;
         font-weight: bold;
         @include titre-souligné-gout;
         font-family: "Segoe Print";
-        @media(max-width:1024px)
+        @media(max-width:1440px)
         {
             display:inline-block;
+            text-align: center;
         }
-        .hover
-        {
-            display: inline-block;
-            text-align:center;
-        }
-        .trait-gout-d
         
-        {
-            display:inline-block;
-            width: 400px;
+        
+        .trait-gout-g,.trait-gout-d
+        
+        {   
             
-            position: absolute;;
-            left:20%;
-            
+            width:330px;
             @media (max-width:1440px)
             {
                 display: none;
             }
         }
-        .trait-gout-g            
-        {
-            display:inline-block;
-            width: 400px;
-            position: absolute;
-            right:20%;
-            
-            @media (max-width:1440px)
-            {
-                display: none;
-            }
-        }
+    }             
         
-    }
+        
+    
     .entre4
     {
         
@@ -1243,17 +1192,12 @@ h2
 
 
 
-
-#bloc-page
+h1 {text-align:center;}
+.bloc-page
 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    .hebergeur
-    {
-        margin-left: 58px;
-    }
-    
     p 
     {
         font-family: Arial, Helvetica, sans-serif;

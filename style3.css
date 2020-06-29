@@ -74,7 +74,7 @@
     transform: translateX(-5px);
   }
   75% {
-    transform: translzteY(-5px);
+    transform: translateY(-5px);
   }
   80% {
     transform: translateX(5px);
@@ -591,7 +591,7 @@ h2 {
 .repas2 h3 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   font-weight: bold;
   padding: 0;
@@ -625,28 +625,11 @@ h2 {
     display: inline-block;
   }
 }
-.repas2 h3 .hover {
-  display: inline-block;
-}
-.repas2 h3 .chic1g {
-  display: inline-block;
-  width: 300px;
-  position: absolute;
-  left: 20%;
+.repas2 h3 .chic1g, .repas2 h3 .chic1d {
+  width: 200px;
 }
 @media (max-width: 1420px) {
-  .repas2 h3 .chic1g {
-    display: none;
-  }
-}
-.repas2 h3 .chic1d {
-  display: inline-block;
-  width: 300px;
-  position: absolute;
-  right: 20%;
-}
-@media (max-width: 1420px) {
-  .repas2 h3 .chic1d {
+  .repas2 h3 .chic1g, .repas2 h3 .chic1d {
     display: none;
   }
 }
@@ -730,38 +713,21 @@ h2 {
 .repas3 h3 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   font-family: "Segoe Print";
 }
-@media (max-width: 1024px) {
+@media (max-width: 11440024px) {
   .repas3 h3 {
     display: inline-block;
+    text-align: center;
   }
 }
-.repas3 h3 .hover {
-  display: inline-block;
-  text-align: center;
-}
-.repas3 h3 .trait_g {
-  display: inline-block;
-  width: 400px;
-  position: absolute;
-  left: 20%;
+.repas3 h3 .trait_g, .repas3 h3 .trait_d {
+  width: 280px;
 }
 @media (max-width: 1440px) {
-  .repas3 h3 .trait_g {
-    display: none;
-  }
-}
-.repas3 h3 .trait_d {
-  display: inline-block;
-  width: 400px;
-  position: absolute;
-  right: 20%;
-}
-@media (max-width: 1440px) {
-  .repas3 h3 .trait_d {
+  .repas3 h3 .trait_g, .repas3 h3 .trait_d {
     display: none;
   }
 }
@@ -864,7 +830,7 @@ h2 {
 .repas4 h3 {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   text-align: center;
   font-weight: bold;
   font-family: "Segoe Print";
@@ -891,34 +857,17 @@ h2 {
   width: 100%;
   opacity: 1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   .repas4 h3 {
     display: inline-block;
+    text-align: center;
   }
 }
-.repas4 h3 .hover {
-  display: inline-block;
-  text-align: center;
-}
-.repas4 h3 .trait-gout-d {
-  display: inline-block;
-  width: 400px;
-  position: absolute;
-  left: 20%;
+.repas4 h3 .trait-gout-g, .repas4 h3 .trait-gout-d {
+  width: 330px;
 }
 @media (max-width: 1440px) {
-  .repas4 h3 .trait-gout-d {
-    display: none;
-  }
-}
-.repas4 h3 .trait-gout-g {
-  display: inline-block;
-  width: 400px;
-  position: absolute;
-  right: 20%;
-}
-@media (max-width: 1440px) {
-  .repas4 h3 .trait-gout-g {
+  .repas4 h3 .trait-gout-g, .repas4 h3 .trait-gout-d {
     display: none;
   }
 }
@@ -975,7 +924,11 @@ h2 {
   }
 }
 
-#bloc-page {
+h1 {
+  text-align: center;
+}
+
+.bloc-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -984,14 +937,11 @@ h2 {
   margin: auto;
   padding: 0 5px 0 8px;
 }
-#bloc-page .hebergeur {
-  margin-left: 58px;
-}
-#bloc-page p {
+.bloc-page p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
 }
-#bloc-page p span {
+.bloc-page p span {
   font-weight: bold;
 }
 
