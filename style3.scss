@@ -1244,7 +1244,7 @@ h2
 
 
 
-body
+#bloc-page
 {
     display: flex;
     flex-direction: column;
@@ -1260,7 +1260,10 @@ body
         text-align: left;
         span{ font-weight:bold;}
     }
-    
+    border: 3px grey ridge; 
+    width: 800px;
+    margin:auto;
+    padding:0 5px 0 8px;
 }
 
 
