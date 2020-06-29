@@ -375,6 +375,11 @@ footer {
   left: 0%;
   bottom: 0%;
 }
+@media (max-width: 1024px) {
+  footer {
+    justify-content: center;
+  }
+}
 footer a {
   text-decoration: none;
   color: #fdcb46;
@@ -385,11 +390,6 @@ footer a:hover {
   animation-name: wiggle;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
-}
-@media (max-width: 1024px) {
-  footer a {
-    font-size: 20px;
-  }
 }
 
 h2 {
@@ -476,7 +476,7 @@ h2 {
   width: 100%;
   opacity: 1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1228px) {
   .repas1 h3 {
     display: inline-block;
   }
@@ -484,7 +484,7 @@ h2 {
 .repas1 h3 > .trait, .repas1 h3 .trait-d {
   width: 280px;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1228px) {
   .repas1 h3 > .trait, .repas1 h3 .trait-d {
     display: none;
   }
@@ -537,7 +537,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    text-align: justify;
+    text-align: center;
     width: auto;
     flex-wrap: wrap;
   }
@@ -634,7 +634,7 @@ h2 {
   position: absolute;
   left: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1420px) {
   .repas2 h3 .chic1g {
     display: none;
   }
@@ -645,7 +645,7 @@ h2 {
   position: absolute;
   right: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1420px) {
   .repas2 h3 .chic1d {
     display: none;
   }
@@ -684,7 +684,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    text-align: justify;
+    text-align: center;
     width: auto;
     flex-wrap: wrap;
   }
@@ -749,7 +749,7 @@ h2 {
   position: absolute;
   left: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1440px) {
   .repas3 h3 .trait_g {
     display: none;
   }
@@ -760,7 +760,7 @@ h2 {
   position: absolute;
   right: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1440px) {
   .repas3 h3 .trait_d {
     display: none;
   }
@@ -831,7 +831,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    text-align: justify;
+    text-align: center;
     width: auto;
     flex-wrap: wrap;
   }
@@ -906,7 +906,7 @@ h2 {
   position: absolute;
   left: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1440px) {
   .repas4 h3 .trait-gout-d {
     display: none;
   }
@@ -917,7 +917,7 @@ h2 {
   position: absolute;
   right: 20%;
 }
-@media (max-width: 1124px) {
+@media (max-width: 1440px) {
   .repas4 h3 .trait-gout-g {
     display: none;
   }
@@ -969,7 +969,7 @@ h2 {
     justify-content: space-between;
     align-items: center;
     padding: 0;
-    text-align: justify;
+    text-align: center;
     width: auto;
     flex-wrap: wrap;
   }

@@ -70,7 +70,7 @@
     justify-content: space-between;
     align-items:center;
     padding:0;
-    text-align:justify ;
+    text-align:center ;
     width:auto;
     flex-wrap: wrap;
 }
@@ -605,7 +605,14 @@ footer{
     width:100%;
     position: fixed; 
     left:0%;
-    bottom:0%;   
+    bottom:0%; 
+    @media(max-width: 1024px)
+    {
+        justify-content:center;
+        
+    }
+     
+    
     a{
         text-decoration: none;
         color:$color_text_h1;
@@ -616,10 +623,7 @@ footer{
             animation-duration : 0.8s;
             animation-iteration-count:infinite ;
         }
-    @media(max-width: 1024px)
-    {
-        font-size:20px
-    }
+   
     }
     
 }  
@@ -708,7 +712,7 @@ h2
         font-family: "Segoe Print";
         font-weight: bold;
         font-size: 30px;
-        @media(max-width:1024px)
+        @media(max-width:1228px)
         {
             display:inline-block;
 
@@ -716,7 +720,7 @@ h2
         >.trait, .trait-d
         {
             width: 280px;
-            @media (max-width:1124px)
+            @media (max-width:1228px)
             {
                 display:none;
 
@@ -869,7 +873,7 @@ h2
                 position: absolute;;
                 left:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1420px)
                 {
                 display: none;
                 }
@@ -882,9 +886,9 @@ h2
                 position: absolute;
                 right:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1420px)
                 {
-            display: none;
+                    display: none;
                 }
             }
            
@@ -1015,7 +1019,7 @@ h2
                 position: absolute;;
                 left:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1440px)
                 {
                 display: none;
                 }
@@ -1027,7 +1031,7 @@ h2
                 position: absolute;
                 right:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1440px)
                 {
             display: none;
                 }
@@ -1152,7 +1156,7 @@ h2
                 position: absolute;;
                 left:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1440px)
                 {
                 display: none;
                 }
@@ -1164,7 +1168,7 @@ h2
                 position: absolute;
                 right:20%;
                 
-                @media (max-width:1124px)
+                @media (max-width:1440px)
                 {
             display: none;
                 }
