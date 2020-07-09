@@ -1,6 +1,6 @@
 //sommaire
-//10 : declarations des polices
-//47 : mixins, keyfrmaes, animations et variables
+//14 : declarations des polices
+//48 : mixins, keyfrmaes, animations et variables
 //274 : mise en CSS page index
 //518 :  mise en style CSS menu 1 la note enchantée:
 //660 : mise en page CSS menu 2 le chic a la francaise
@@ -13,19 +13,19 @@
 
 @font-face {
     font-family:"Mitr-Medium" ;
-    src: url('Mitr-SemiBold.ttf')format('truetype');
+    src: url('Mitr-SemiBold.ttf') format('truetype');
 }
 @font-face {
-    font-family: "Devonshire-Regular";
-    src: url("Devonshire-Regular/Devonshire/Devonshire-Regular.ttf")format('truetype');
+    font-family: "Devonshire";
+    src: local("C:/Users/boire/OneDrive/Documents/Opensclassroom/FORMATION/projet3/Devonshire-Regular/devonshire/Devonsire-Regular.ttf") format('truetype');
 }
 @font-face {
     font-family: "Komika Text";
-    src: local("KOMTXT_.TTF")format('truetype');
+    src: local("KOMTXT_.TTF") format('truetype');
 }
 @font-face {
     font-family:'croissantone';
-    src: url('Croissant-One/croissantone/CroissantOne-Regular.ttf') format('truetype');
+    src: url("Croissant-One/croissantone/CroissantOne-regular.ttf") format('truetype');
 }
 @font-face{
     font-family:'Dancing-Script' ;
@@ -37,7 +37,7 @@
 }
 @font-face{
     font-family: 'Kaushan-Script';
-    src: url('Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf') format("truetype")
+    src: url('Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf') format("truetype");
 }
 
 
@@ -302,11 +302,14 @@ $anim-delay:$anim-dur/$num-pts;
 
 
 //mise en style CSS page index
-
-#bloc-page 
+body
 {
     margin:0;
-    width:110%;
+}
+#bloc-page 
+{
+    margin:auto;
+    width:1100px;
     background-color:white;
 }
 
@@ -319,7 +322,7 @@ header
     height:161px;    
     border-bottom: 2px rgb(161, 193, 129 ) solid;
     background-color:$color_headfoot;
-    width: 100%;
+    width: auto;
 }
 h1
 {
@@ -377,10 +380,9 @@ a
             height: 100%;
             box-shadow:             
             0 0 5px 2px hsl(0, 0%, 90%);
-            font-family: 'Devonshire-Regular';
+            font-family: "Devonshire";
             font-size: 30px; 
             color: rgb(60 18 24);
-            
             
             
             
@@ -396,7 +398,8 @@ a
         }   
         
         .chic
-        {
+        {   
+            
             background-color: $color_fondchic-start;
             transition:transform 450ms, background-color 450ms;
             &:hover
@@ -419,7 +422,7 @@ a
             height: 100%;
             box-shadow:             
             0 0 5px 2px hsl(0, 0%, 90%);
-            font-family: 'croissantone';
+            font-family:"croissantone";
             font-size: 25px;
             background-image: linear-gradient(to right,#d8852e,#905bfd); 
             color:transparent;
@@ -467,7 +470,7 @@ a
             height: 100%;
             box-shadow:             
             0 0 5px 2px hsl(0, 0%, 90%);
-            font-family: 'Dancing-Script',"Palace Script MT","Kunstler Script";
+            font-family: 'Dancing-Script';
             font-size: 40px;
             font-weight: bold;
             background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251));
@@ -524,10 +527,8 @@ a
         }
         
     }
-    @media(max-width:1024px)
-    {
-        overflow: scroll;
-    }
+   
+    
     
 }
 .cadre {
@@ -564,7 +565,7 @@ a
     color: $color_text_h1;
     margin:auto;
     border-radius:10px;
-    font-size:300%;
+    font-size:200%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     margin-bottom: 130px;
@@ -663,7 +664,6 @@ h2
     0 0 5px 2px hsl(0, 0%, 90%); 
     font-size: 20px; 
     color: rgb(60 18 24);
-    padding:80px 120px 120px 120px ; 
     margin:0 20% 0 20%;
     @media(max-width:1024px)
     {
@@ -948,6 +948,7 @@ h2
     0 0 5px 2px hsl(0, 0%, 90%);
     padding: 80px  120px 120px 120px ; 
     font-family:'Dancing-Script',"Palace Script MT","Kunstler Script" ;
+    font-weight: bold;
     @media(max-width:1024px)
     {
         padding:0 10px 50px 10px;
@@ -957,11 +958,11 @@ h2
     .titre-menu
     {
         background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
-        color: transparent;
+        color:transparent;
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        font-size: 4em; 
+        
     }
     
     .entre3
