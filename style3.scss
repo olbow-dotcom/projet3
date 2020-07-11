@@ -14,9 +14,7 @@
 @font-face {
     font-family:"Mitr-Medium" ;
     src: url('Mitr-SemiBold.ttf') format('truetype');
-    
 }
-
 @font-face {
     font-family: "Devonshire";
     src: local("C:/Users/boire/OneDrive/Documents/Opensclassroom/FORMATION/projet3/Devonshire-Regular/devonshire/Devonsire-Regular.ttf") format('truetype');
@@ -41,26 +39,12 @@
     font-family: 'Kaushan-Script';
     src: url('Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf') format("truetype");
 }
-
-
-
-
-
-
 // mixins, keyframes, animations et variables 
-
-
-
-
-
-
 @mixin presentation-du-menu-prix{
     width: 100%;
     display: flex;
     flex-direction: column;
-    
 }
-
 @mixin style-menu
 {   display: flex;
     flex-direction: row;
@@ -76,13 +60,7 @@
     width:auto;
     flex-wrap: wrap;
 }
-
-
-
 $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
-
-
-
 @mixin titre-souligné-chic
 {
     .hover
@@ -91,7 +69,6 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         margin:0,auto;
         transition:$animate;
         position: relative;
-        
         &:after
         {
             content: "";
@@ -110,17 +87,14 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     {
         .hover
         {
-            
             &:after
             {
-                
                 width:100%;
                 opacity:1;
             }
         }
     }    
 }
-
 @mixin titre-souligné-enchantee
 {
     .hover
@@ -129,7 +103,6 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         margin:0,auto;
         transition:$animate;
         position: relative;
-        
         &:after
         {
             content: "";
@@ -148,10 +121,8 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     {
         .hover
         {
-            
-            &:after
+           &:after
             {
-                
                 width:100%;
                 opacity:1;
             }
@@ -166,7 +137,6 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         margin:0,auto;
         transition:$animate;
         position: relative;
-        
         &:after
         {
             content: "";
@@ -185,8 +155,7 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     {
         .hover
         {
-            
-            &:after
+           &:after
             {
                 
                 width:100%;
@@ -203,7 +172,6 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         margin:0,auto;
         transition:$animate;
         position: relative;
-        
         &:after
         {
             content: "";
@@ -222,10 +190,8 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     {
         .hover
         {
-            
             &:after
             {
-                
                 width:100%;
                 opacity:1;
             }
@@ -252,7 +218,6 @@ $color_fondpapilles-end:rgba(249,249,249,0.7);
 $color_fondgout-start:rgba(253,253,253,1);
 $color_fondgout-end:rgba(253,253,253,0.7);
 $color_text_h1:rgb(253,203,70);
-
 @keyframes wiggle{
     0%{transform:  translateX(5px);}
     5%{transform:  translateY(5px);}
@@ -275,7 +240,6 @@ $color_text_h1:rgb(253,203,70);
     90%{transform: translateX(-5px);}
     95%{transform: translateY(-5px);}
     100%{transform: translateX(5px,);}
-    
 }
 @keyframes progress-3pts{
     0%{transform:  translateY(-5px);}
@@ -290,19 +254,9 @@ $color_text_h1:rgb(253,203,70);
     90%{transform: translateY(-14px);}
     100%{transform: translateY(-15px);}
 }
-
-
 $anim-dur:400ms;
 $num-pts:3;
 $anim-delay:$anim-dur/$num-pts;
-
-
-
-
-
-
-
-
 //mise en style CSS page index
 body
 {
@@ -314,8 +268,6 @@ body
     width:1100px;
     background-color:white;
 }
-
-
 header
 {
     display: flex;
@@ -339,17 +291,13 @@ a
     margin: 20px;
     
 }   
-
 .sommaire
 {
-    
     display: flex;
     flex-direction: column;
     height: 100%;
     align-items:stretch ;
-    
-    
-    .haut-menu
+     .haut-menu
     {
         display: flex;
         flex-direction: row;
@@ -357,7 +305,6 @@ a
         padding-top:64px;
         height:514px;
         width: auto;
-        
         .note
         {
             background-color:$color_fondnote-start;
@@ -368,10 +315,8 @@ a
                 background-color: $color_fondnote-end;
             }            
         }  
-        
         .haut-menu__un 
         {
-            
             display: flex;
             flex-direction: column;
             flex-wrap: nowrap;
@@ -385,9 +330,6 @@ a
             font-family: "Devonshire";
             font-size: 30px; 
             color: rgb(60 18 24);
-            
-            
-            
             .menu-un
             {
                 margin-top: 20px; 
@@ -398,20 +340,16 @@ a
             }
             
         }   
-        
         .chic
         {   
-            
             background-color: $color_fondchic-start;
             transition:transform 450ms, background-color 450ms;
             &:hover
             {
                 transform: scale(1.1);
                 background-color: $color_fondchic-end;
-                
             }         
         }
-        
         .haut-menu__deux
         {
             background-color: $color_fondchic-start;
@@ -431,8 +369,6 @@ a
             background-clip:text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            
-            
             .menu-deux
             {
                 font-family: 'Lucida Fax', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 'Verdana', 'sans-serif';
@@ -449,7 +385,6 @@ a
         flex-direction: row;
         justify-content: center;
         height: 514px;
-        
         .papilles
         {
             background-color: $color_fondpapilles-start;
@@ -458,12 +393,10 @@ a
             {
                 transform: scale(1.1);
                 background-color: $color_fondpapilles-end;
-                
             }         
         }
         .bas-menu__trois
         {
-            
             display:flex;
             flex-direction: column;
             justify-content:center; 
@@ -480,7 +413,6 @@ a
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            
             .menu-trois
             {
                 font-family: "Segoe Print";
@@ -500,7 +432,6 @@ a
                 
             }         
         }
-        
         .bas-menu__quatre
         {
             display: flex;
@@ -519,7 +450,6 @@ a
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            
             .menu-quatre
             {
                 font-family: 'Segoe Print';
@@ -529,19 +459,16 @@ a
         }
         
     }
-   
-    
-    
 }
-.cadre {
+.cadre 
+{
     @media (max-width: 1024px) 
     {         
         height :500px !important;
     }
-    
 } 
-
-.colonne{
+.colonne
+{   
     @media (max-width: 1024px)
     {
         display: flex !important;
@@ -552,8 +479,6 @@ a
         width:auto;
     }    
 }
-
-
 .après
 {
     display:flex;
@@ -571,15 +496,14 @@ a
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     margin-bottom: 130px;
-    
     .trois-points
     {
         display:flex;
         flex-direction: row;
         justify-content: center;
+        align-items: baseline;
         &__bar
         {
-            
             animation: progress-3pts $anim-dur forwards ease-in-out infinite;
             animation-direction: alternate;
             @for $i from 1 through $num-pts 
@@ -588,16 +512,14 @@ a
                 {animation-delay: $anim-delay*$i;}       
             }
         }
-        
-        
     }
     @media (max-width:1024px)
     {
         font-size:100%;
     }
 }  
-
-footer{
+footer
+{
     display:flex;
     align-items: center;
     height:112px;
@@ -612,10 +534,7 @@ footer{
     @media(max-width: 1024px)
     {
         justify-content:center;
-        
     }
-    
-    
     a{
         text-decoration: none;
         color:$color_text_h1;
@@ -630,30 +549,13 @@ footer{
     }
     
 }  
-
-
-
-
-
-
-
-
-
-
-
 // mise en style CSS menu 1 la note enchantée:
-
-
-
-
-
 h2
 {
     font-size: 3rem;
     margin-bottom: 70px;
     text-align: center;
 }
-
 .repas1
 {
     display: flex;
@@ -670,7 +572,6 @@ h2
     @media(max-width:1024px)
     {
         padding:0 10px 50px 10px;
-        
     }
     .titre-menu__un
     {
@@ -688,22 +589,17 @@ h2
             padding-top: 50px;
             width: 50px;
             height: 50px;
-            
         }
     }
     .entrees
     {   margin-bottom: 70px;
-        
         @include presentation-du-menu-prix;
     }
     .ravioles,.caviar,.homard, .foie-gras
     {
         @include style-menu;
         font-family: "Segoe Print";
-        
-        
     }
-    
     h3
     {   display:flex;
         flex-direction: row;
@@ -717,7 +613,6 @@ h2
         @media(max-width:1228px)
         {
             display:inline-block;
-            
         }
         >.trait, .trait-d
         {
@@ -725,13 +620,9 @@ h2
             @media (max-width:1228px)
             {
                 display:none;
-                
             }
-            
-            
         }
     }
-    
     .plat
     {
         margin-bottom: 70px;
@@ -741,11 +632,7 @@ h2
     {
         @include style-menu;
         font-family: "Segoe Print";
-        
-        
-        
     }
-    
     .fin
     {
         display: flex;
@@ -757,21 +644,16 @@ h2
         font-size: 45px;
         margin-top: 100px;
         margin-bottom: 70px;
-        
     }
     .dessert
     {
         @include presentation-du-menu-prix;
-        
         >p
         {
-            
-            
             font-family: "Segoe Print";
             @media(max-width: 1024px)
             {
                 line-height: 2;
-                
             }
         }
     }    
@@ -783,19 +665,7 @@ h2
         }
     }  
 }    
-
-
-
-
-
-
 // mise en page CSS menu 2 le chic a la francaise
-
-
-
-
-
-
 .repas2
 {
     display:flex;
@@ -813,14 +683,11 @@ h2
     @media(max-width:1024px)
     {
         padding:0 10px 50px 10px;
-        
     }
-    
     .chic2
     {
         margin: 90px,0,90px,0;
     }
-    
     .titre-menu_deux
     {
         text-align: center;
@@ -833,7 +700,6 @@ h2
         -webkit-background-clip: text;
         -moz-background-clip: text;
     }
-    
     .entre2
     {
         @include presentation-du-menu-prix;
@@ -844,8 +710,6 @@ h2
     {
         @include style-menu;
         font-family:"Lucida fax";
-        
-        
     }
     h3 
     {   
@@ -862,28 +726,15 @@ h2
         {
             display:inline-block;
         }
-        
         .chic1g,.chic1d
-        
         {
-            
             width: 200px;
-            
-                      
             @media (max-width:1420px)
             {
                 display: none;
             }
         }
-        
-        
-             
-        
     }
-    
-    
-    
-    
     .plat2
     {   
         color:#b37097;
@@ -894,8 +745,6 @@ h2
     {
         @include style-menu;
         font-family:"Lucida Fax"; 
-        
-        
     }
     .dessert2
     {
@@ -908,37 +757,16 @@ h2
     {
         @include style-menu;
         font-family:"Lucida fax";
-        
-        
     }
     .plat-prix
     { 
-        
         @media(max-width:1024px)
         {
             @include style-menu-res;
         }
     }      
 }  
-
-
-
-
-
-
-
-
-
-
-
-
-
 //style menu 3 le délice des papilles
-
-
-
-
-
 .repas3
 {
     display:flex;
@@ -954,9 +782,7 @@ h2
     @media(max-width:1024px)
     {
         padding:0 10px 50px 10px;
-        
     }
-    
     .titre-menu
     {
         background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
@@ -964,12 +790,9 @@ h2
         background-clip: text;
         -webkit-background-clip: text;
         -moz-background-clip: text;
-        
     }
-    
     .entre3
     {
-        
         @include presentation-du-menu-prix;
         padding-top:120px;
         padding-bottom:100px;
@@ -979,7 +802,6 @@ h2
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
     }
     h3
     {
@@ -993,19 +815,13 @@ h2
             text-align:center;
         }
         .trait_g,.trait_d   
-        
         {
-            
             width: 280px;
             @media (max-width:1440px)
             {
                 display: none;
             }
         }
-                 
-        
-        
-        
         @include titre-souligné-papilles;
         font-family: "Segoe Print";
     }
@@ -1020,28 +836,23 @@ h2
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
     } 
-    
     .dessert3
     {
         font-family:"Segoe Print" ;
         @include presentation-du-menu-prix;
         padding-bottom:100px; 
     }
-    
     .farandole, .creme, .tiramisu 
     {
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
     }
     span
     {
         font-size: 20px;
     }   
-    
     h2, h3
     {
         font-weight: normal;
@@ -1052,25 +863,13 @@ h2
     }    
     .plat-prix
     { 
-        
         @media(max-width:1024px)
         {
             @include style-menu-res;
         }
     }                     
 }    
-
-
-
-
-
 //mise en forme css menu 4 la palette du gout
-
-
-
-
-
-
 .repas4
 {
     display: flex;
@@ -1087,7 +886,6 @@ h2
     @media(max-width:1024px)
     {
         padding:0 10px 50px 10px;
-        
     }
     h2
     {
@@ -1111,12 +909,8 @@ h2
             display:inline-block;
             text-align: center;
         }
-        
-        
         .trait-gout-g,.trait-gout-d
-        
         {   
-            
             width:330px;
             @media (max-width:1440px)
             {
@@ -1124,9 +918,6 @@ h2
             }
         }
     }             
-        
-        
-    
     .entre4
     {
         
@@ -1139,9 +930,7 @@ h2
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
     }
-    
     .plat4
     {
         @include presentation-du-menu-prix;
@@ -1152,7 +941,6 @@ h2
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
     }
     .dessert4
     {
@@ -1164,37 +952,16 @@ h2
         @include style-menu;
         padding-bottom: 10px;
         font-family: "Segoe Print";
-        
-        
     }
     .plat-prix
     { 
-        
-        @media(max-width:1024px)
+    @media(max-width:1024px)
         {
             @include style-menu-res;
         }
     }                     
 }
-
-
-
-
-
-
-
-
 //mise ne pages css mentions légales
-
-
-
-
-
-
-
-
-
-
 h1 {text-align:center;}
 .bloc-page
 {
