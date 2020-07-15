@@ -211,11 +211,6 @@ footer a:hover {
   font-size: 20px;
 }
 
-a {
-  text-decoration: none;
-  margin: 20px;
-}
-
 .sommaire {
   display: flex;
   flex-direction: column;
@@ -224,21 +219,27 @@ a {
 .sommaire .menu0 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  height: auto;
+  margin-top: 30px;
 }
-.sommaire .menu0 .colonne {
+.sommaire .menu0 .menuH {
   display: flex;
   flex-direction: row;
   justify-content: center;
   height: 514px;
   align-items: center;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  margin-bottom: 40px;
 }
-.sommaire .menu0 .colonne__un {
+.sommaire .menu0 .menuH .note {
+  text-decoration: none;
+  margin: 20px;
+  background-color: #fcdfdb;
+  transition: transform 450ms, background-color 450ms;
+}
+.sommaire .menu0 .menuH .note:hover {
+  transform: scale(1.1);
+  background-color: rgba(252, 223, 219, 0.7);
+}
+.sommaire .menu0 .menuH .note .menus__un {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -252,22 +253,24 @@ a {
   font-size: 30px;
   color: #3c1218;
 }
-.sommaire .menu0 .colonne__un .menu-un {
+.sommaire .menu0 .menuH .note .menus__un .menu-un {
   margin-top: 20px;
   font-family: "Komika Text";
   font-weight: bold;
   font-size: 40px;
   color: #3c1218;
 }
-.sommaire .menu0 .colonne .note {
-  background-color: #fcdfdb;
+.sommaire .menu0 .menuH .chic {
+  text-decoration: none;
+  margin: 20px;
+  background-color: #fff5fe;
   transition: transform 450ms, background-color 450ms;
 }
-.sommaire .menu0 .colonne .note:hover {
+.sommaire .menu0 .menuH .chic:hover {
   transform: scale(1.1);
-  background-color: rgba(252, 223, 219, 0.7);
+  background-color: rgba(255, 245, 254, 0.7);
 }
-.sommaire .menu0 .colonne__deux {
+.sommaire .menu0 .menuH .chic .menus__deux {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -284,22 +287,31 @@ a {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-.sommaire .menu0 .colonne__deux .menu-deux {
+.sommaire .menu0 .menuH .chic .menus__deux .menu-deux {
   font-family: "Lucida Fax", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, "Verdana", "sans-serif";
   font-weight: bold;
   font-size: 40px;
   color: #c77412;
   margin-top: 20px;
 }
-.sommaire .menu0 .colonne .chic {
-  background-color: #fff5fe;
+.sommaire .menu0 .menuB {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 514px;
+  align-items: center;
+}
+.sommaire .menu0 .menuB .papilles {
+  text-decoration: none;
+  margin: 20px;
+  background-color: #f9f9f9;
   transition: transform 450ms, background-color 450ms;
 }
-.sommaire .menu0 .colonne .chic:hover {
+.sommaire .menu0 .menuB .papilles:hover {
   transform: scale(1.1);
-  background-color: rgba(255, 245, 254, 0.7);
+  background-color: rgba(249, 249, 249, 0.7);
 }
-.sommaire .menu0 .colonne__trois {
+.sommaire .menu0 .menuB .papilles .menus__trois {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -316,21 +328,23 @@ a {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-.sommaire .menu0 .colonne__trois .menu-trois {
+.sommaire .menu0 .menuB .papilles .menus__trois .menu-trois {
   font-family: "Segoe Print";
   margin-top: 20px;
   font-weight: lighter;
   color: #0887fb;
 }
-.sommaire .menu0 .colonne .papilles {
-  background-color: #f9f9f9;
+.sommaire .menu0 .menuB .gout {
+  text-decoration: none;
+  margin: 20px;
+  background-color: #fdfdfd;
   transition: transform 450ms, background-color 450ms;
 }
-.sommaire .menu0 .colonne .papilles:hover {
+.sommaire .menu0 .menuB .gout:hover {
   transform: scale(1.1);
-  background-color: rgba(249, 249, 249, 0.7);
+  background-color: rgba(253, 253, 253, 0.7);
 }
-.sommaire .menu0 .colonne__quatre {
+.sommaire .menu0 .menuB .gout .menus__quatre {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -346,31 +360,23 @@ a {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-.sommaire .menu0 .colonne__quatre .menu-quatre {
+.sommaire .menu0 .menuB .gout .menus__quatre .menu-quatre {
   font-family: "Segoe Print";
   font-size: 40px;
   color: #72bf56;
 }
-.sommaire .menu0 .colonne .gout {
-  background-color: #fdfdfd;
-  transition: transform 450ms, background-color 450ms;
-}
-.sommaire .menu0 .colonne .gout:hover {
-  transform: scale(1.1);
-  background-color: rgba(253, 253, 253, 0.7);
-}
 @media (max-width: 1024px) {
-  .sommaire .menu0 .colonne .cadre {
-    height: 500px !important;
+  .sommaire .menu0 .cadre {
+    height: 500px;
   }
 }
 @media (max-width: 1024px) {
-  .sommaire .menu0 .colonne .colonne {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: space-around !important;
-    height: 100% !important;
+  .sommaire .menu0 .colonne {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
     width: auto;
   }
 }
@@ -412,7 +418,7 @@ a {
   animation-delay: 400ms;
 }
 @media (max-width: 1024px) {
-  .sommaire .menu0 .après .trois-points {
+  .sommaire .menu0 .après {
     font-size: 80%;
   }
 }

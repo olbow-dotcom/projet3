@@ -356,11 +356,7 @@ footer
     font-size: 20px; 
 }
  //mise en style CSS page index
-a
-{
-    text-decoration: none;
-    margin: 20px;
-}   
+
 .sommaire
 {
     display: flex;
@@ -370,174 +366,196 @@ a
     {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        margin-top: 40px;
-        margin-bottom: 40px;
-        height: auto;
-        .colonne
+        
+        margin-top: 30px;
+        .menuH
         {
             display: flex;
             flex-direction: row;
             justify-content: center;
             height:514px;
             align-items: center;
-            margin-bottom: 20px;
-            margin-top: 20px;
-            &__un 
-            {   
-                display: flex;
-                flex-direction: column;
-                flex-wrap: nowrap;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                width:369px;
-                height: 514px;
-                box-shadow: 0 0 5px 2px hsl(0, 0%, 90%);
-                font-family: "Devonshire";
-                font-size: 30px; 
-                color: rgb(60 18 24);
-                .menu-un
-                {
+            margin-bottom: 40px;   
+            .note
+            { 
+                text-decoration: none;
+                margin: 20px;                  
+                background-color: $color_fondnote-start;
+                transition:transform 450ms, background-color 450ms;
+                &:hover
+                    {
+                        transform: scale(1.1);
+                        background-color: $color_fondnote-end;
+                    }    
+                .menus__un 
+                {   
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    width:369px;
+                    height:514px;
+                    box-shadow: 0 0 5px 2px hsl(0, 0%, 90%);
+                    font-family: "Devonshire";
+                    font-size: 30px; 
+                    color: rgb(60 18 24);
+                    .menu-un
+                    {
                     margin-top: 20px; 
                     font-family: "Komika Text";
                     font-weight: bold;
                     font-size: 40px;
                     color:rgb(60 18 24); 
-                }
-            }   
-            .note
-            {   background-color: $color_fondnote-start;
+                    }
+                }   
+                
+            }
+            .chic
+            {   text-decoration: none;
+                margin: 20px; 
+                background-color: $color_fondchic-start;
                 transition:transform 450ms, background-color 450ms;
                 &:hover
-                {
+                    {
                     transform: scale(1.1);
-                    background-color: $color_fondnote-end;
-                } 
-            }        
-            &__deux
-            {            
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                width:369px;
-                height: 514px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                font-family:"croissantone";
-                font-size: 25px;
-                background-image: linear-gradient(to right,#d8852e,#905bfd); 
-                color:transparent;
-                background-clip:text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                .menu-deux
-                {
+                    background-color: $color_fondchic-end;
+                    }                 
+                .menus__deux
+                {            
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    align-items: center;
+                    width:369px;
+                    height: 514px;
+                    box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
+                    font-family:"croissantone";
+                    font-size: 25px;
+                    background-image: linear-gradient(to right,#d8852e,#905bfd); 
+                    color:transparent;
+                    background-clip:text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    .menu-deux
+                    {
                     font-family: 'Lucida Fax', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, 'Verdana', 'sans-serif';
                     font-weight: bold;
                     font-size: 40px;
                     color: rgb(199 116 18);
                     margin-top:20px;
+                    }
                 }
+                
             }
-            .chic
-            {   background-color: $color_fondchic-start;
+        }
+        .menuB
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            height:514px;
+            align-items: center;    
+            .papilles
+            {   
+                text-decoration: none;
+                margin: 20px; 
+                background-color: $color_fondpapilles-start;
                 transition:transform 450ms, background-color 450ms;
-                &:hover
-                {
-                transform: scale(1.1);
-                background-color: $color_fondchic-end;
-                }         
-            }
-            &__trois    
-            {            
-                display:flex;
-                flex-direction: column;
-                justify-content:center; 
-                text-align: center;
-                width:369px;
-                height: 514px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                font-family: 'Dancing-Script';
-                font-size: 40px;
-                font-weight: bold;
-                background-image: linear-gradient(to right,rgb(6,69,229),rgba(8,135,251,0.7));
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                .menu-trois
-                {
+                    &:hover
+                    {
+                         transform: scale(1.1);
+                        background-color: $color_fondpapilles-end;
+                    }         
+                
+                .menus__trois    
+                {            
+                    display:flex;
+                    flex-direction: column;
+                    justify-content:center; 
+                    text-align: center;
+                    width:369px;
+                    height: 514px;
+                    box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
+                    font-family: 'Dancing-Script';
+                    font-size: 40px;
+                    font-weight: bold;
+                    background-image: linear-gradient(to right,rgb(6,69,229),rgba(8,135,251,0.7));
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    .menu-trois
+                    {
                     font-family: "Segoe Print";
                     margin-top:20px;
                     font-weight: lighter;
                     color:rgb(8 135 251)
+                    }
                 }
+                
             }
-            .papilles
+            .gout
             {   
-                background-color: $color_fondpapilles-start;
+                text-decoration: none;
+                margin: 20px; 
+                background-color: $color_fondgout-start;
                 transition:transform 450ms, background-color 450ms;
                 &:hover
-                {
-                transform: scale(1.1);
-                background-color: $color_fondpapilles-end;
-                }         
-            }
-        
-            &__quatre
-            {   
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                width: 369px;
-                height: 514px;
-                box-shadow: 0 0 5px 2px hsl(0, 0%, 90%);
-                font-family: 'Kaushan-Script';  
-                font-size: 40px;
-                background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
-                color:transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -moz-background-clip: text;
-                .menu-quatre
-                {
+                    {
+                        transform: scale(1.1);
+                        background-color: $color_fondgout-end;
+                    }         
+                .menus__quatre
+                {   
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    width: 369px;
+                    height: 514px;
+                    box-shadow: 0 0 5px 2px hsl(0, 0%, 90%);
+                    font-family: 'Kaushan-Script';  
+                    font-size: 40px;
+                    background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
+                    color:transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    .menu-quatre
+                    {
                     font-family: 'Segoe Print';
                     font-size: 40px;
                     color: rgb(114, 191, 86);
+                    }
                 }
+                
             }
-            .gout
-            {   background-color: $color_fondgout-start;
-                transition:transform 450ms, background-color 450ms;
-                &:hover
-                {
-                    transform: scale(1.1);
-                    background-color: $color_fondgout-end;
-                }         
-            }
+        }
+
             .cadre 
             {
                 @media (max-width: 1024px) 
-            {         
-                height :500px !important;
-            }
+                    {         
+                     height :500px; 
+                    }
             } 
             .colonne
             {   
                 @media (max-width: 1024px)
-            {
-                display: flex !important;
-                flex-direction: column !important; 
-                align-items: center !important;
-                justify-content: space-around !important;
-                height: 100% !important;
-                width:auto;
-            }    
+                {
+                    display: flex ;
+                    flex-direction: column; 
+                    align-items: center;
+                    justify-content: space-around;
+                    height: 100%;
+                    width:auto;
+                }    
             }   
-        }
+        
+    
         .après
         {
             display:flex;
@@ -560,26 +578,27 @@ a
             {
                 display:flex;
                 flex-direction: row;
-                justify-content: center;
+                 justify-content: center;
                 align-items: baseline;
                 &__bar
                 {
                     animation: progress-3pts $anim-dur forwards ease-in-out infinite;
                     animation-direction: alternate;
-                    @for $i from 1 through $num-pts 
+                     @for $i from 1 through $num-pts 
                     {
-                    &--#{$i}
-                    {animation-delay: $anim-delay*$i;}       
+                        &--#{$i}
+                        {animation-delay: $anim-delay*$i;}       
                     }
                 }
-                @media (max-width:1024px)
-                {
-                    font-size:80%;
-                }
-            } 
+            }    
+            @media (max-width:1024px)
+            {
+                font-size:80%;
+            }
         } 
-    }
-}        
+    } 
+}
+        
 
 // mise en style CSS menu 1 la note enchantée:
 
