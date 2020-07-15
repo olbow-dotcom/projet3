@@ -203,14 +203,6 @@ footer a:hover {
   animation-iteration-count: infinite;
 }
 
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 20px;
-}
-
 .sommaire {
   display: flex;
   flex-direction: column;
@@ -423,7 +415,21 @@ footer a:hover {
   }
 }
 
-.titre-menu__un {
+.repas {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.repas .menu {
+  background-color: #fcdfdb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  margin: 0 10% 10% 10%;
+}
+.repas .menu .titre-menu__un {
   display: flex;
   color: #3c1218;
   flex-direction: column;
@@ -435,27 +441,12 @@ footer a:hover {
   font-family: "Devonshire";
   padding-bottom: 40px;
 }
-.titre-menu__un .musique {
+.repas .menu .titre-menu__un .musique {
   margin-top: 40px;
   width: 90px;
   height: 90px;
 }
-
-.entrees {
-  margin-bottom: 70px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.ravioles, .caviar, .homard, .foie-gras {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-family: "Segoe Print" !important;
-}
-
-.enchantee h3 {
+.repas .menu .h3 {
   display: flex;
   width: auto;
   flex-direction: row;
@@ -467,14 +458,15 @@ footer a:hover {
   font-family: "Segoe Print";
   font-weight: bold;
   font-size: 30px;
+  text-decoration: none;
 }
-.enchantee h3 .hover {
+.repas .menu .h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-.enchantee h3 .hover:after {
+.repas .menu .h3 .hover:after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -486,39 +478,60 @@ footer a:hover {
   opacity: 0;
   background: #3c1218;
 }
-.enchantee h3:hover .hover:after {
+.repas .menu .h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
-
-h3 > .trait-g, .trait-d {
+.repas .menu .trait-g, .repas .menu .trait-d {
   width: 280px;
 }
 @media (max-width: 1100px) {
-  h3 > .trait-g, .trait-d {
+  .repas .menu .trait-g, .repas .menu .trait-d {
     display: none;
   }
 }
-
-.hover {
+.repas .menu .hover {
   color: #3c1218;
+  align-items: center;
 }
-
-.plat {
+.repas .menu .entrees {
   margin-bottom: 70px;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-
-.noix, .langoustine, .mijote {
+.repas .menu .entrees .ravioles, .repas .menu .entrees .caviar, .repas .menu .entrees .homard, .repas .menu .entrees .foie-gras {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Segoe Print" !important;
 }
-
-.fin {
+.repas .menu .plat {
+  margin-bottom: 70px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.repas .menu .plat .noix, .repas .menu .plat .langoustine, .repas .menu .plat .mijote {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Segoe Print" !important;
+}
+.repas .menu .dessert {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.repas .menu .dessert p {
+  font-family: "Segoe Print";
+}
+@media (max-width: 1024px) {
+  .repas .menu .dessert p {
+    line-height: 2;
+  }
+}
+.repas .menu .fin {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -529,29 +542,11 @@ h3 > .trait-g, .trait-d {
   margin-top: 60px;
   margin-bottom: 40px;
 }
-
-.dessert {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.dessert > p {
-  font-family: "Segoe Print";
-}
-@media (max-width: 1024px) {
-  .dessert > p {
-    line-height: 2;
-  }
-}
-
-.plat-prix {
+.repas .menu .plat-prix {
   color: #3c1218;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 @media (max-width: 1024px) {
-  .plat-prix {
+  .repas .menu .plat-prix {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
