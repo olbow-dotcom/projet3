@@ -209,7 +209,7 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
     }
 }
 @mixin repas
-{    display:flex;
+{   display:flex;
     flex-direction: column ;
     justify-content: space-between;
 }
@@ -266,7 +266,7 @@ $anim-dur:400ms;
 $num-pts:3;
 $anim-delay:$anim-dur/$num-pts;
 //css commun au 5 pages
-body
+@mixin body
 {
     margin:0;
     width: 100%;
@@ -275,13 +275,8 @@ body
         width:auto;    
     }
 }
-//#bloc-page 
-//{
-//    margin:auto;
-//    width:1200px;
-//    background-color:white;
-//   }
-header
+
+@mixin header
 {
     display: flex;
     justify-content:center ;
@@ -298,14 +293,14 @@ header
         width:auto;
     }
 }
-h1
+@mixin h1
 {
     font-size:60px;
     font-family: 'Mitr-Medium',Arial,sans-serif;
     color: $color_text_h1;
     align-items: center;
 } 
-h2
+@mixin h2
 {
     padding-top: 45px;
     font-size: 30px;
@@ -346,16 +341,6 @@ footer
         }
     }
 } 
-//css pour les 4 pages
-
-@mixin menu
-{  display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    font-size: 20px;
-    margin:0 10% 10% 10% ;
- }
  //mise en style CSS page index
 
 .sommaire
@@ -369,7 +354,7 @@ footer
         flex-direction: column;
         
         margin-top: 30px;
-        .menuH
+        .menu-h
         {
             display: flex;
             flex-direction: row;
@@ -452,7 +437,7 @@ footer
                 
             }
         }
-        .menuB
+        .menu-b
         {
             display: flex;
             flex-direction: row;
@@ -602,48 +587,54 @@ footer
         
 
 // mise en style CSS menu 1 la note enchantée:
-.repas
-{
-    @include repas;
-    .menu
-    {   background-color: $color-fondnote;
-        @include menu;
-        .titre-menu__un
+body
+{ @include body;
+    header
+    {
+        @include header;
+        h1
         {
-            display:flex;
-            color: rgb(60 18 24);
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            font-size: 3em;
-            font-weight: bold;
-            font-family:'Devonshire';
-            padding-bottom: 40px;
-            
-            .musique
+            @include h1;
+        }
+    }
+.repas
+{ 
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+        .titre-menu__un
             {
-                margin-top: 40px;
-                width: 90px;
-                height: 90px;
+                display:flex;
+                color: rgb(60 18 24);
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                font-size: 3em;
+                font-weight: bold;
+                font-family:'Devonshire';
+                padding-bottom: 40px;
+                .musique
+                {
+                    margin-top: 40px;
+                    width: 90px;
+                    height: 90px;
+                }
             }
-        }
-        .h3
-        {   
-            display:flex;
-            width:auto;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            margin:0;
-            height:100px ;
-            text-align: center;
-            @include titre-souligné-enchantee;
-            font-family: "Segoe Print";
-            font-weight: bold;
-            font-size: 30px;
-            text-decoration: none;
-        }
+            .h3
+            {   
+                display:flex;
+                width:auto;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin:0;
+                text-align: center;
+                @include titre-souligné-enchantee;
+                font-family: "Segoe Print";
+                font-weight: bold;
+                font-size: 30px;
+            }
             .trait-g, .trait-d 
             {
                 width: 280px;
@@ -653,65 +644,65 @@ footer
                 }
             }
         
-        .hover
-        {
-            color: rgb(60 18 24);
-            align-items: center;
-         }    
-        .entrees
-        {   
-            margin-bottom: 70px;
-            @include presentation-du-menu-prix;
-           .ravioles,.caviar,.homard,.foie-gras
+            .hover
             {
-                @include style-menu;
-                font-family: "Segoe Print" !important;
-            }
-        }
-        .plat
-        {
-            margin-bottom: 70px;
-            @include presentation-du-menu-prix;
-           .noix, .langoustine, .mijote
-            {
-                @include style-menu;
-                font-family: "Segoe Print"!important;
-            }
-        }
-        .dessert
-        {
-            @include presentation-du-menu-prix;
-            p
-            {
-                font-family: "Segoe Print";
-                @media(max-width: 1024px)
+                color: rgb(60 18 24);
+                align-items: center;
+            }    
+            .entrees
+            {   
+                margin-bottom: 70px;
+                @include presentation-du-menu-prix;
+                .ravioles,.caviar,.homard,.foie-gras
                 {
-                line-height: 2;
+                    @include style-menu;
+                    font-family: "Segoe Print" !important;
                 }
             }
-        }    
-        .fin
-        {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            text-align:center;
-            align-items: center;
-            font-family: "Devonshire";
-            font-size: 35px;
-            margin-top: 60px;
-            margin-bottom: 40px;        
-        }
-        .plat-prix
-        { 
-            color: rgb(60 18 24);
-            @media(max-width:1024px)
+            .plat
             {
-                @include style-menu-res;
+                margin-bottom: 70px;
+                @include presentation-du-menu-prix;
+                .noix, .langoustine, .mijote
+                {
+                    @include style-menu;
+                    font-family: "Segoe Print"!important;
+                }
             }
-        }  
+            .dessert
+            {
+                @include presentation-du-menu-prix;
+                p
+                {
+                    font-family: "Segoe Print";
+                    @media(max-width: 1024px)
+                    {
+                        line-height: 2;
+                    }
+                }
+            }
+        
+    .fin
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align:center;
+        align-items: center;
+        font-family: "Devonshire";
+        font-size: 35px;
+        margin-top: 60px;
+        margin-bottom: 40px;        
     }
-}
+    .plat-prix
+    { 
+        color: rgb(60 18 24);
+        @media(max-width:1024px)
+        {
+            @include style-menu-res;
+        }
+    }    }   }
+
 
 
 
@@ -825,7 +816,7 @@ footer
     }      
   
 //style menu 3 le délice des papilles
-.repas3
+.repas
 {
     display:flex;
     flex-direction: column;
