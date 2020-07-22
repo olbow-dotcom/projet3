@@ -7,38 +7,47 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   sodipodi:docname="dessin trait.svg"
+   sodipodi:docname="dessin-enchantee_traitD.svg"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
    id="svg8"
    version="1.1"
-   viewBox="0 0 197.00001 107"
-   height="107px"
-   width="70px">
+   viewBox="0 0 79.789131 8.3538933"
+   height="8.3538933mm"
+   width="79.789131mm">
   <defs
      id="defs2" />
   <sodipodi:namedview
-     inkscape:snap-center="true"
-     inkscape:lockguides="false"
-     showborder="false"
-     scale-x="1"
-     inkscape:window-maximized="0"
-     inkscape:window-y="0"
-     inkscape:window-x="-7"
-     inkscape:window-height="1368"
-     inkscape:window-width="1718"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="1377"
+     inkscape:window-width="3440"
+     inkscape:guide-bbox="true"
+     showguides="true"
+     inkscape:snap-page="true"
+     inkscape:snap-bbox="true"
      showgrid="false"
      inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer2"
      inkscape:document-units="mm"
-     inkscape:cy="297.11933"
-     inkscape:cx="426.09347"
-     inkscape:zoom="1.8599359"
+     inkscape:cy="107.75427"
+     inkscape:cx="357.82383"
+     inkscape:zoom="3.8321488"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
      bordercolor="#666666"
      pagecolor="#ffffff"
-     id="base" />
+     id="base"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+    <sodipodi:guide
+       id="guide861"
+       orientation="0,-1"
+       position="208.92789,64.936309" />
+  </sodipodi:namedview>
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -52,12 +61,12 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
-     inkscape:groupmode="layer"
-     inkscape:label="Calque 1">
+     inkscape:label="Calque 2"
+     id="layer2"
+     inkscape:groupmode="layer">
     <path
-       id="path863"
-       d="m 152.81233,59.329104 c -7.64786,-0.291193 -72.213966,-1.373297 -78.057296,-1.308213 -1.080038,0.01204 -4.835625,0.259562 -8.345749,0.55007 -3.510123,0.290504 -12.383565,0.539251 -19.718758,0.552775 l -13.336714,0.02459 -1.18e-4,-1.730026 c -1.07e-4,-1.556125 0.134431,-1.844377 1.33839,-2.867542 l 1.338508,-1.137521 12.489251,0.0062 c 6.869088,0.0033 14.992976,0.185046 18.053084,0.403673 7.451846,0.532407 66.689662,0.663868 74.948092,0.166331 9.32979,-0.562079 48.35202,0.700795 49.66538,1.607326 0.66083,0.456121 0.7512,1.663163 0.18001,2.404576 -0.22358,0.290216 -1.31606,0.514257 -2.53645,0.520167 -1.17905,0.0057 -2.73282,0.179184 -3.45285,0.385496 -1.9326,0.553747 -22.20592,0.816551 -32.56478,0.422139 z"
-       style="fill:#000000;stroke-width:0.372878" />
+       style="fill:#3c1218;fill-opacity:1;stroke:#3c1218;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1.5935312,2.569403 c 5.084687,0.3625932 9.5640128,0.3997991 9.5640128,0.3997991 l 5.200151,0.3348556 4.530832,-0.07441 4.633785,0.260443 5.251635,-0.03721 h 3.295152 3.295137 l 5.40608,0.03721 5.509086,0.03721 h 5.457597 l 4.324853,-0.111619 4.994309,0.07441 7.87731,0.186031 8.031957,-0.297649 h 0.463296 L 79.789131,3.0064082 78.707943,2.2622854 58.113361,2.0390482 54.20038,1.7413992 l -6.023967,0.037206 -1.44162,-0.074413 h -5.09715 L 34.583963,1.5553678 30.15611,1.6297808 21.145954,1.5553678 15.842841,1.6669866 9.1495722,1.5925736 5.7514602,1.5553676 4.5157722,1.2949244 h -1.390137 l -0.72081,0.1860312 -0.772301,0.074413 -0.514865,0.037206 -0.41189404,0.5208862 z"
+       id="path26-8" />
   </g>
 </svg>
