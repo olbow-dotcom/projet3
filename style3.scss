@@ -13,11 +13,6 @@
 
 @font-face 
 {
-    font-family:"Mitr-Medium" ;
-    src: url('Mitr-SemiBold.ttf') format('truetype');
-}
-@font-face 
-{
     font-family: "Devonshire";
     src: local("C:/Users/boire/OneDrive/Documents/Opensclassroom/FORMATION/projet3/Devonshire-Regular/devonshire/Devonsire-Regular.ttf") format('truetype');
 }
@@ -207,19 +202,7 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         }
     }    
 }
-@mixin margin-block-main
-{
-    h3
-    {
-        font-weight: bold;
-        text-align: center;
-    }
-}
-@mixin repas
-{   display:flex;
-    flex-direction: column ;
-    justify-content: space-between;
-}
+
 $color_headfoot:rgb(87,156,135);
 $color-fondnote: rgb(252,223,219);
 $color_fondnote-start:rgba(252,223,219,1);
@@ -268,38 +251,41 @@ $num-pts:3;
 $anim-delay:$anim-dur/$num-pts;
 //css commun au 5 pages
 @mixin body
-{
+{   
     margin:0;
     width: 100%;
-    @media (max-width:1024px)
-    {
-        width:auto;    
-    }
 }
 
-@mixin header
+header
 {
     display: flex;
-    justify-content:center ;
+    flex-direction: column;
+    justify-content:stretch ;
     align-items: center;
     height:161px;    
     border-bottom: 2px rgb(161, 193, 129 ) solid;
     background-color:$color_headfoot;
-    width:auto;
+    width:100%;
     @media (max-width:1024px)
     {
         display:flex;
         flex-direction:column;
         align-items:space-between;
-        width:auto;
+        
     }
 }
-@mixin h1
+h1
 {
+    display:flex;
     font-size:60px;
-    font-family: 'Mitr-Medium',Arial,sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     color: $color_text_h1;
-    align-items: center;
+    text-align: center;
+    @media (max-width:1024px)
+    {
+        width:auto;
+    }
 } 
 @mixin h2
 {
@@ -312,8 +298,19 @@ $anim-delay:$anim-dur/$num-pts;
     background-color: white;
     margin:0;
 }
+@mixin h3
+{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:1000px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
 a
 {
+    display: block;
     text-decoration: none;
 }
 footer
@@ -339,21 +336,17 @@ footer
         color:$color_text_h1;
         font-size:40px ;
         font-family: Arial, Helvetica, sans-serif;
+        padding:30px;
         &:hover
         {
             animation-name: wiggle;
             animation-duration : 0.8s;
             animation-iteration-count:infinite;
         }
-        .ctc
-        {
-            padding:20px;
-        }
-    }
+    }    
 } 
     //mise en style CSS page index
     .sommaire
-    
     {
         display: flex;
         flex-direction: column;
@@ -361,10 +354,6 @@ footer
         @media (max-width:1024px)
         {
             width: auto;
-        }
-        header
-        {
-            @include header;
         }
         .menu0
         {
@@ -604,150 +593,153 @@ footer
     
     
     // mise en style CSS menu 1 la note enchantée:
-    body
-    {
-        @include body;
-        .enchantee
-        { 
-            display:flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            height: 100%;
-            header
-            {
-                @include header;
-            }
-            h1
-            {
-                @include h1;
-            }
-            h2
-            {   
-                display:flex;
-                justify-content: center;
-                align-items: baseline;
-                height:15px;
-                margin:35px;
-                padding-bottom:0;
-            }
-            .menu
-            {
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                background-color: $color-fondnote;
-                width: 1000px;
-                margin-left:auto;
-                margin-right: auto;
-                margin-bottom: 150px;
-                padding-top: 50px;
-                height:1400px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                .titre-menu__un
-                {
-                    display:flex;
-                    color: rgb(60 18 24);
-                    flex-direction: column;
-                    justify-content: center;
-                    text-align: center;
-                    align-items: center;
-                    font-size: 3em;
-                    font-weight: bold;
-                    font-family:'Devonshire';
-                    padding-bottom: 40px;
-                    .musique
-                    {
-                        margin-top: 40px;
-                        width: 90px;
-                        height: 90px;
-                    }
-                }
-                .entrees
-                {   
-                    margin-bottom: 70px;
-                    @include presentation-du-menu-prix;
-                    .ravioles,.caviar,.homard,.foie-gras
-                    {
-                        @include style-menu;
-                        font-family: "Segoe Print" !important;
-                    }
-                }    
-                
-                
-                .plat
-                {
-                    margin-bottom: 70px;
-                    @include presentation-du-menu-prix;
-                    .noix, .langoustine, .mijote
-                    {
-                        @include style-menu;
-                        font-family: "Segoe Print"!important;
-                    }
-                }
-                .dessert
-                {
-                    @include presentation-du-menu-prix;
-                    p
-                    {
-                        font-family: "Segoe Print";
-                        @media(max-width: 1024px)
-                        {
-                            line-height: 2;
-                        }
-                    }
-                }
-                .h3
-                {   
-                    display:flex;
-                    width:1000px;
-                    flex-direction: row;
-                    justify-content: center;
-                    text-align: center;
-                    @include titre-souligné-enchantee;
-                    font-family: "Segoe Print";
-                    font-weight: bold;
-                    font-size: 30px;
-                    height: 50px;
-                    margin:0 50px 0 50px;
-                    .trait-g.trait-d
-                    {   
-                        justify-content:center;
-                        height:50px;
-                        @media (max-width:1100px)
-                        {
-                            display:none;
-                        }
-                    }
-                }
-                .hover
-                {
-                    color: rgb(60 18 24);
-                    text-align: center;
-                }
-                
-                .fin
-                {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    text-align:center;
-                    align-items: center;
-                    font-family: "Devonshire";
-                    font-size: 35px;
-                    margin-top: 60px;
-                    margin-bottom: 40px;        
-                }
-                .plat-prix
-                { 
-                    color: rgb(60 18 24);
-                    @media(max-width:1024px)
-                    {
-                        @include style-menu-res;
-                    }
-                }    
-            }  
+
+.enchantee
+{   
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100%;
+    @media (max-width:1024px)
+        {
+            width: auto;
         }
+    h2
+    {   
+        display:flex;
+        justify-content: center;
+        align-items: baseline;
+        height:15px;
+        margin:35px;
+        padding-bottom:0;
     }
+    .menu
+    {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color:rgb(60 18 24);
+        background-color: $color-fondnote;
+        width: 1000px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 150px;
+        padding: 50px 120px 20px 120px;
+        height:1400px;
+        box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
+        @media (max-width:1250px) {
+           width:50% 
+        }
+        .titre-menu__un
+        {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            font-size: 3em;
+            font-weight: bold;
+            font-family:'Devonshire';
+            padding-bottom: 40px;
+            .musique
+            {
+                margin-top: 40px;
+                width: 90px;
+                height: 90px;
+            }
+        }
+        h3
+        {   
+            @include h3 ;
+            @include titre-souligné-enchantee;
+            @media (max-width:1100px)
+                {
+                    justify-content:center;
+                }
+            .trait-g
+            {   
+                width:350px;
+                @media (max-width:1100px)
+                {
+                    display:none;
+                }
+            }
+            .trait-d
+            {
+                width:350px;
+                margin-top: 13px;
+                @media(max-width:1100px){
+                display: none;
+                }
+            }       
+            .hover
+            {   
+                font-family: "Segoe Print";
+                color: rgb(60 18 24);
+                
+            }
+        }
+        span
+        {
+            font-weight: bold;
+        }
+        .entrees
+        {   
+            margin-bottom: 70px;
+            @include presentation-du-menu-prix;
+            .ravioles,.caviar,.homard,.foie-gras
+            {
+                @include style-menu;
+                font-family: "Segoe Print" !important;
+            }
+        }    
+        .plat
+        {
+            margin-bottom: 70px;
+            @include presentation-du-menu-prix;
+            .noix, .langoustine, .mijote
+            {
+                @include style-menu;
+                font-family: "Segoe Print"!important;
+            }
+        }
+        .dessert
+        {
+            @include presentation-du-menu-prix;
+            p
+            {
+                font-family: "Segoe Print";
+                @media(max-width: 1024px)
+                {
+                line-height: 2;
+                }
+            }
+        }
+        .fin
+        {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            text-align:center;
+            align-items: center;
+            font-family: "Devonshire";
+            font-size: 35px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            @media (max-width:1100px);        
+        }
+        .plat-prix
+        {   
+            @media(max-width:1100px)
+            {
+            @include style-menu-res;
+            }
+            color: rgb(60 18 24);
+            
+        }    
+    } 
+}  
     // mise en page CSS menu 2 le chic a la francaise
     body
     { 
@@ -758,14 +750,6 @@ footer
             flex-direction: column !important;
             justify-content: space-between !important;
             height: 100%;
-            header
-            {
-                @include header;
-            }
-            h1
-            {
-                @include h1;
-            }
             h2
             {   
                 display:flex;
@@ -895,14 +879,6 @@ footer
             flex-direction: column !important;
             justify-content: space-between !important;
             height: 100%;
-            header
-            {
-                @include header;
-            }
-            h1
-            {
-                @include h1;
-            }
             h2
             {   
                 display:flex;
@@ -953,11 +929,6 @@ footer
                     text-align: center;
                     @include titre-souligné-papilles;
                     font-family: "Segoe Print";
-                    @media(max-width:1024px)
-                    {
-                        display: inline-block;
-                        text-align:center;
-                    }
                     .trait_g,.trait_d   
                     {
                         width: 280px;
@@ -1024,14 +995,6 @@ footer
             flex-direction: column !important;
             justify-content: space-between !important;
             height: 100%;
-            header
-            {
-                @include header;
-            }
-            h1
-            {
-                @include h1;
-            }
             h2
             {   
                 display:flex;
@@ -1075,15 +1038,10 @@ footer
                     font-weight: bold;
                     @include titre-souligné-gout;
                     font-family: "Segoe Print";
-                    @media(max-width:1440px)
-                    {
-                        display:inline-block;
-                        text-align: center;
-                    }
                     .trait-gout-g,.trait-gout-d
                     {   
                         width:330px;
-                        @media (max-width:1440px)
+                        @media (max-width:1024px)
                         {
                             display: none;
                         }
