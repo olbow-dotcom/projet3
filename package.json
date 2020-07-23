@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-  "sass": "sass --watch ./style3.scss ./style3.css"
+  "sass": "sass --watch ./style3.scss ./style3.css",
+  "prefix": "postcss ./projet3/style3.css --use autoprefixer -d./projet3/prefixed"
   },
   "author": "olbo",
-  "license": "ISC"
+  "license": "ISC",
+  "browserlist":"last 4 versions"
+
 }

@@ -56,12 +56,11 @@
 @mixin style-menu-res
 {   display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content:center;
     align-items:center;
-    padding:0;
     text-align:center ;
     width:auto;
-    flex-wrap: wrap;
+    
     
 }
 $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
@@ -612,6 +611,8 @@ footer
         height:15px;
         margin:35px;
         padding-bottom:0;
+        font-family: Arial, Helvetica, sans-serif;
+        
     }
     .menu
     {
@@ -629,7 +630,8 @@ footer
         height:1400px;
         box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
         @media (max-width:1250px) {
-           width:50% 
+           width:50%;
+           height: auto; 
         }
         .titre-menu__un
         {
@@ -681,7 +683,7 @@ footer
             }
         }
         span
-        {
+        {   
             font-weight: bold;
         }
         .entrees
@@ -727,7 +729,10 @@ footer
             font-size: 35px;
             margin-top: 20px;
             margin-bottom: 40px;
-            @media (max-width:1100px);        
+            @media (max-width:1100px)
+            {
+                display:none;
+            }        
         }
         .plat-prix
         {   
