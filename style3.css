@@ -106,11 +106,12 @@ header {
   background-color: #579c87;
   width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   header {
     display: flex;
     flex-direction: column;
     align-items: space-between;
+    max-width: auto;
   }
 }
 
@@ -146,11 +147,6 @@ footer {
   left: 0%;
   bottom: 0%;
 }
-@media (max-width: 1024px) {
-  footer {
-    justify-content: center;
-  }
-}
 footer a {
   text-decoration: none;
   color: #fdcb46;
@@ -162,6 +158,12 @@ footer a:hover {
   animation-name: wiggle;
   animation-duration: 0.8s;
   animation-iteration-count: infinite;
+}
+@media (max-width: 768px) {
+  footer a {
+    justify-content: center;
+    font-size: 16px;
+  }
 }
 
 .sommaire {
@@ -323,22 +325,13 @@ footer a:hover {
   font-size: 40px;
   color: #72bf56;
 }
-@media (min-width: 411px) and (max-width: 1024px) {
-  .sommaire .menu0 .cadre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    height: 500px;
-  }
-}
 @media (max-width: 410px) {
   .sommaire .menu0 .cadre {
-    height: 412px;
-    width: 295px;
+    height: 412px !important;
+    width: 295px !important;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 767px) {
   .sommaire .menu0 .colonne {
     display: flex;
     flex-direction: column;
@@ -379,7 +372,12 @@ footer a:hover {
 .sommaire .menu0 .après .trois-points__bar--3 {
   animation-delay: 400ms;
 }
-@media (max-width: 1024px) {
+@media (min-width: 513px) and (max-width: 902px) {
+  .sommaire .menu0 .après {
+    font-size: 18px;
+  }
+}
+@media (max-width: 512px) {
   .sommaire .menu0 .après {
     font-size: 80%;
   }
@@ -391,9 +389,9 @@ footer a:hover {
   justify-content: space-between !important;
   height: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .enchantee {
-    width: auto;
+    max-width: auto;
   }
 }
 .enchantee h2 {
@@ -423,6 +421,8 @@ footer a:hover {
 @media (max-width: 1250px) {
   .enchantee .menu {
     width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     height: auto;
   }
 }
@@ -442,11 +442,15 @@ footer a:hover {
   width: 90px;
   height: 90px;
 }
+@media (max-width: 900px) {
+  .enchantee .menu .titre-menu__un .musique {
+    font-size: 2em;
+  }
+}
 .enchantee .menu h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1000px;
   font-weight: bold;
   font-size: 30px;
 }
@@ -472,7 +476,7 @@ footer a:hover {
   width: 100%;
   opacity: 1;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .enchantee .menu h3 {
     justify-content: center;
   }
@@ -480,7 +484,7 @@ footer a:hover {
 .enchantee .menu h3 .trait-g {
   width: 350px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .enchantee .menu h3 .trait-g {
     display: none;
   }
@@ -489,7 +493,7 @@ footer a:hover {
   width: 350px;
   margin-top: 13px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1250px) {
   .enchantee .menu h3 .trait-d {
     display: none;
   }
@@ -498,12 +502,9 @@ footer a:hover {
   font-family: "Segoe Print";
   color: #3c1218;
 }
-.enchantee .menu span {
-  font-weight: bold;
-}
 .enchantee .menu .entrees {
   margin-bottom: 70px;
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
@@ -515,7 +516,7 @@ footer a:hover {
 }
 .enchantee .menu .plat {
   margin-bottom: 70px;
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
@@ -526,14 +527,14 @@ footer a:hover {
   font-family: "Segoe Print" !important;
 }
 .enchantee .menu .dessert {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
 }
 .enchantee .menu .dessert p {
   font-family: "Segoe Print";
 }
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .enchantee .menu .dessert p {
     line-height: 2;
   }
@@ -554,55 +555,73 @@ footer a:hover {
     display: none;
   }
 }
-.enchantee .menu .plat-prix {
-  color: #3c1218;
+.enchantee .menu .plat-prix span {
+  display: inline-flex;
+  font-weight: bold;
 }
 @media (max-width: 1100px) {
   .enchantee .menu .plat-prix {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     text-align: center;
     width: auto;
   }
 }
 
-body {
-  margin: 0;
-  width: 100%;
-}
-body .francaise {
+.francaise {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100%;
 }
-body .francaise h2 {
+@media (max-width: 1100px) {
+  .francaise {
+    max-width: auto;
+  }
+}
+.francaise h2 {
   display: flex;
   justify-content: center;
   align-items: baseline;
   height: 15px;
   margin: 35px;
   padding-bottom: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
-body .francaise .menu {
+.francaise .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  color: #3c1218;
   background-color: #fff5fe;
   width: 1000px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 150px;
-  padding-top: 50px;
+  padding: 50px 120px 20px 120px;
   height: 1400px;
   box-shadow: 0 0 5px 2px #e6e6e6;
 }
-body .francaise .menu .titre-menu_deux {
+@media (max-width: 1250px) {
+  .francaise .menu {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+}
+.francaise .menu .titre-menu__deux {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  margin: 70px 0 60px 0;
-  font-size: 2em;
+  align-items: center;
+  font-size: 3em;
+  font-weight: bold;
+  padding-bottom: 40px;
   font-family: "croissantone";
   background-image: linear-gradient(to right, #d8852e, #905bfd) !important;
   color: transparent;
@@ -610,41 +629,21 @@ body .francaise .menu .titre-menu_deux {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-body .francaise .menu .entre2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 70px;
-  font-family: "Baskerville Old face", "bell MT";
-  color: #d8852e !important;
-}
-body .francaise .menu .entre2 .hover {
-  color: #d8852e;
-}
-body .francaise .menu .entre2 .tartare, body .francaise .menu .entre2 .veloute, body .francaise .menu .entre2 .soupe {
+.francaise .menu h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-family: "Lucida fax";
-  color: #d8852e !important;
-}
-body .francaise .menu h3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
   font-weight: bold;
-  padding: 0;
-  width: 900px;
+  font-size: 30px;
   font-family: "Lucida fax";
 }
-body .francaise .menu h3 .hover {
+.francaise .menu h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-body .francaise .menu h3 .hover:after {
+.francaise .menu h3 .hover:after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -656,74 +655,226 @@ body .francaise .menu h3 .hover:after {
   opacity: 0;
   background: linear-gradient(to right, #d8852e, #905bfd);
 }
-body .francaise .menu h3:hover .hover:after {
+.francaise .menu h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
+@media (max-width: 1250px) {
+  .francaise .menu h3 {
+    justify-content: center;
+  }
+}
 @media (max-width: 1024px) {
-  body .francaise .menu h3 {
+  .francaise .menu h3 {
     display: inline-block;
   }
 }
-body .francaise .menu h3 .chic1g, body .francaise .menu h3 .chic1d {
+.francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
   width: 200px;
 }
 @media (max-width: 1100px) {
-  body .francaise .menu h3 .chic1g, body .francaise .menu h3 .chic1d {
+  .francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
     display: none;
   }
 }
-body .francaise .menu .plat2 {
+.francaise .menu .entre2 {
+  width: auto;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 70px;
   font-family: "Baskerville Old face", "bell MT";
-  width: 100%;
+  color: #d8852e !important;
+}
+.francaise .menu .entre2 .hover {
+  color: #d8852e;
+}
+.francaise .menu .entre2 .tartare, .francaise .menu .entre2 .veloute, .francaise .menu .entre2 .soupe {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Lucida fax";
+  color: #d8852e !important;
+}
+.francaise .menu .plat2 {
+  margin-bottom: 70px;
+  font-family: "Baskerville Old face", "bell MT";
+  width: auto;
   display: flex;
   flex-direction: column;
 }
-body .francaise .menu .plat2 .hover {
+.francaise .menu .plat2 .hover {
   color: #b37097;
 }
-body .francaise .menu .plat2 .st-jacques, body .francaise .menu .plat2 .magret, body .francaise .menu .plat2 .pigeonneau {
+.francaise .menu .plat2 .st-jacques, .francaise .menu .plat2 .magret, .francaise .menu .plat2 .pigeonneau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida Fax";
   color: #b37097 !important;
 }
-body .francaise .menu .dessert2 {
-  width: 100%;
+.francaise .menu .plat2 .dessert {
+  width: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 70px;
   line-height: 2;
 }
-body .francaise .menu .dessert2 .hover {
+.francaise .menu .plat2 .dessert .hover {
   color: #905bfd;
 }
-body .francaise .menu .dessert2 .type-dessert {
+.francaise .menu .plat2 .dessert .type-dessert {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida fax";
   color: #905bfd !important;
 }
-body .francaise .menu .plat-prix {
+.francaise .menu .menu .plat-prix span {
   font-family: "Baskerville Old face", "bell MT";
+  display: inline-flex;
+  font-weight: bold;
 }
-@media (max-width: 1024px) {
-  body .francaise .menu .plat-prix {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 1100px) {
+  .francaise .menu .menu .plat-prix {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     text-align: center;
     width: auto;
   }
 }
 
+/* body
+ { 
+     @include body; 
+     .francaise
+     {   
+         display:flex !important;
+         flex-direction: column !important;
+         justify-content: space-between !important;
+         height: 100%;
+         h2
+         {   
+             display:flex;
+             justify-content: center;
+             align-items: baseline;
+             height:15px;
+             margin:35px;
+             padding-bottom:0;
+         }
+         .menu
+         {   
+             display:flex;
+             flex-direction: column;
+             justify-content: center;
+             background-color:$color_fondchic; 
+             width: 1000px;
+             margin-left:auto;
+             margin-right: auto;
+             margin-bottom: 150px;
+             padding-top: 50px;
+             height:1400px;
+             box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
+             .titre-menu_deux
+             {
+                 text-align: center;
+                 margin:70px 0 60px 0;
+                 font-size:2em;
+                 font-family: 'croissantone';
+                 background-image: linear-gradient(to right,#d8852e,#905bfd) !important; 
+                 color:transparent;
+                 background-clip:text;
+                 -webkit-background-clip: text;
+                 -moz-background-clip: text;
+             }
+             .entre2
+             {
+                 @include presentation-du-menu-prix;
+                 margin-bottom: 70px;
+                 font-family:"Baskerville Old face","bell MT";
+                 color:  #d8852e !important;
+                 .hover
+                 {
+                     color: #d8852e;
+                 }
+                 .tartare, .veloute, .soupe
+                 {
+                     @include style-menu;
+                     font-family:"Lucida fax";
+                     color: #d8852e !important;
+                 }
+             }
+             h3 
+             {   
+                 display:flex;
+                 flex-direction: row;
+                 justify-content:space-between ;
+                 text-align: center;
+                 font-weight: bold;
+                 padding:0;
+                 width:900px;
+                 @include titre-souligné-chic;
+                 font-family:"Lucida fax";
+                 @media(max-width:1024px)
+                 {
+                     display:inline-block;
+                 }
+                 .chic1g,.chic1d
+                 {
+                     width: 200px;
+                     @media (max-width:1100px)
+                     {
+                         display: none;
+                     }
+                 }
+             }
+             .plat2
+             {   
+                 margin-bottom: 70px;
+                 font-family:"Baskerville Old face","bell MT";
+                 @include presentation-du-menu-prix;
+                 .hover
+                 {
+                     color:#b37097;
+                 }
+                 .st-jacques, .magret, .pigeonneau
+                 {
+                     @include style-menu;
+                     font-family:"Lucida Fax"; 
+                     color:#b37097 !important;
+                 }
+             }
+             .dessert2
+             {
+                 @include presentation-du-menu-prix;
+                 margin-bottom: 70px;
+                 line-height: 2;
+                 .hover
+                 {
+                     color:#905bfd ;
+                 }
+                 .type-dessert 
+                 {
+                     @include style-menu;
+                     font-family:"Lucida fax";
+                     color:#905bfd !important;
+                 }
+             }
+             .plat-prix
+             { 
+                 font-family:"Baskerville Old face","bell MT";
+                 @media(max-width:1024px)
+                 {
+                     @include style-menu-res;
+                 }
+             }      
+         }
+     } 
+ }*/
 body {
   margin: 0;
-  width: 100%;
+  width: auto;
 }
 body .papilles {
   display: flex !important;
@@ -760,7 +911,7 @@ body .papilles menu .titre-menu {
   -moz-background-clip: text;
 }
 body .papilles menu .entre3 {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
@@ -812,7 +963,7 @@ body .papilles menu h3 .trait_g, body .papilles menu h3 .trait_d {
 }
 body .papilles menu .plat3 {
   font-family: "Segoe Print";
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -826,7 +977,7 @@ body .papilles menu .plat3 .poulet, body .papilles menu .plat3 .langouste, body 
 }
 body .papilles menu .dessert3 {
   font-family: "Segoe Print";
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -852,10 +1003,10 @@ body .papilles menu .plat-prix {
 }
 @media (max-width: 1024px) {
   body .papilles menu .plat-prix {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     text-align: center;
     width: auto;
   }
@@ -863,7 +1014,7 @@ body .papilles menu .plat-prix {
 
 body {
   margin: 0;
-  width: 100%;
+  width: auto;
 }
 body .gout {
   display: flex !important;
@@ -943,7 +1094,7 @@ body .gout menu h3 .trait-gout-g, body .gout menu h3 .trait-gout-d {
   }
 }
 body .gout menu .entre4 {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
@@ -957,7 +1108,7 @@ body .gout menu .entre4 .fricassee, body .gout menu .entre4 .oeuf, body .gout me
   font-family: "Segoe Print";
 }
 body .gout menu .plat4 {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -970,7 +1121,7 @@ body .gout menu .plat4 .filet, body .gout menu .plat4 .parmentier, body .gout me
   font-family: "Segoe Print";
 }
 body .gout menu .dessert4 {
-  width: 100%;
+  width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
@@ -984,10 +1135,10 @@ body .gout menu .dessert4 .paris-brest, body .gout menu .dessert4 .macaron, body
 }
 @media (max-width: 1024px) {
   body .gout menu .plat-prix {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
     text-align: center;
     width: auto;
   }
