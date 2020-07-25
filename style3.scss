@@ -289,6 +289,7 @@ h1
 } 
 @mixin h2
 {
+    max-width: 400px ;
     padding-top: 45px;
     font-size: 30px;
     height:40px;
@@ -319,8 +320,7 @@ footer
     height:112px;
     margin-top: 48PX;
     background-color: $color_headfoot;
-    justify-content:space-between ;
-    padding:0 30px 0 15px;
+    justify-content:space-between;
     width:100%;
     position: fixed; 
     left:0%;
@@ -594,6 +594,7 @@ footer
 
 .enchantee
 {   
+    width: auto;
     display:flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
@@ -604,14 +605,8 @@ footer
         }
     h2
     {   
-        display:flex;
-        justify-content: center;
-        align-items: baseline;
-        height:15px;
-        margin:35px;
-        padding-bottom:0;
-        font-family: Arial, Helvetica, sans-serif;
-        
+        @include h2;
+        margin:auto 
     }
     .menu
     {
@@ -621,18 +616,22 @@ footer
         align-items: center;
         color:rgb(60 18 24);
         background-color: $color-fondnote;
-        width: 1000px;
-        margin-left:auto;
-        margin-right: auto;
-        margin-bottom: 150px;
+        width: 50%;
+        font-size: 20px;
+        margin:auto;
+        margin-bottom:200px;
         padding: 50px 120px 20px 120px;
         height:1400px;
         box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-        @media (max-width:1250px) {
-            width:50%;
-            margin-left:auto;
-            margin-right: auto;
-            height: auto; 
+        @media (min-width:1000px)and (max-width: 1420px){
+            margin:auto;
+            height: auto;
+        }
+        @media (max-width:500px)
+        { 
+            padding:0 50px 0 50px;
+            margin :0;
+            width: auto;   
         }
         .titre-menu__un
         {
@@ -650,24 +649,41 @@ footer
                 margin-top: 40px;
                 width: 90px;
                 height: 90px;
-                @media (max-width:900px)
+                @media(max-width: 600px)
                 {
-                    font-size: 2em;
+                    width:30px;
+                    height:30px;
                 }
             }
+            @media (max-width:900px)
+            {
+                font-size:2em;
+            }
+            @media (max-width:600px)
+            {
+                font-size: 1em;
+                padding:40px 0 15px 0;
+                
+            }
         }
-        h3
+        h3    
         {   
             @include h3 ;
             @include titre-souligné-enchantee;
-            @media (max-width:1250px)
+            @media (max-width:1000px)
                 {
                     justify-content:center;
                 }
             .trait-g
             {   
                 width:350px;
-                @media (max-width:1250px)
+                @media (max-width: 1420px)
+                {
+                    width:200px;
+                    
+                }
+                  
+                @media (max-width:1000px)
                 {
                     display:none;
                 }
@@ -676,7 +692,11 @@ footer
             {
                 width:350px;
                 margin-top: 13px;
-                @media(max-width:1250px){
+                @media (max-width: 1420px)
+                {
+                    width:200px;
+                }
+                @media(max-width:1000px){
                 display: none;
                 }
             }       
@@ -684,7 +704,8 @@ footer
             {   
                 font-family: "Segoe Print";
                 color: rgb(60 18 24);
-                
+                width:253px;
+                font-size:16px;
             }
         }
         .entrees
@@ -728,8 +749,7 @@ footer
             align-items: center;
             font-family: "Devonshire";
             font-size: 35px;
-            margin-top: 20px;
-            margin-bottom: 40px;
+            margin: 40px 0 80px 0;
             @media (max-width:1100px)
             {
                 display:none;
@@ -738,14 +758,26 @@ footer
     }
     .menu .plat-prix
     {   
+        width:952px;
+        font-size: 16px;
         span
         {   
             display:inline-flex;
             font-weight: bold;
         }
+        @media(max-width : 1420px)
+        {
+            width: 80%;
+            justify-content: stretch;
+            margin: auto;
+        }
         @media(max-width:1100px)
         {
         @include style-menu-res;
+        }
+        @media(max-width: 600px)
+        {
+            font-size:13px;
         }
     } 
 }  
@@ -758,7 +790,7 @@ footer
         height: 100%;
         @media (max-width:1100px)
             {
-              max-width: auto;
+              width: auto;
             }
         h2
         {   

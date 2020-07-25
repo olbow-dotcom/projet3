@@ -141,7 +141,6 @@ footer {
   margin-top: 48PX;
   background-color: #579c87;
   justify-content: space-between;
-  padding: 0 30px 0 15px;
   width: 100%;
   position: fixed;
   left: 0%;
@@ -384,6 +383,7 @@ footer a:hover {
 }
 
 .enchantee {
+  width: auto;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -395,13 +395,16 @@ footer a:hover {
   }
 }
 .enchantee h2 {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  height: 15px;
-  margin: 35px;
-  padding-bottom: 0;
+  max-width: 400px;
+  padding-top: 45px;
+  font-size: 30px;
+  height: 40px;
+  padding-bottom: 30px;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: 0;
+  margin: auto;
 }
 .enchantee .menu {
   display: flex;
@@ -410,20 +413,25 @@ footer a:hover {
   align-items: center;
   color: #3c1218;
   background-color: #fcdfdb;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 150px;
+  width: 50%;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 200px;
   padding: 50px 120px 20px 120px;
   height: 1400px;
   box-shadow: 0 0 5px 2px #e6e6e6;
 }
-@media (max-width: 1250px) {
+@media (min-width: 1000px) and (max-width: 1420px) {
   .enchantee .menu {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .enchantee .menu {
+    padding: 0 50px 0 50px;
+    margin: 0;
+    width: auto;
   }
 }
 .enchantee .menu .titre-menu__un {
@@ -442,9 +450,21 @@ footer a:hover {
   width: 90px;
   height: 90px;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .enchantee .menu .titre-menu__un .musique {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media (max-width: 900px) {
+  .enchantee .menu .titre-menu__un {
     font-size: 2em;
+  }
+}
+@media (max-width: 600px) {
+  .enchantee .menu .titre-menu__un {
+    font-size: 1em;
+    padding: 40px 0 15px 0;
   }
 }
 .enchantee .menu h3 {
@@ -476,7 +496,7 @@ footer a:hover {
   width: 100%;
   opacity: 1;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1000px) {
   .enchantee .menu h3 {
     justify-content: center;
   }
@@ -484,7 +504,12 @@ footer a:hover {
 .enchantee .menu h3 .trait-g {
   width: 350px;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1420px) {
+  .enchantee .menu h3 .trait-g {
+    width: 200px;
+  }
+}
+@media (max-width: 1000px) {
   .enchantee .menu h3 .trait-g {
     display: none;
   }
@@ -493,7 +518,12 @@ footer a:hover {
   width: 350px;
   margin-top: 13px;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1420px) {
+  .enchantee .menu h3 .trait-d {
+    width: 200px;
+  }
+}
+@media (max-width: 1000px) {
   .enchantee .menu h3 .trait-d {
     display: none;
   }
@@ -501,6 +531,8 @@ footer a:hover {
 .enchantee .menu h3 .hover {
   font-family: "Segoe Print";
   color: #3c1218;
+  width: 253px;
+  font-size: 16px;
 }
 .enchantee .menu .entrees {
   margin-bottom: 70px;
@@ -547,17 +579,27 @@ footer a:hover {
   align-items: center;
   font-family: "Devonshire";
   font-size: 35px;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin: 40px 0 80px 0;
 }
 @media (max-width: 1100px) {
   .enchantee .menu .fin {
     display: none;
   }
 }
+.enchantee .menu .plat-prix {
+  width: 952px;
+  font-size: 16px;
+}
 .enchantee .menu .plat-prix span {
   display: inline-flex;
   font-weight: bold;
+}
+@media (max-width: 1420px) {
+  .enchantee .menu .plat-prix {
+    width: 80%;
+    justify-content: stretch;
+    margin: auto;
+  }
 }
 @media (max-width: 1100px) {
   .enchantee .menu .plat-prix {
@@ -569,6 +611,11 @@ footer a:hover {
     width: auto;
   }
 }
+@media (max-width: 600px) {
+  .enchantee .menu .plat-prix {
+    font-size: 13px;
+  }
+}
 
 .francaise {
   display: flex !important;
@@ -578,7 +625,7 @@ footer a:hover {
 }
 @media (max-width: 1100px) {
   .francaise {
-    max-width: auto;
+    width: auto;
   }
 }
 .francaise h2 {
