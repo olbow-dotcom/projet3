@@ -96,6 +96,11 @@
     transform: translateY(-15px);
   }
 }
+body {
+  margin: 0;
+  width: auto;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -129,7 +134,7 @@ h1 {
   }
 }
 
-a {
+.enchante > a, .francaise > a, .papilles > a, .gout > a {
   display: block;
   text-decoration: none;
   color: none;
@@ -646,11 +651,6 @@ footer a:hover {
   }
 }
 .francaise .menu .titre-menu_deux {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
   font-size: 2em;
   padding-bottom: 100px;
   padding-top: 60px;
@@ -796,199 +796,79 @@ footer a:hover {
   }
 }
 
-/* body
- { 
-     @include body; 
-     .francaise
-     {   
-         display:flex !important;
-         flex-direction: column !important;
-         justify-content: space-between !important;
-         height: 100%;
-         h2
-         {   
-             display:flex;
-             justify-content: center;
-             align-items: baseline;
-             height:15px;
-             margin:35px;
-             padding-bottom:0;
-         }
-         .menu
-         {   
-             display:flex;
-             flex-direction: column;
-             justify-content: center;
-             background-color:$color_fondchic; 
-             width: 1000px;
-             margin-left:auto;
-             margin-right: auto;
-             margin-bottom: 150px;
-             padding-top: 50px;
-             height:1400px;
-             box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-             .titre-menu_deux
-             {
-                 text-align: center;
-                 margin:70px 0 60px 0;
-                 font-size:2em;
-                 font-family: 'croissantone';
-                 background-image: linear-gradient(to right,#d8852e,#905bfd) !important; 
-                 color:transparent;
-                 background-clip:text;
-                 -webkit-background-clip: text;
-                 -moz-background-clip: text;
-             }
-             .entre2
-             {
-                 @include presentation-du-menu-prix;
-                 margin-bottom: 70px;
-                 font-family:"Baskerville Old face","bell MT";
-                 color:  #d8852e !important;
-                 .hover
-                 {
-                     color: #d8852e;
-                 }
-                 .tartare, .veloute, .soupe
-                 {
-                     @include style-menu;
-                     font-family:"Lucida fax";
-                     color: #d8852e !important;
-                 }
-             }
-             h3 
-             {   
-                 display:flex;
-                 flex-direction: row;
-                 justify-content:space-between ;
-                 text-align: center;
-                 font-weight: bold;
-                 padding:0;
-                 width:900px;
-                 @include titre-souligné-chic;
-                 font-family:"Lucida fax";
-                 @media(max-width:1024px)
-                 {
-                     display:inline-block;
-                 }
-                 .chic1g,.chic1d
-                 {
-                     width: 200px;
-                     @media (max-width:1100px)
-                     {
-                         display: none;
-                     }
-                 }
-             }
-             .plat2
-             {   
-                 margin-bottom: 70px;
-                 font-family:"Baskerville Old face","bell MT";
-                 @include presentation-du-menu-prix;
-                 .hover
-                 {
-                     color:#b37097;
-                 }
-                 .st-jacques, .magret, .pigeonneau
-                 {
-                     @include style-menu;
-                     font-family:"Lucida Fax"; 
-                     color:#b37097 !important;
-                 }
-             }
-             .dessert2
-             {
-                 @include presentation-du-menu-prix;
-                 margin-bottom: 70px;
-                 line-height: 2;
-                 .hover
-                 {
-                     color:#905bfd ;
-                 }
-                 .type-dessert 
-                 {
-                     @include style-menu;
-                     font-family:"Lucida fax";
-                     color:#905bfd !important;
-                 }
-             }
-             .plat-prix
-             { 
-                 font-family:"Baskerville Old face","bell MT";
-                 @media(max-width:1024px)
-                 {
-                     @include style-menu-res;
-                 }
-             }      
-         }
-     } 
- }*/
-body {
-  margin: 0;
+.papilles {
   width: auto;
-}
-body .papilles {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100%;
 }
-body .papilles h2 {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  height: 15px;
-  margin: 35px;
-  padding-bottom: 0;
+.papilles h2 {
+  max-width: 400px;
+  padding-top: 45px;
+  font-size: 30px;
+  height: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: auto;
+  margin: auto;
 }
-body .papilles menu {
+.papilles .menu {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #f9f9f9;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 150px;
-  padding-top: 50px;
-  height: 1400px;
+  width: 60%;
+  font-size: 18px;
+  margin: auto !important;
+  margin-bottom: 200px !important;
+  padding: 50px 120px 20px 120px;
+  height: 1400px !important;
   box-shadow: 0 0 5px 2px #e6e6e6;
+  background-color: #f9f9f9;
+  color: #000000;
 }
-body .papilles menu .titre-menu {
+@media (max-width: 750px) {
+  .papilles .menu {
+    padding: 0;
+    margin: 0;
+    width: 60%;
+  }
+}
+.papilles .menu .titre-menu {
+  font-family: "Dancing-Script";
+  font-size: 5em;
+  padding: 100px 0 100px 10px;
+  margin: auto;
   background-image: linear-gradient(to right, #0645e5, rgba(8, 135, 251, 0.6));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-body .papilles menu .entre3 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  padding-top: 120px;
-  padding-bottom: 100px;
+@media (max-width: 750px) {
+  .papilles .menu .titre-menu {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
 }
-body .papilles menu .entre3 .tartare, body .papilles menu .entre3 .bouchee, body .papilles menu .entre3 .cepes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-bottom: 10px;
-  font-family: "Segoe Print";
-}
-body .papilles menu h3 {
+.papilles .menu h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
   font-family: "Segoe Print";
 }
-body .papilles menu h3 .hover {
+.papilles .menu h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-body .papilles menu h3 .hover:after {
+.papilles .menu h3 .hover:after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -1000,60 +880,82 @@ body .papilles menu h3 .hover:after {
   opacity: 0;
   background: linear-gradient(to right, #0645e5, rgba(8, 135, 251, 0.6));
 }
-body .papilles menu h3:hover .hover:after {
+.papilles .menu h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
-body .papilles menu h3 .trait_g, body .papilles menu h3 .trait_d {
-  width: 280px;
+@media (max-width: 1000px) {
+  .papilles .menu h3 {
+    justify-content: center;
+  }
 }
-@media (max-width: 1440px) {
-  body .papilles menu h3 .trait_g, body .papilles menu h3 .trait_d {
+.papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
+  width: 350px;
+}
+@media (max-width: 1000px) {
+  .papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
     display: none;
   }
 }
-body .papilles menu .plat3 {
-  font-family: "Segoe Print";
+.papilles .menu h3 .hover {
+  padding: 0 15px 0 15px;
+  width: 300px;
+}
+.papilles .menu .entre3 {
   width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
 }
-body .papilles menu .plat3 .poulet, body .papilles menu .plat3 .langouste, body .papilles menu .plat3 .cote {
+.papilles .menu .entre3 .tartare, .papilles .menu .entre3 .bouchee, .papilles .menu .entre3 .cepes {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
 }
-body .papilles menu .dessert3 {
+.papilles .menu .plat3 {
   font-family: "Segoe Print";
   width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
 }
-body .papilles menu .dessert3 .farandole, body .papilles menu .dessert3 .creme, body .papilles menu .dessert3 .tiramisu {
+.papilles .menu .plat3 .poulet, .papilles .menu .plat3 .langouste, .papilles .menu .plat3 .cote {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
 }
-body .papilles menu span {
+.papilles .menu .dessert3 {
+  font-family: "Segoe Print";
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+}
+.papilles .menu .dessert3 .farandole, .papilles .menu .dessert3 .creme, .papilles .menu .dessert3 .tiramisu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-family: "Segoe Print";
+}
+.papilles .menu span {
   font-size: 20px;
 }
-body .papilles menu h2, body .papilles menu h3 {
+.papilles .menu h2, .papilles .menu h3 {
   font-weight: normal;
 }
-body .papilles menu h3 {
+.papilles .menu h3 {
   padding-bottom: 20px;
 }
-body .papilles menu .plat-prix {
+.papilles .menu .plat-prix {
   margin: 0 70px 0 70px !important;
 }
 @media (max-width: 1024px) {
-  body .papilles menu .plat-prix {
+  .papilles .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -1063,17 +965,13 @@ body .papilles menu .plat-prix {
   }
 }
 
-body {
-  margin: 0;
-  width: auto;
-}
-body .gout {
+.gout {
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100%;
 }
-body .gout h2 {
+.gout h2 {
   display: flex;
   justify-content: center;
   align-items: baseline;
@@ -1081,7 +979,7 @@ body .gout h2 {
   margin: 35px;
   padding-bottom: 0;
 }
-body .gout menu {
+.gout .menu {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1095,18 +993,18 @@ body .gout menu {
   box-shadow: 0 0 5px 2px #e6e6e6;
 }
 @media (max-width: 1024px) {
-  body .gout menu {
+  .gout .menu {
     padding: 0 10px 50px 10px;
   }
 }
-body .gout menu h2 {
+.gout .menu h2 {
   background-image: linear-gradient(to right, #56a847, #bfff7e);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-body .gout menu h3 {
+.gout .menu h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1114,13 +1012,13 @@ body .gout menu h3 {
   font-weight: bold;
   font-family: "Segoe Print";
 }
-body .gout menu h3 .hover {
+.gout .menu h3 .hover {
   text-align: center;
   margin: 0, auto;
   transition: width 0.2s ease-in-out, opacity 0.2s ease-in-out;
   position: relative;
 }
-body .gout menu h3 .hover:after {
+.gout .menu h3 .hover:after {
   content: "";
   position: absolute;
   bottom: -5px;
@@ -1132,52 +1030,52 @@ body .gout menu h3 .hover:after {
   opacity: 0;
   background: linear-gradient(to right, #56a847, #bfff7e);
 }
-body .gout menu h3:hover .hover:after {
+.gout .menu h3:hover .hover:after {
   width: 100%;
   opacity: 1;
 }
-body .gout menu h3 .trait-gout-g, body .gout menu h3 .trait-gout-d {
+.gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
   width: 330px;
 }
 @media (max-width: 1024px) {
-  body .gout menu h3 .trait-gout-g, body .gout menu h3 .trait-gout-d {
+  .gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
     display: none;
   }
 }
-body .gout menu .entre4 {
+.gout .menu .entre4 {
   width: auto;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
   padding-bottom: 100px;
 }
-body .gout menu .entre4 .fricassee, body .gout menu .entre4 .oeuf, body .gout menu .entre4 .foie {
+.gout .menu .entre4 .fricassee, .gout .menu .entre4 .oeuf, .gout .menu .entre4 .foie {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
 }
-body .gout menu .plat4 {
+.gout .menu .plat4 {
   width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
 }
-body .gout menu .plat4 .filet, body .gout menu .plat4 .parmentier, body .gout menu .plat4 .turbot {
+.gout .menu .plat4 .filet, .gout .menu .plat4 .parmentier, .gout .menu .plat4 .turbot {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
 }
-body .gout menu .dessert4 {
+.gout .menu .dessert4 {
   width: auto;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
 }
-body .gout menu .dessert4 .paris-brest, body .gout menu .dessert4 .macaron, body .gout menu .dessert4 .mousse {
+.gout .menu .dessert4 .paris-brest, .gout .menu .dessert4 .macaron, .gout .menu .dessert4 .mousse {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1185,7 +1083,7 @@ body .gout menu .dessert4 .paris-brest, body .gout menu .dessert4 .macaron, body
   font-family: "Segoe Print";
 }
 @media (max-width: 1024px) {
-  body .gout menu .plat-prix {
+  .gout .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;

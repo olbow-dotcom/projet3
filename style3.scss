@@ -263,7 +263,7 @@ $anim-dur:400ms;
 $num-pts:3;
 $anim-delay:$anim-dur/$num-pts;
 //css commun au 5 pages
-@mixin body
+body
 {   
     margin:0;
     width: auto;
@@ -322,7 +322,7 @@ h1
     font-size: 30px;
 }
 
-a
+.enchante>a, .francaise>a, .papilles>a, .gout>a
 {
     display: block;
     text-decoration: none;
@@ -617,7 +617,7 @@ footer
     h2
     {   
         @include h2;
-        margin:auto 
+        margin:auto; 
     }
     .menu
     {
@@ -801,11 +801,6 @@ footer
         }
         .titre-menu_deux   
         {
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
             font-size: 2em;
             padding-bottom: 100px;
             padding-top: 60px;
@@ -824,7 +819,7 @@ footer
         h3
         {   
             @include h3 ;
-            @include titre-souligné-chic();
+            @include titre-souligné-chic;
             font-size: 18px;
             font-family:"Lucida fax";
             @media (max-width:1000px)
@@ -924,380 +919,255 @@ footer
         }
     }
 }  
-   /* body
-    { 
-        @include body; 
-        .francaise
+//style menu 3 le délice des papilles
+.papilles
+{   
+    width: auto;
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100%;
+    h2
+    {   
+        @include h2;
+        margin:auto;        
+    }
+    .menu
+    {   
+        @include menu;
+        background-color:$color-fondpapilles;
+        color: #000000;
+        @media (max-width:750px)
+        
+        {
+            padding:0;
+            margin:0;
+            width:60%
+        }
+        .titre-menu
         {   
-            display:flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            height: 100%;
-            h2
-            {   
-                display:flex;
-                justify-content: center;
-                align-items: baseline;
-                height:15px;
-                margin:35px;
-                padding-bottom:0;
-            }
-            .menu
-            {   
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                background-color:$color_fondchic; 
-                width: 1000px;
-                margin-left:auto;
-                margin-right: auto;
-                margin-bottom: 150px;
-                padding-top: 50px;
-                height:1400px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                .titre-menu_deux
-                {
-                    text-align: center;
-                    margin:70px 0 60px 0;
-                    font-size:2em;
-                    font-family: 'croissantone';
-                    background-image: linear-gradient(to right,#d8852e,#905bfd) !important; 
-                    color:transparent;
-                    background-clip:text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                }
-                .entre2
-                {
-                    @include presentation-du-menu-prix;
-                    margin-bottom: 70px;
-                    font-family:"Baskerville Old face","bell MT";
-                    color:  #d8852e !important;
-                    .hover
-                    {
-                        color: #d8852e;
-                    }
-                    .tartare, .veloute, .soupe
-                    {
-                        @include style-menu;
-                        font-family:"Lucida fax";
-                        color: #d8852e !important;
-                    }
-                }
-                h3 
-                {   
-                    display:flex;
-                    flex-direction: row;
-                    justify-content:space-between ;
-                    text-align: center;
-                    font-weight: bold;
-                    padding:0;
-                    width:900px;
-                    @include titre-souligné-chic;
-                    font-family:"Lucida fax";
-                    @media(max-width:1024px)
-                    {
-                        display:inline-block;
-                    }
-                    .chic1g,.chic1d
-                    {
-                        width: 200px;
-                        @media (max-width:1100px)
-                        {
-                            display: none;
-                        }
-                    }
-                }
-                .plat2
-                {   
-                    margin-bottom: 70px;
-                    font-family:"Baskerville Old face","bell MT";
-                    @include presentation-du-menu-prix;
-                    .hover
-                    {
-                        color:#b37097;
-                    }
-                    .st-jacques, .magret, .pigeonneau
-                    {
-                        @include style-menu;
-                        font-family:"Lucida Fax"; 
-                        color:#b37097 !important;
-                    }
-                }
-                .dessert2
-                {
-                    @include presentation-du-menu-prix;
-                    margin-bottom: 70px;
-                    line-height: 2;
-                    .hover
-                    {
-                        color:#905bfd ;
-                    }
-                    .type-dessert 
-                    {
-                        @include style-menu;
-                        font-family:"Lucida fax";
-                        color:#905bfd !important;
-                    }
-                }
-                .plat-prix
-                { 
-                    font-family:"Baskerville Old face","bell MT";
-                    @media(max-width:1024px)
-                    {
-                        @include style-menu-res;
-                    }
-                }      
-            }
-        } 
-    }*/
-    
-    //style menu 3 le délice des papilles
-    body
-    { 
-        @include body; 
-        .papilles
-        {   
-            display:flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            height: 100%;
-            h2
-            {   
-                display:flex;
-                justify-content: center;
-                align-items: baseline;
-                height:15px;
-                margin:35px;
-                padding-bottom:0;
-            }
-            menu
-            {   
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                background-color:$color-fondpapilles; 
-                width: 1000px;
-                margin-left:auto;
-                margin-right: auto;
-                margin-bottom: 150px;
-                padding-top: 50px;
-                height:1400px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                .titre-menu
-                {
-                    background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
-                    color:transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                }
-                .entre3
-                {
-                    @include presentation-du-menu-prix;
-                    padding-top:120px;
-                    padding-bottom:100px;
-                    .tartare, .bouchee, .cepes
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    }
-                }
-                h3
-                {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    text-align: center;
-                    @include titre-souligné-papilles;
-                    font-family: "Segoe Print";
-                    .trait_g,.trait_d   
-                    {
-                        width: 280px;
-                        @media (max-width:1440px)
-                        {
-                            display: none;
-                        }
-                    }
-                }
-                .plat3
-                {
-                    font-family:"Segoe Print" ;
-                    @include presentation-du-menu-prix;
-                    padding-bottom: 100px;
-                    .poulet, .langouste, .cote
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    } 
-                } 
-                .dessert3
-                {
-                    font-family:"Segoe Print" ;
-                    @include presentation-du-menu-prix;
-                    padding-bottom:100px; 
-                    .farandole, .creme, .tiramisu 
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    }
-                }
-                span
-                {
-                    font-size: 20px;
-                }   
-                h2, h3
-                {
-                    font-weight: normal;
-                }
-                h3
-                {
-                    padding-bottom: 20px;
-                }    
-                .plat-prix
-                { 
-                    margin:0 70px 0 70px !important;
-                    @media(max-width:1024px)
-                    {
-                        @include style-menu-res;
-                    }
-                }                     
+            font-family: "Dancing-Script";
+            font-size:5em;
+            padding: 100px 0 100px 10px;
+            margin:auto;
+            background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
+            color:transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            @media (max-width:750px)
+            {
+                font-size:24px;
+                padding-bottom:20px;
             }
         }
-    }    
-    //mise en forme css menu 4 la palette du gout
-    body
-    { 
-        @include body; 
-        .gout
-        {   
-            display:flex !important;
-            flex-direction: column !important;
-            justify-content: space-between !important;
-            height: 100%;
-            h2
-            {   
-                display:flex;
-                justify-content: center;
-                align-items: baseline;
-                height:15px;
-                margin:35px;
-                padding-bottom:0;
+        h3
+        {
+            @include h3;
+            @include titre-souligné-papilles;
+            font-family: "Segoe Print";
+            @media (max-width:1000px)
+            {
+                justify-content:center;
             }
-            menu
-            {   
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                background-color:$color_fondgout-start; 
-                width: 1000px;
-                margin-left:auto;
-                margin-right: auto;
-                margin-bottom: 150px;
-                padding-top: 50px;
-                height:1400px;
-                box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-                @media(max-width:1024px)
+            .trait_g,.trait_d   
+            {
+                width:350px;
+                @media (max-width:1000px)
                 {
-                    padding:0 10px 50px 10px;
+                    display: none;
                 }
-                h2
-                {
-                    background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
-                    color:transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
-                }
-                h3
-                { 
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    text-align: center;
-                    font-weight: bold;
-                    @include titre-souligné-gout;
-                    font-family: "Segoe Print";
-                    .trait-gout-g,.trait-gout-d
-                    {   
-                        width:330px;
-                        @media (max-width:1024px)
-                        {
-                            display: none;
-                        }
-                    }
-                }             
-                .entre4
-                {
-                    @include presentation-du-menu-prix;
-                    padding-top:120px;
-                    padding-bottom:100px;
-                    .fricassee, .oeuf, .foie
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    }
-                }
-                .plat4
-                {
-                    @include presentation-du-menu-prix;
-                    padding-bottom:100px;
-                    .filet, .parmentier, .turbot
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    }
-                }
-                .dessert4
-                {
-                    @include presentation-du-menu-prix;
-                    padding-bottom:100px;
-                    .paris-brest, .macaron, .mousse
-                    {
-                        @include style-menu;
-                        padding-bottom: 10px;
-                        font-family: "Segoe Print";
-                    }
-                }
-                .plat-prix
-                { 
-                    @media(max-width:1024px)
-                    {
-                        @include style-menu-res;
-                    }
-                }
+            }
+            .hover
+            {
+                padding:0 15px 0 15px;
+                width:300px;
+            }
+                
+        }
+        .entre3
+        {
+            @include presentation-du-menu-prix;
+            padding-bottom:100px;
+            .tartare, .bouchee, .cepes
+            {
+                @include style-menu;
+                padding-bottom: 10px;
+                font-family: "Segoe Print";
+            }
+        }
+        .plat3
+        {
+            font-family:"Segoe Print" ;
+            @include presentation-du-menu-prix;
+            padding-bottom: 100px;
+            .poulet, .langouste, .cote
+            {
+                @include style-menu;
+                padding-bottom: 10px;
+                font-family: "Segoe Print";
+            } 
+        } 
+        .dessert3
+        {
+            font-family:"Segoe Print" ;
+            @include presentation-du-menu-prix;
+            padding-bottom:100px; 
+            .farandole, .creme, .tiramisu 
+            {
+                @include style-menu;
+                padding-bottom: 10px;
+                font-family: "Segoe Print";
+            }
+        }
+        span
+        {
+            font-size: 20px;
+        }   
+        h2, h3
+        {
+            font-weight: normal;
+        }
+        h3
+        {
+            padding-bottom: 20px;
+        }    
+        .plat-prix
+        { 
+            margin:0 70px 0 70px !important;
+            @media(max-width:1024px)
+            {
+                @include style-menu-res;
             }
         }                     
-    }    
-        //mise ne pages css mentions légales
-        h1 
+    }
+}
+//mise en forme css menu 4 la palette du gout
+.gout
+{    
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100%;
+    h2
+    {   
+        display:flex;
+        justify-content: center;
+        align-items: baseline;
+        height:15px;
+        margin:35px;
+        padding-bottom:0;
+    }
+    .menu
+    {   
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color:$color_fondgout-start; 
+        width: 1000px;
+        margin-left:auto;
+        margin-right: auto;
+        margin-bottom: 150px;
+        padding-top: 50px;
+        height:1400px;
+        box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
+        @media(max-width:1024px)
         {
-            text-align:center;
+            padding:0 10px 50px 10px;
         }
-        .bloc-page
+        h2
         {
+            background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
+            color:transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+        }
+        h3
+        { 
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 3px grey ridge; 
-            width: 800px;
-            margin:auto;
-            padding:0 5px 0 8px;
-            p 
-            {
-                font-family: Arial, Helvetica, sans-serif;
-                text-align: left;
-                span
-                { 
-                    font-weight:bold;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: center;
+            font-weight: bold;
+            @include titre-souligné-gout;
+            font-family: "Segoe Print";
+            .trait-gout-g,.trait-gout-d
+            {   
+                width:330px;
+                @media (max-width:1024px)
+                {
+                    display: none;
                 }
             }
+        }             
+        .entre4
+        {
+            @include presentation-du-menu-prix;
+            padding-top:120px;
+            padding-bottom:100px;
+            .fricassee, .oeuf, .foie
+            {
+            @include style-menu;
+            padding-bottom: 10px;
+            font-family: "Segoe Print";
+            }
         }
+        .plat4
+        {
+            @include presentation-du-menu-prix;
+            padding-bottom:100px;
+            .filet, .parmentier, .turbot
+            {
+                @include style-menu;
+                padding-bottom: 10px;
+                font-family: "Segoe Print";
+            }
+        }
+        .dessert4
+        {
+            @include presentation-du-menu-prix;
+            padding-bottom:100px;
+            .paris-brest, .macaron, .mousse
+            {
+                @include style-menu;
+                padding-bottom: 10px;
+                font-family: "Segoe Print";
+            }
+        }
+        .plat-prix
+        { 
+            @media(max-width:1024px)
+            {
+                @include style-menu-res;
+            }
+        }
+    }
+}
+//mise ne pages css mentions légales
+h1 
+{
+    text-align:center;
+}
+.bloc-page
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px grey ridge; 
+    width: 800px;
+    margin:auto;
+    padding:0 5px 0 8px;
+    p 
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        span
+        { 
+            font-weight:bold;
+        }
+    }
+}
         
         
         
