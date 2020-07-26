@@ -132,6 +132,7 @@ h1 {
 a {
   display: block;
   text-decoration: none;
+  color: none;
 }
 
 footer {
@@ -389,11 +390,6 @@ footer a:hover {
   justify-content: space-between !important;
   height: 100%;
 }
-@media (max-width: 1100px) {
-  .enchantee {
-    max-width: auto;
-  }
-}
 .enchantee h2 {
   max-width: 400px;
   padding-top: 45px;
@@ -403,28 +399,27 @@ footer a:hover {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background-color: white;
-  margin: 0;
+  margin: auto;
   margin: auto;
 }
 .enchantee .menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 60%;
+  font-size: 18px;
+  margin: auto !important;
+  margin-bottom: 200px !important;
+  padding: 50px 120px 20px 120px;
+  height: 1400px !important;
+  box-shadow: 0 0 5px 2px #e6e6e6;
   color: #3c1218;
   background-color: #fcdfdb;
-  width: 50%;
-  font-size: 20px;
-  margin: auto;
-  margin-bottom: 200px;
-  padding: 50px 120px 20px 120px;
-  height: 1400px;
-  box-shadow: 0 0 5px 2px #e6e6e6;
 }
-@media (min-width: 1000px) and (max-width: 1420px) {
+@media (max-width: 1200px) {
   .enchantee .menu {
-    margin: auto;
-    height: auto;
+    margin-bottom: 160px;
   }
 }
 @media (max-width: 500px) {
@@ -445,12 +440,18 @@ footer a:hover {
   font-family: "Devonshire";
   padding-bottom: 40px;
 }
+@media (max-width: 900px) {
+  .enchantee .menu .titre-menu__un {
+    height: 100px;
+    padding: 40px 0 15px 0;
+  }
+}
 .enchantee .menu .titre-menu__un .musique {
   margin-top: 40px;
   width: 90px;
   height: 90px;
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .enchantee .menu .titre-menu__un .musique {
     width: 30px;
     height: 30px;
@@ -459,12 +460,6 @@ footer a:hover {
 @media (max-width: 900px) {
   .enchantee .menu .titre-menu__un {
     font-size: 2em;
-  }
-}
-@media (max-width: 600px) {
-  .enchantee .menu .titre-menu__un {
-    font-size: 1em;
-    padding: 40px 0 15px 0;
   }
 }
 .enchantee .menu h3 {
@@ -502,9 +497,9 @@ footer a:hover {
   }
 }
 .enchantee .menu h3 .trait-g {
-  width: 350px;
+  width: 400px;
 }
-@media (max-width: 1420px) {
+@media (max-width: 1370px) {
   .enchantee .menu h3 .trait-g {
     width: 200px;
   }
@@ -515,10 +510,10 @@ footer a:hover {
   }
 }
 .enchantee .menu h3 .trait-d {
-  width: 350px;
+  width: 400px;
   margin-top: 13px;
 }
-@media (max-width: 1420px) {
+@media (max-width: 1370px) {
   .enchantee .menu h3 .trait-d {
     width: 200px;
   }
@@ -532,7 +527,6 @@ footer a:hover {
   font-family: "Segoe Print";
   color: #3c1218;
   width: 253px;
-  font-size: 16px;
 }
 .enchantee .menu .entrees {
   margin-bottom: 70px;
@@ -566,7 +560,7 @@ footer a:hover {
 .enchantee .menu .dessert p {
   font-family: "Segoe Print";
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .enchantee .menu .dessert p {
     line-height: 2;
   }
@@ -581,7 +575,7 @@ footer a:hover {
   font-size: 35px;
   margin: 40px 0 80px 0;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .enchantee .menu .fin {
     display: none;
   }
@@ -594,14 +588,7 @@ footer a:hover {
   display: inline-flex;
   font-weight: bold;
 }
-@media (max-width: 1420px) {
-  .enchantee .menu .plat-prix {
-    width: 80%;
-    justify-content: stretch;
-    margin: auto;
-  }
-}
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .enchantee .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
@@ -609,6 +596,7 @@ footer a:hover {
     align-items: center !important;
     text-align: center;
     width: auto;
+    margin: 0;
   }
 }
 @media (max-width: 600px) {
@@ -618,57 +606,54 @@ footer a:hover {
 }
 
 .francaise {
+  width: auto;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
   height: 100%;
 }
-@media (max-width: 1100px) {
-  .francaise {
-    width: auto;
-  }
-}
 .francaise h2 {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  height: 15px;
-  margin: 35px;
-  padding-bottom: 0;
+  max-width: 400px;
+  padding-top: 45px;
+  font-size: 30px;
+  height: 40px;
+  padding-bottom: 30px;
+  text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: auto;
+  margin: auto;
 }
 .francaise .menu {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  color: #3c1218;
-  background-color: #fff5fe;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 150px;
+  justify-content: center;
+  width: 60%;
+  font-size: 18px;
+  margin: auto !important;
+  margin-bottom: 200px !important;
   padding: 50px 120px 20px 120px;
-  height: 1400px;
+  height: 1400px !important;
   box-shadow: 0 0 5px 2px #e6e6e6;
+  background-color: #fff5fe;
 }
-@media (max-width: 1250px) {
+@media (max-width: 750px) {
   .francaise .menu {
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
+    padding: 0;
+    margin: 0;
+    width: 60%;
   }
 }
-.francaise .menu .titre-menu__deux {
+.francaise .menu .titre-menu_deux {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 3em;
-  font-weight: bold;
-  padding-bottom: 40px;
+  font-size: 2em;
+  padding-bottom: 100px;
+  padding-top: 60px;
   font-family: "croissantone";
   background-image: linear-gradient(to right, #d8852e, #905bfd) !important;
   color: transparent;
@@ -676,12 +661,19 @@ footer a:hover {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
+@media (max-width: 750px) {
+  .francaise .menu .titre-menu_deux {
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
 .francaise .menu h3 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-weight: bold;
   font-size: 30px;
+  font-size: 18px;
   font-family: "Lucida fax";
 }
 .francaise .menu h3 .hover {
@@ -706,23 +698,32 @@ footer a:hover {
   width: 100%;
   opacity: 1;
 }
-@media (max-width: 1250px) {
+@media (max-width: 1000px) {
   .francaise .menu h3 {
     justify-content: center;
   }
 }
-@media (max-width: 1024px) {
+@media (max-width: 750px) {
   .francaise .menu h3 {
-    display: inline-block;
+    max-width: 250px;
   }
 }
 .francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
-  width: 200px;
+  width: 240px;
 }
-@media (max-width: 1100px) {
+@media (max-width: 1000px) {
   .francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
     display: none;
   }
+}
+@media (max-width: 1100px) {
+  .francaise .menu h3 .hover {
+    text-align: center;
+  }
+}
+.francaise .menu .titre-entre > .hover {
+  color: #d8852e;
+  margin: center;
 }
 .francaise .menu .entre2 {
   width: auto;
@@ -732,15 +733,15 @@ footer a:hover {
   font-family: "Baskerville Old face", "bell MT";
   color: #d8852e !important;
 }
-.francaise .menu .entre2 .hover {
-  color: #d8852e;
-}
 .francaise .menu .entre2 .tartare, .francaise .menu .entre2 .veloute, .francaise .menu .entre2 .soupe {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida fax";
-  color: #d8852e !important;
+  color: #d8852e;
+}
+.francaise .menu .titre-plat > .hover {
+  color: #b37097;
 }
 .francaise .menu .plat2 {
   margin-bottom: 70px;
@@ -748,41 +749,44 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
-}
-.francaise .menu .plat2 .hover {
-  color: #b37097;
+  color: #b37097 !important;
 }
 .francaise .menu .plat2 .st-jacques, .francaise .menu .plat2 .magret, .francaise .menu .plat2 .pigeonneau {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida Fax";
-  color: #b37097 !important;
 }
-.francaise .menu .plat2 .dessert {
+.francaise .menu .titre-dessert > .hover {
+  color: #905bfd;
+}
+.francaise .menu .dessert2 {
   width: auto;
   display: flex;
   flex-direction: column;
   margin-bottom: 70px;
   line-height: 2;
 }
-.francaise .menu .plat2 .dessert .hover {
+.francaise .menu .dessert2 .hover {
   color: #905bfd;
 }
-.francaise .menu .plat2 .dessert .type-dessert {
+.francaise .menu .dessert2 .type-dessert {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   font-family: "Lucida fax";
   color: #905bfd !important;
 }
-.francaise .menu .menu .plat-prix span {
-  font-family: "Baskerville Old face", "bell MT";
+.francaise .menu .plat-prix {
+  width: 650px;
+  font-size: 16px;
+}
+.francaise .menu .plat-prix span {
   display: inline-flex;
   font-weight: bold;
 }
-@media (max-width: 1100px) {
-  .francaise .menu .menu .plat-prix {
+@media (max-width: 1200px) {
+  .francaise .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;

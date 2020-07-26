@@ -40,7 +40,21 @@
     font-family: 'Kaushan-Script';
     src: url('Kaushan-Script/Kaushanscript/KaushanScript-Regular.ttf') format("truetype");
 }
-// mixins, keyframes, animations et variables 
+// mixins, keyframes, animations et variables
+@mixin menu
+{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    width:60%;
+    font-size:18px;
+    margin:auto !important;
+    margin-bottom:200px !important;
+    padding: 50px 120px 20px 120px;
+    height:1400px !important;
+    box-shadow:0 0 5px 2px hsl(0, 0%, 90%)
+} 
 @mixin presentation-du-menu-prix
 {
     width: auto;
@@ -297,7 +311,7 @@ h1
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: white;
-    margin:0;
+    margin:auto;
 }
 @mixin h3
 {
@@ -312,6 +326,7 @@ a
 {
     display: block;
     text-decoration: none;
+    color:none;
 }
 footer
 {
@@ -599,10 +614,6 @@ footer
     flex-direction: column !important;
     justify-content: space-between !important;
     height: 100%;
-    @media (max-width:1100px)
-        {
-          max-width: auto;
-        }
     h2
     {   
         @include h2;
@@ -610,22 +621,12 @@ footer
     }
     .menu
     {
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include menu;
         color:rgb(60 18 24);
         background-color: $color-fondnote;
-        width: 50%;
-        font-size: 20px;
-        margin:auto;
-        margin-bottom:200px;
-        padding: 50px 120px 20px 120px;
-        height:1400px;
-        box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-        @media (min-width:1000px)and (max-width: 1420px){
-            margin:auto;
-            height: auto;
+        @media (max-width:1200px)
+        {
+            margin-bottom:160px;
         }
         @media (max-width:500px)
         { 
@@ -644,12 +645,17 @@ footer
             font-weight: bold;
             font-family:'Devonshire';
             padding-bottom: 40px;
+            @media (max-width:900px)
+            {
+                height:100px;
+                padding:40px 0 15px 0;
+            }
             .musique
             {
                 margin-top: 40px;
                 width: 90px;
                 height: 90px;
-                @media(max-width: 600px)
+                @media(max-width: 900px)
                 {
                     width:30px;
                     height:30px;
@@ -659,12 +665,7 @@ footer
             {
                 font-size:2em;
             }
-            @media (max-width:600px)
-            {
-                font-size: 1em;
-                padding:40px 0 15px 0;
-                
-            }
+            
         }
         h3    
         {   
@@ -676,8 +677,8 @@ footer
                 }
             .trait-g
             {   
-                width:350px;
-                @media (max-width: 1420px)
+                width:400px;
+                @media (max-width: 1370px)
                 {
                     width:200px;
                     
@@ -690,9 +691,9 @@ footer
             }
             .trait-d
             {
-                width:350px;
+                width:400px;
                 margin-top: 13px;
-                @media (max-width: 1420px)
+                @media (max-width: 1370px)
                 {
                     width:200px;
                 }
@@ -705,7 +706,6 @@ footer
                 font-family: "Segoe Print";
                 color: rgb(60 18 24);
                 width:253px;
-                font-size:16px;
             }
         }
         .entrees
@@ -734,7 +734,7 @@ footer
             p
             {
                 font-family: "Segoe Print";
-                @media(max-width: 1100px)
+                @media(max-width: 1200px)
                 {
                 line-height: 2;
                 }
@@ -750,7 +750,7 @@ footer
             font-family: "Devonshire";
             font-size: 35px;
             margin: 40px 0 80px 0;
-            @media (max-width:1100px)
+            @media (max-width:1200px)
             {
                 display:none;
             }        
@@ -765,15 +765,10 @@ footer
             display:inline-flex;
             font-weight: bold;
         }
-        @media(max-width : 1420px)
-        {
-            width: 80%;
-            justify-content: stretch;
-            margin: auto;
-        }
-        @media(max-width:1100px)
+        @media(max-width:1200px)
         {
         @include style-menu-res;
+        margin:0;
         }
         @media(max-width: 600px)
         {
@@ -782,149 +777,151 @@ footer
     } 
 }  
     // mise en page CSS menu 2 le chic a la francaise
-    .francaise
+.francaise
+{   
+    width:auto;
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100%;
+    h2
     {   
-        display:flex !important;
-        flex-direction: column !important;
-        justify-content: space-between !important;
-        height: 100%;
-        @media (max-width:1100px)
-            {
-              width: auto;
-            }
-        h2
-        {   
-            display:flex;
-            justify-content: center;
-            align-items: baseline;
-            height:15px;
-            margin:35px;
-            padding-bottom:0;
-            font-family: Arial, Helvetica, sans-serif;
+        @include h2;
+        margin:auto;
+    }
+    .menu
+    {
+        @include menu;
+        background-color: $color_fondchic;
+        @media (max-width:750px)
+        {
+            padding: 0 ;
+            margin: 0;
+            width:60%;
         }
-        .menu
+        .titre-menu_deux   
         {
             display:flex;
             flex-direction: column;
             justify-content: center;
+            text-align: center;
             align-items: center;
-            color:rgb(60 18 24);
-            background-color: $color_fondchic;
-            width: 1000px;
-            margin-left:auto;
-            margin-right: auto;
-            margin-bottom: 150px;
-            padding: 50px 120px 20px 120px;
-            height:1400px;
-            box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-            @media (max-width:1250px) {
-                width:50%;
-                margin-left:auto;
-                margin-right: auto;
-                height: auto; 
-            }
-            .titre-menu__deux   
+            font-size: 2em;
+            padding-bottom: 100px;
+            padding-top: 60px;
+            font-family: 'croissantone';
+            background-image: linear-gradient(to right,#d8852e,#905bfd) !important; 
+            color:transparent;
+            background-clip:text;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            @media(max-width: 750px)
             {
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                align-items: center;
-                font-size: 3em;
-                font-weight: bold;
-                padding-bottom: 40px;
-                font-family: 'croissantone';
-                    background-image: linear-gradient(to right,#d8852e,#905bfd) !important; 
-                    color:transparent;
-                    background-clip:text;
-                    -webkit-background-clip: text;
-                    -moz-background-clip: text;
+                font-size:24px;
+                padding-bottom:20px;
             }
-            h3
-            {   
-                @include h3 ;
-                @include titre-souligné-chic();
-                @media (max-width:1250px)
-                    {
-                        justify-content:center;
-                    }
-                font-family:"Lucida fax";
-                @media(max-width:1024px)
-                {
-                    display:inline-block;
-                }
-                .chic1g,.chic1d
-                {
-                width: 200px;
-                @media (max-width:1100px)
+        }
+        h3
+        {   
+            @include h3 ;
+            @include titre-souligné-chic();
+            font-size: 18px;
+            font-family:"Lucida fax";
+            @media (max-width:1000px)
+            {
+                justify-content:center;
+            }
+            @media(max-width: 750px)
+            {
+                max-width: 250px;
+            }            
+            .chic1g, .chic1d
+            {                
+                width: 240px;
+                @media (max-width:1000px)
                 {
                     display: none;
-                
+
                 }
-                    
             }
-        }
-            .entre2
-            {   
-                @include presentation-du-menu-prix;
-                    margin-bottom: 70px;
-                    font-family:"Baskerville Old face","bell MT";
-                    color:  #d8852e !important;
-                    .hover
-                    {
-                        color: #d8852e;
-                    }
-                    .tartare, .veloute, .soupe
-                    {
-                        @include style-menu;
-                        font-family:"Lucida fax";
-                        color: #d8852e !important;
-                    }
-            }   
-            .plat2
+            .hover
             {
-                margin-bottom: 70px;
-                    font-family:"Baskerville Old face","bell MT";
-                    @include presentation-du-menu-prix;
-                    .hover
-                    {
-                        color:#b37097;
-                    }
-                    .st-jacques, .magret, .pigeonneau
-                    {
-                        @include style-menu;
-                        font-family:"Lucida Fax"; 
-                        color:#b37097 !important;
+                @media (max-width: 1100px)
+                {
+                    text-align: center,    
+                }
             }
-            .dessert
-            {
-                @include presentation-du-menu-prix;
-                    margin-bottom: 70px;
-                    line-height: 2;
-                    .hover
-                    {
-                        color:#905bfd ;
-                    }
-                    .type-dessert 
-                    {
-                        @include style-menu;
-                        font-family:"Lucida fax";
-                        color:#905bfd !important;
-                    }
-            }
+        }     
+            
+        .titre-entre>.hover  
+        { 
+            color:#d8852e;
+            margin: center;
         }
-        .menu .plat-prix
+        .entre2
         {   
-            span
-            {   font-family:"Baskerville Old face","bell MT";
-                display:inline-flex;
-                font-weight: bold;
-            }
-            @media(max-width:1100px)
+            @include presentation-du-menu-prix;
+            margin-bottom: 70px;
+            font-family:"Baskerville Old face","bell MT";
+            color:#d8852e !important;
+            .tartare, .veloute, .soupe
             {
-            @include style-menu-res;
+                @include style-menu;
+                font-family:"Lucida fax";
+                color: #d8852e 
             }
         } 
+        .titre-plat>.hover 
+        {
+            color:#b37097;
+        } 
+        .plat2
+        {
+            margin-bottom: 70px;
+            font-family:"Baskerville Old face","bell MT";
+            @include presentation-du-menu-prix;
+            color:#b37097 !important;
+            .st-jacques, .magret, .pigeonneau
+            {
+                @include style-menu;
+                font-family:"Lucida Fax"; 
+                
+            }
+        }
+        .titre-dessert>.hover
+        {
+            color:#905bfd
+        }
+        .dessert2
+        {
+            @include presentation-du-menu-prix;
+            margin-bottom: 70px;
+            line-height: 2;
+            .hover
+            {
+                color:#905bfd ;
+            }
+            .type-dessert 
+            {
+                @include style-menu;
+                font-family:"Lucida fax";
+                color:#905bfd !important;
+            }
+        }
+    }
+    .menu .plat-prix
+    {   
+        width: 650px;
+        font-size:16px;
+        span
+        {   
+            display:inline-flex;
+            font-weight: bold;
+        }
+        @media(max-width:1200px)
+        {
+            @include style-menu-res;
+        }
     }
 }  
    /* body
