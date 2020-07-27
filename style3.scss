@@ -57,10 +57,10 @@
 } 
 @mixin presentation-du-menu-prix
 {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    align-items :center;
+    width: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items :center !important;
 }    
 @mixin style-menu
 {   display: flex;
@@ -70,11 +70,10 @@
 }
 @mixin style-menu-res
 {   display: flex !important;
-    flex-direction: column !important;
+    flex-direction: column !important ;
     justify-content:center !important;
     align-items:center !important;
-    text-align:center;
-    width:auto;
+    
     
     
 }
@@ -628,6 +627,7 @@ footer
         @include menu;
         color:rgb(60 18 24);
         background-color: $color-fondnote;
+        font-size: 16px;
         @media (max-width:1200px)
         {
             margin-bottom:160px;
@@ -762,14 +762,14 @@ footer
     }
     .menu .plat-prix
     {   
-        width:952px;
+        width:1053px;
         font-size: 16px;
         span
         {   
             display:inline-flex;
             font-weight: bold;
         }
-        @media(max-width:1200px)
+        @media(max-width:1360px)
         {
         @include style-menu-res;
         margin:0;
@@ -793,11 +793,11 @@ footer
     {
         @include menu;
         background-color: $color_fondchic;
-        @media (max-width:750px)
+        @media (max-width:850px)
         {
             padding: 0 ;
             margin: 0;
-            width:60%;
+            width:auto;
         }
         .titre-menu_deux   
         {
@@ -810,29 +810,31 @@ footer
             background-clip:text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            @media(max-width: 750px)
+            @media(max-width: 850px)
             {
+                width:auto;
                 font-size:24px;
                 padding-bottom:20px;
             }
         }
         h3
         {   
-            @include h3 ;
             @include titre-souligné-chic;
+            @include h3 ;
+            width:850px;
             font-size: 18px;
             font-family:"Lucida fax";
             @media (max-width:1000px)
             {
                 justify-content:center;
             }
-            @media(max-width: 750px)
+            @media(max-width: 850px)
             {
                 max-width: 250px;
             }            
             .chic1g, .chic1d
             {                
-                width: 240px;
+                width: 280px;
                 @media (max-width:1000px)
                 {
                     display: none;
@@ -840,7 +842,9 @@ footer
                 }
             }
             .hover
-            {
+            {   
+                
+                text-align: center;
                 @media (max-width: 1100px)
                 {
                     text-align: center,    
@@ -942,7 +946,7 @@ footer
         {   
             font-family: "Dancing-Script";
             font-size:5em;
-            padding: 100px 0 100px 10px;
+            padding: 100px 0 20px 10px;
             margin:auto;
             background-image: linear-gradient(to right,rgb(6,69,229),rgb(8,135,251,0.6));
             color:transparent;
@@ -972,7 +976,6 @@ footer
             {
                 justify-content:center;
                 font-weight: bold !important;
-
             }
             @media (max-width:600px)
             {
@@ -1010,6 +1013,7 @@ footer
             .tartare, .bouchee, .cepes
             {
                 @include style-menu;
+                
                 padding-bottom: 10px;
                 font-family: "Segoe Print";
             }
@@ -1050,31 +1054,22 @@ footer
         {
             font-size: 20px;
         }   
-        h2, h3
-        {
-            font-weight: normal;
-        }
-        h3
-        {
-            padding-bottom: 20px;
-        }    
         .plat-prix
         { 
-            margin:0 70px 0 70px !important;
-            @media(max-width:1024px)
+            width:900px;
+            @media(max-width:1000px)
             {
                 @include style-menu-res;
             }
-            
-        }
-        .plats
-        {
-            @media(max-width: 760px)
+             @media(max-width: 760px)
             {
-                padding-bottom:10px ;
+                margin-bottom:0;
+                margin-top:0;
+                padding-bottom:0 ;
                 font-size: 16px;
+                width:300px !important;
             }
-        }                     
+        }
     }
 }
 //mise en forme css menu 4 la palette du gout
@@ -1202,7 +1197,11 @@ footer
                 @include style-menu-res;
                 padding-bottom: 0;
                 margin-bottom: 0;
-            }
+            @media(max-width:650px)
+            {
+                width:300px!important;
+                margin:auto;
+            } 
         }
         
         .plat
@@ -1211,10 +1210,7 @@ footer
             {
                 padding:0;
             }
-            @media(max-width:400px)
-            {
-                width:300px;
-                margin:auto;
+            
             }
         }
     }

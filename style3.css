@@ -420,6 +420,7 @@ footer a:hover {
   box-shadow: 0 0 5px 2px #e6e6e6;
   color: #3c1218;
   background-color: #fcdfdb;
+  font-size: 16px;
 }
 @media (max-width: 1200px) {
   .enchantee .menu {
@@ -534,10 +535,10 @@ footer a:hover {
 }
 .enchantee .menu .entrees {
   margin-bottom: 70px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .enchantee .menu .entrees .ravioles, .enchantee .menu .entrees .caviar, .enchantee .menu .entrees .homard, .enchantee .menu .entrees .foie-gras {
   display: flex;
@@ -547,10 +548,10 @@ footer a:hover {
 }
 .enchantee .menu .plat {
   margin-bottom: 70px;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .enchantee .menu .plat .noix, .enchantee .menu .plat .langoustine, .enchantee .menu .plat .mijote {
   display: flex;
@@ -559,10 +560,10 @@ footer a:hover {
   font-family: "Segoe Print" !important;
 }
 .enchantee .menu .dessert {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
 }
 .enchantee .menu .dessert p {
   font-family: "Segoe Print";
@@ -588,21 +589,19 @@ footer a:hover {
   }
 }
 .enchantee .menu .plat-prix {
-  width: 952px;
+  width: 1053px;
   font-size: 16px;
 }
 .enchantee .menu .plat-prix span {
   display: inline-flex;
   font-weight: bold;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1360px) {
   .enchantee .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: center;
-    width: auto;
     margin: 0;
   }
 }
@@ -644,11 +643,11 @@ footer a:hover {
   box-shadow: 0 0 5px 2px #e6e6e6;
   background-color: #fff5fe;
 }
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .francaise .menu {
     padding: 0;
     margin: 0;
-    width: 60%;
+    width: auto;
   }
 }
 .francaise .menu .titre-menu_deux {
@@ -662,8 +661,9 @@ footer a:hover {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .francaise .menu .titre-menu_deux {
+    width: auto;
     font-size: 24px;
     padding-bottom: 20px;
   }
@@ -674,6 +674,7 @@ footer a:hover {
   justify-content: space-between;
   font-weight: bold;
   font-size: 30px;
+  width: 850px;
   font-size: 18px;
   font-family: "Lucida fax";
 }
@@ -704,18 +705,21 @@ footer a:hover {
     justify-content: center;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   .francaise .menu h3 {
     max-width: 250px;
   }
 }
 .francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
-  width: 240px;
+  width: 280px;
 }
 @media (max-width: 1000px) {
   .francaise .menu h3 .chic1g, .francaise .menu h3 .chic1d {
     display: none;
   }
+}
+.francaise .menu h3 .hover {
+  text-align: center;
 }
 @media (max-width: 1100px) {
   .francaise .menu h3 .hover {
@@ -727,10 +731,10 @@ footer a:hover {
   margin: center;
 }
 .francaise .menu .entre2 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   margin-bottom: 70px;
   font-family: "Baskerville Old face", "bell MT";
   color: #d8852e !important;
@@ -748,10 +752,10 @@ footer a:hover {
 .francaise .menu .plat2 {
   margin-bottom: 70px;
   font-family: "Baskerville Old face", "bell MT";
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   color: #b37097 !important;
 }
 .francaise .menu .plat2 .st-jacques, .francaise .menu .plat2 .magret, .francaise .menu .plat2 .pigeonneau {
@@ -764,10 +768,10 @@ footer a:hover {
   color: #905bfd;
 }
 .francaise .menu .dessert2 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   margin-bottom: 70px;
   line-height: 2;
 }
@@ -795,8 +799,6 @@ footer a:hover {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: center;
-    width: auto;
   }
 }
 
@@ -842,7 +844,7 @@ footer a:hover {
 .papilles .menu .titre-menu {
   font-family: "Dancing-Script";
   font-size: 5em;
-  padding: 100px 0 100px 10px;
+  padding: 100px 0 20px 10px;
   margin: auto;
   background-image: linear-gradient(to right, #0645e5, rgba(8, 135, 251, 0.6));
   color: transparent;
@@ -930,10 +932,10 @@ footer a:hover {
   font-size: 20px;
 }
 .papilles .menu .entre3 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .papilles .menu .entre3 .tartare, .papilles .menu .entre3 .bouchee, .papilles .menu .entre3 .cepes {
@@ -950,10 +952,10 @@ footer a:hover {
 }
 .papilles .menu .plat3 {
   font-family: "Segoe Print";
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .papilles .menu .plat3 .poulet, .papilles .menu .plat3 .langouste, .papilles .menu .plat3 .cote {
@@ -970,10 +972,10 @@ footer a:hover {
 }
 .papilles .menu .dessert3 {
   font-family: "Segoe Print";
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .papilles .menu .dessert3 .farandole, .papilles .menu .dessert3 .creme, .papilles .menu .dessert3 .tiramisu {
@@ -986,29 +988,24 @@ footer a:hover {
 .papilles .menu span {
   font-size: 20px;
 }
-.papilles .menu h2, .papilles .menu h3 {
-  font-weight: normal;
-}
-.papilles .menu h3 {
-  padding-bottom: 20px;
-}
 .papilles .menu .plat-prix {
-  margin: 0 70px 0 70px !important;
+  width: 900px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
   .papilles .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: center;
-    width: auto;
   }
 }
 @media (max-width: 760px) {
-  .papilles .menu .plats {
-    padding-bottom: 10px;
+  .papilles .menu .plat-prix {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0;
     font-size: 16px;
+    width: 300px !important;
   }
 }
 
@@ -1137,10 +1134,10 @@ footer a:hover {
   }
 }
 .gout .menu .entre4 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .gout .menu .entre4 .fricassee, .gout .menu .entre4 .oeuf, .gout .menu .entre4 .foie {
@@ -1151,10 +1148,10 @@ footer a:hover {
   font-family: "Segoe Print";
 }
 .gout .menu .plat4 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .gout .menu .plat4 .filet, .gout .menu .plat4 .parmentier, .gout .menu .plat4 .turbot {
@@ -1165,10 +1162,10 @@ footer a:hover {
   font-family: "Segoe Print";
 }
 .gout .menu .dessert4 {
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   padding-bottom: 100px;
 }
 .gout .menu .dessert4 .paris-brest, .gout .menu .dessert4 .macaron, .gout .menu .dessert4 .mousse {
@@ -1187,21 +1184,19 @@ footer a:hover {
     flex-direction: column !important;
     justify-content: center !important;
     align-items: center !important;
-    text-align: center;
-    width: auto;
     padding-bottom: 0;
     margin-bottom: 0;
   }
 }
-@media (max-width: 1030px) {
-  .gout .menu .plat {
-    padding: 0;
+@media (max-width: 1030px) and (max-width: 650px) {
+  .gout .menu .plat-prix {
+    width: 300px !important;
+    margin: auto;
   }
 }
-@media (max-width: 400px) {
-  .gout .menu .plat {
-    width: 300px;
-    margin: auto;
+@media (max-width: 1030px) {
+  .gout .menu .plat-prix .plat {
+    padding: 0;
   }
 }
 
