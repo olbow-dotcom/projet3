@@ -1046,9 +1046,18 @@ footer a:hover {
 }
 @media (max-width: 750px) {
   .gout .menu {
-    padding: 0;
+    padding: 30px;
     margin: 0;
-    width: 60%;
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 400px) {
+  .gout .menu {
+    font-size: 14px;
+    padding: 0;
+    width: auto;
+    align-items: stretch;
   }
 }
 .gout .menu .titre-menu-4 {
@@ -1060,6 +1069,16 @@ footer a:hover {
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
+}
+@media (max-width: 1060px) {
+  .gout .menu .titre-menu-4 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 400px) {
+  .gout .menu .titre-menu-4 {
+    text-align: center;
+  }
 }
 .gout .menu h3 {
   display: flex;
@@ -1092,12 +1111,29 @@ footer a:hover {
   width: 100%;
   opacity: 1;
 }
-.gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
-  width: 300px;
+@media (max-width: 1000px) {
+  .gout .menu h3 {
+    width: 400px;
+  }
 }
-@media (max-width: 1024px) {
+@media (max-width: 400px) {
+  .gout .menu h3 {
+    width: 300px;
+    margin: auto;
+  }
+}
+.gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
+  width: 280px;
+}
+@media (max-width: 1000px) {
   .gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
+    width: auto;
     display: none;
+  }
+}
+@media (max-width: 1000px) {
+  .gout .menu h3 .hover {
+    margin: auto;
   }
 }
 .gout .menu .entre4 {
@@ -1145,7 +1181,7 @@ footer a:hover {
 .gout .menu .plat-prix {
   width: 650px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
   .gout .menu .plat-prix {
     display: flex !important;
     flex-direction: column !important;
@@ -1153,6 +1189,19 @@ footer a:hover {
     align-items: center !important;
     text-align: center;
     width: auto;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 1030px) {
+  .gout .menu .plat {
+    padding: 0;
+  }
+}
+@media (max-width: 400px) {
+  .gout .menu .plat {
+    width: 300px;
+    margin: auto;
   }
 }
 

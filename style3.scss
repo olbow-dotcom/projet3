@@ -1092,9 +1092,17 @@ footer
         background-color:$color_fondgout; 
         @media(max-width:750px)
         {
-            padding: 0 ;
+            padding: 30px;
             margin: 0;
-            width:60%;
+            width:auto;
+            height:100%;
+        }
+        @media (max-width:400px)
+        {
+            font-size: 14px;
+            padding:0;
+            width: auto;
+            align-items: stretch;
         }
         .titre-menu-4
         {   
@@ -1106,6 +1114,14 @@ footer
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
+            @media(max-width: 1060px)
+            {
+                font-size: 2em;
+            }
+            @media (max-width:400px)
+            {
+                text-align: center;
+            }
         }
         h3
         { 
@@ -1117,13 +1133,31 @@ footer
             width:850px;
             @include titre-souligné-gout;
             font-family: "Segoe Print";
+            @media (max-width:1000px)
+            {
+                width:400px;
+            }
+            @media(max-width:400px)
+            {
+                width:300px;
+                margin:auto;
+            }
             .trait-gout-g,.trait-gout-d
             {   
-                width:300px;
-                @media (max-width:1024px)
+                width:280px;
+                @media (max-width:1000px)
                 {
+                    width:auto;
                     display: none;
                 }
+            }
+            .hover
+            {
+                @media(max-width: 1000px)
+                {
+                    margin:auto;
+                }
+                
             }
         }             
         .entre4
@@ -1163,9 +1197,24 @@ footer
         .plat-prix
         {   
             width:650px;
-            @media(max-width:1024px)
+            @media(max-width:1030px)
             {
                 @include style-menu-res;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+        
+        .plat
+        {
+            @media (max-width : 1030px) 
+            {
+                padding:0;
+            }
+            @media(max-width:400px)
+            {
+                width:300px;
+                margin:auto;
             }
         }
     }
