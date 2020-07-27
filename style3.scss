@@ -937,12 +937,11 @@ footer
         @include menu;
         background-color:$color-fondpapilles;
         color: #000000;
-        @media (max-width:750px)
-        
+        @media (max-width:800px)
         {
             padding:0;
-            margin:0;
-            width:60%
+            margin:0 !important;
+            width:auto;
         }
         .titre-menu
         {   
@@ -955,10 +954,18 @@ footer
             background-clip: text;
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            @media (max-width:750px)
+            @media (max-width:1250px)
             {
-                font-size:24px;
+                font-size:60px;
+            }
+            @media (max-width:800px)
+            {
+                font-size:2em;
                 padding-bottom:20px;
+                margin-bottom:0;
+                padding-top:0;
+                text-align:center;
+                margin-top: 0;
             }
         }
         h3
@@ -969,19 +976,35 @@ footer
             @media (max-width:1000px)
             {
                 justify-content:center;
+                font-weight: bold !important;
+
+            }
+            @media (max-width:600px)
+            {
+                margin:0;
+                
             }
             .trait_g,.trait_d   
             {
                 width:350px;
+                @media(max-width:1300px)
+                {
+                    width:200px;
+                }
                 @media (max-width:1000px)
                 {
                     display: none;
+                }
+                @media(max-width: 800px)
+                {
+                    padding-bottom: 20px;
                 }
             }
             .hover
             {
                 padding:0 15px 0 15px;
                 width:300px;
+                font-size:20px;
             }
                 
         }
@@ -995,6 +1018,10 @@ footer
                 padding-bottom: 10px;
                 font-family: "Segoe Print";
             }
+            @media (max-width:1000px)
+            {
+                padding-bottom: 30px;
+            } 
         }
         .plat3
         {
@@ -1006,6 +1033,10 @@ footer
                 @include style-menu;
                 padding-bottom: 10px;
                 font-family: "Segoe Print";
+            }
+            @media (max-width:1000px)
+            {
+                padding-bottom: 30px;
             } 
         } 
         .dessert3
@@ -1038,6 +1069,15 @@ footer
             @media(max-width:1024px)
             {
                 @include style-menu-res;
+            }
+            
+        }
+        .plats
+        {
+            @media(max-width: 760px)
+            {
+                padding-bottom:10px ;
+                font-size: 16px;
             }
         }                     
     }

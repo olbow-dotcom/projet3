@@ -830,11 +830,11 @@ footer a:hover {
   background-color: #f9f9f9;
   color: #000000;
 }
-@media (max-width: 750px) {
+@media (max-width: 800px) {
   .papilles .menu {
     padding: 0;
-    margin: 0;
-    width: 60%;
+    margin: 0 !important;
+    width: auto;
   }
 }
 .papilles .menu .titre-menu {
@@ -848,10 +848,19 @@ footer a:hover {
   -webkit-background-clip: text;
   -moz-background-clip: text;
 }
-@media (max-width: 750px) {
+@media (max-width: 1250px) {
   .papilles .menu .titre-menu {
-    font-size: 24px;
+    font-size: 60px;
+  }
+}
+@media (max-width: 800px) {
+  .papilles .menu .titre-menu {
+    font-size: 2em;
     padding-bottom: 20px;
+    margin-bottom: 0;
+    padding-top: 0;
+    text-align: center;
+    margin-top: 0;
   }
 }
 .papilles .menu h3 {
@@ -887,19 +896,36 @@ footer a:hover {
 @media (max-width: 1000px) {
   .papilles .menu h3 {
     justify-content: center;
+    font-weight: bold !important;
+  }
+}
+@media (max-width: 600px) {
+  .papilles .menu h3 {
+    margin: 0;
   }
 }
 .papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
   width: 350px;
+}
+@media (max-width: 1300px) {
+  .papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
+    width: 200px;
+  }
 }
 @media (max-width: 1000px) {
   .papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
     display: none;
   }
 }
+@media (max-width: 800px) {
+  .papilles .menu h3 .trait_g, .papilles .menu h3 .trait_d {
+    padding-bottom: 20px;
+  }
+}
 .papilles .menu h3 .hover {
   padding: 0 15px 0 15px;
   width: 300px;
+  font-size: 20px;
 }
 .papilles .menu .entre3 {
   width: auto;
@@ -914,6 +940,11 @@ footer a:hover {
   padding-bottom: 10px;
   font-family: "Segoe Print";
 }
+@media (max-width: 1000px) {
+  .papilles .menu .entre3 {
+    padding-bottom: 30px;
+  }
+}
 .papilles .menu .plat3 {
   font-family: "Segoe Print";
   width: auto;
@@ -927,6 +958,11 @@ footer a:hover {
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+}
+@media (max-width: 1000px) {
+  .papilles .menu .plat3 {
+    padding-bottom: 30px;
+  }
 }
 .papilles .menu .dessert3 {
   font-family: "Segoe Print";
@@ -962,6 +998,12 @@ footer a:hover {
     align-items: center !important;
     text-align: center;
     width: auto;
+  }
+}
+@media (max-width: 760px) {
+  .papilles .menu .plats {
+    padding-bottom: 10px;
+    font-size: 16px;
   }
 }
 
