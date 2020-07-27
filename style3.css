@@ -134,7 +134,7 @@ h1 {
   }
 }
 
-.enchante > a, .francaise > a, .papilles > a, .gout > a {
+.enchantee > a, .francaise > a, .papilles > a, .gout > a {
   display: block;
   text-decoration: none;
   color: none;
@@ -389,7 +389,6 @@ footer a:hover {
 }
 
 .enchantee {
-  width: auto;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -538,6 +537,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .enchantee .menu .entrees .ravioles, .enchantee .menu .entrees .caviar, .enchantee .menu .entrees .homard, .enchantee .menu .entrees .foie-gras {
   display: flex;
@@ -550,6 +550,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .enchantee .menu .plat .noix, .enchantee .menu .plat .langoustine, .enchantee .menu .plat .mijote {
   display: flex;
@@ -561,6 +562,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .enchantee .menu .dessert p {
   font-family: "Segoe Print";
@@ -611,7 +613,6 @@ footer a:hover {
 }
 
 .francaise {
-  width: auto;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -729,6 +730,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 70px;
   font-family: "Baskerville Old face", "bell MT";
   color: #d8852e !important;
@@ -749,6 +751,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #b37097 !important;
 }
 .francaise .menu .plat2 .st-jacques, .francaise .menu .plat2 .magret, .francaise .menu .plat2 .pigeonneau {
@@ -764,6 +767,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-bottom: 70px;
   line-height: 2;
 }
@@ -797,7 +801,6 @@ footer a:hover {
 }
 
 .papilles {
-  width: auto;
   display: flex !important;
   flex-direction: column !important;
   justify-content: space-between !important;
@@ -812,7 +815,6 @@ footer a:hover {
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   background-color: white;
-  margin: auto;
   margin: auto;
 }
 .papilles .menu {
@@ -931,6 +933,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
 }
 .papilles .menu .entre3 .tartare, .papilles .menu .entre3 .bouchee, .papilles .menu .entre3 .cepes {
@@ -950,6 +953,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
 }
 .papilles .menu .plat3 .poulet, .papilles .menu .plat3 .langouste, .papilles .menu .plat3 .cote {
@@ -969,6 +973,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
 }
 .papilles .menu .dessert3 .farandole, .papilles .menu .dessert3 .creme, .papilles .menu .dessert3 .tiramisu {
@@ -1014,32 +1019,42 @@ footer a:hover {
   height: 100%;
 }
 .gout h2 {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  height: 15px;
-  margin: 35px;
-  padding-bottom: 0;
+  max-width: 400px;
+  padding-top: 45px;
+  font-size: 30px;
+  height: 40px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  margin: auto;
 }
 .gout .menu {
+  color: #000000;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  background-color: #fdfdfd;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 150px;
-  padding-top: 50px;
-  height: 1400px;
+  width: 60%;
+  font-size: 18px;
+  margin: auto !important;
+  margin-bottom: 200px !important;
+  padding: 50px 120px 20px 120px;
+  height: 1400px !important;
   box-shadow: 0 0 5px 2px #e6e6e6;
+  background-color: #fdfdfd;
 }
-@media (max-width: 1024px) {
+@media (max-width: 750px) {
   .gout .menu {
-    padding: 0 10px 50px 10px;
+    padding: 0;
+    margin: 0;
+    width: 60%;
   }
 }
-.gout .menu h2 {
+.gout .menu .titre-menu-4 {
+  font-family: "Kaushan-Script";
+  font-size: 5em;
+  padding: 100px 0 50px 0px;
   background-image: linear-gradient(to right, #56a847, #bfff7e);
   color: transparent;
   background-clip: text;
@@ -1052,6 +1067,7 @@ footer a:hover {
   justify-content: space-between;
   text-align: center;
   font-weight: bold;
+  width: 850px;
   font-family: "Segoe Print";
 }
 .gout .menu h3 .hover {
@@ -1077,7 +1093,7 @@ footer a:hover {
   opacity: 1;
 }
 .gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
-  width: 330px;
+  width: 300px;
 }
 @media (max-width: 1024px) {
   .gout .menu h3 .trait-gout-g, .gout .menu h3 .trait-gout-d {
@@ -1088,7 +1104,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
-  padding-top: 120px;
+  align-items: center;
   padding-bottom: 100px;
 }
 .gout .menu .entre4 .fricassee, .gout .menu .entre4 .oeuf, .gout .menu .entre4 .foie {
@@ -1102,6 +1118,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
 }
 .gout .menu .plat4 .filet, .gout .menu .plat4 .parmentier, .gout .menu .plat4 .turbot {
@@ -1115,6 +1132,7 @@ footer a:hover {
   width: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
 }
 .gout .menu .dessert4 .paris-brest, .gout .menu .dessert4 .macaron, .gout .menu .dessert4 .mousse {
@@ -1123,6 +1141,9 @@ footer a:hover {
   justify-content: space-between;
   padding-bottom: 10px;
   font-family: "Segoe Print";
+}
+.gout .menu .plat-prix {
+  width: 650px;
 }
 @media (max-width: 1024px) {
   .gout .menu .plat-prix {
@@ -1152,12 +1173,27 @@ footer a:hover {
 .bloc-page h1 {
   text-align: center;
 }
+@media (max-width: 500px) {
+  .bloc-page h1 {
+    font-size: 20px;
+  }
+}
 .bloc-page p {
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
 }
 .bloc-page p span {
   font-weight: bold;
+}
+@media (max-width: 1000px) {
+  .bloc-page {
+    margin: 0;
+  }
+}
+@media (max-width: 500px) {
+  .bloc-page {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=style3.css.map */

@@ -60,6 +60,7 @@
     width: auto;
     display: flex;
     flex-direction: column;
+    align-items :center;
 }    
 @mixin style-menu
 {   display: flex;
@@ -215,6 +216,13 @@ $animate: width  0.2s ease-in-out,opacity 0.2s ease-in-out;
         }
     }    
 }
+@mixin page
+{
+    display:flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    height: 100%;
+}
 
 $color_headfoot:rgb(87,156,135);
 $color-fondnote: rgb(252,223,219);
@@ -322,7 +330,7 @@ h1
     font-size: 30px;
 }
 
-.enchante>a, .francaise>a, .papilles>a, .gout>a
+.enchantee>a, .francaise>a, .papilles>a, .gout>a
 {
     display: block;
     text-decoration: none;
@@ -609,11 +617,7 @@ footer
 
 .enchantee
 {   
-    width: auto;
-    display:flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100%;
+    @include page;
     h2
     {   
         @include h2;
@@ -779,11 +783,7 @@ footer
     // mise en page CSS menu 2 le chic a la francaise
 .francaise
 {   
-    width:auto;
-    display:flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100%;
+    @include page;
     h2
     {   
         @include h2;
@@ -922,15 +922,10 @@ footer
 //style menu 3 le délice des papilles
 .papilles
 {   
-    width: auto;
-    display:flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100%;
+    @include page;
     h2
     {   
         @include h2;
-        margin:auto;        
     }
     .menu
     {   
@@ -1085,38 +1080,27 @@ footer
 //mise en forme css menu 4 la palette du gout
 .gout
 {    
-    display:flex !important;
-    flex-direction: column !important;
-    justify-content: space-between !important;
-    height: 100%;
+    @include page;
     h2
     {   
-        display:flex;
-        justify-content: center;
-        align-items: baseline;
-        height:15px;
-        margin:35px;
-        padding-bottom:0;
+        @include h2
     }
     .menu
     {   
-        display:flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color:$color_fondgout-start; 
-        width: 1000px;
-        margin-left:auto;
-        margin-right: auto;
-        margin-bottom: 150px;
-        padding-top: 50px;
-        height:1400px;
-        box-shadow:0 0 5px 2px hsl(0, 0%, 90%);
-        @media(max-width:1024px)
+        color:#000000;
+        @include menu;
+        background-color:$color_fondgout; 
+        @media(max-width:750px)
         {
-            padding:0 10px 50px 10px;
+            padding: 0 ;
+            margin: 0;
+            width:60%;
         }
-        h2
-        {
+        .titre-menu-4
+        {   
+            font-family: 'Kaushan-Script'; 
+            font-size:5em;
+            padding: 100px 0 50px 0px;
             background-image: linear-gradient(to right, rgb(86,168,71),rgb(191,255,126));
             color:transparent;
             background-clip: text;
@@ -1130,11 +1114,12 @@ footer
             justify-content: space-between;
             text-align: center;
             font-weight: bold;
+            width:850px;
             @include titre-souligné-gout;
             font-family: "Segoe Print";
             .trait-gout-g,.trait-gout-d
             {   
-                width:330px;
+                width:300px;
                 @media (max-width:1024px)
                 {
                     display: none;
@@ -1144,7 +1129,7 @@ footer
         .entre4
         {
             @include presentation-du-menu-prix;
-            padding-top:120px;
+            
             padding-bottom:100px;
             .fricassee, .oeuf, .foie
             {
@@ -1176,7 +1161,8 @@ footer
             }
         }
         .plat-prix
-        { 
+        {   
+            width:650px;
             @media(max-width:1024px)
             {
                 @include style-menu-res;
@@ -1203,7 +1189,11 @@ footer
     padding:0 5px 0 8px;
     h1
     {
-    text-align:center
+    text-align:center;
+    @media(max-width:500px)
+    {
+        font-size: 20px;
+    }
     }
     p 
     {
@@ -1213,6 +1203,14 @@ footer
         { 
             font-weight:bold;
         }
+    }
+    @media (max-width:1000px)
+    {
+        margin:0;
+    }
+    @media (max-width:500px)
+    {
+        width:auto;
     }
 }
         
