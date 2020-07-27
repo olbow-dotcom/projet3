@@ -1135,8 +1135,9 @@ footer a:hover {
   }
 }
 
-h1 {
-  text-align: center;
+.legales {
+  text-decoration: none;
+  color: black;
 }
 
 .bloc-page {
@@ -1147,6 +1148,9 @@ h1 {
   width: 800px;
   margin: auto;
   padding: 0 5px 0 8px;
+}
+.bloc-page h1 {
+  text-align: center;
 }
 .bloc-page p {
   font-family: Arial, Helvetica, sans-serif;
